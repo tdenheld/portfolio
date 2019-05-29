@@ -7,11 +7,9 @@ title: About
 
 I made my first digital designs with a <span class="sharp js-img-hover"><u>Sharp MZ-700</u></span> – a computer with tapes to load programs – no kidding! I remember drawing a map of the Netherlands with using only pipes, dashed and slashes. Later, at the age of 15, I discovered photoshop and was blown away about the possibilities.
 
-After some unsuccessful applications to classic art schools, I found Communication & Multimedia Design. Again, I was very excited. Now about new media like the web. Because everything about graphic design, animation and interactivity comes together.
+During my studies, I started as an intern at a small digital advertising agency. Soon I was developing banners and microsites for clients like Mitsubishi or Greenpeace. On top of that I was offered a contract after my internship.
 
 ![Portret of Tibor den Held](/assets/img/portret-wink.gif)
-
-During my studies, I started as an intern at a small digital advertising agency. Soon I was developing banners and microsites for clients like Mitsubishi or Greenpeace. On top of that I was offered a contract after my internship.
 
 About 4 years later I wrapped up my BSc, quit the agency job and started freelancing. I wanted more freedom and sit at the table with clients to do my own consulting. Besides I was part of a corporation with other creatives. In this period I worked for SnappCar, KPN, Tivoli Utrecht, Doornroosje and many more. 
 
