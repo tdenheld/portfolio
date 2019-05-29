@@ -1,0 +1,17 @@
+.rich-text {
+    h1, p {
+        margin-bottom: 36px;
+
+        @include sm {
+            margin-bottom: 48px;
+        }
+    }
+
+    h1 {
+        @extend .txt__heading;
+    }
+
+    p {
+        @extend .txt__body;
+    }
+}

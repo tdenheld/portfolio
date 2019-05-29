@@ -1,0 +1,35 @@
+// misc
+// --------------------------------------------------
+
+.sharp {
+    position: relative;
+    cursor: pointer;
+
+    u {
+        position: relative;
+        z-index: 1;
+        transition: $fade-link;
+
+        &.is-active {
+            opacity: 0;
+        }
+    }
+
+    span {
+        position: absolute;
+        left: -52px;
+        top: -60px;
+        width: 300px;
+        height: 200px;
+        background-image: url("/assets/img/sharp.png");
+        background-position: 50% 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: $fade-link;
+
+        &.is-active {
+            opacity: 1;
+        }
+    }
+}

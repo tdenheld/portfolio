@@ -1,0 +1,19 @@
+.txt {
+    max-width: 844px;
+}
+
+.txt__body {
+    font-size: toRem(18px);
+
+    @include sm {
+        font-size: toRem(24px);
+    }
+}
+
+.txt__heading {
+    @include font(32px, bold, $lh-title);
+
+    @include sm {
+        font-size: toRem(56px);
+    }
+}

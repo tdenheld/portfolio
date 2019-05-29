@@ -1,0 +1,42 @@
+.header {
+    position: fixed;
+    width: 100%;
+    margin-top: $gutter;
+    z-index: 999;
+
+    @include md {
+        margin-top: 64px;
+    }
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    svg {
+        stroke: $brand;
+        height: 64px;
+    }
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    font-size: toRem(16px);
+    line-height: 27px;
+
+    @include sm {
+        font-size: toRem(18px);
+    }
+}
+
+.header__item {
+    margin-left: $gutter;
+    cursor: pointer;
+
+    @include sm {
+        margin-left: 32px;
+    }
+}

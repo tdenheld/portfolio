@@ -1,0 +1,78 @@
+/*-------------------
+      Animation
+--------------------*/
+
+$ease:						cubic-bezier(0.700, 0.270, 0.270, 1);
+$ease-expo:			        cubic-bezier(1.000, 0.000, 0.000, 1);
+$fade-all: 					all 300ms $ease;
+$fade-link:                 all 200ms $ease;
+
+
+
+
+/*-------------------
+	   Spacers
+--------------------*/
+
+$grid-gutter-width: 24px;
+
+$triple-gutter:				$grid-gutter-width * 3;
+$double-gutter:				$grid-gutter-width * 2;
+$one-half-gutter:			$grid-gutter-width * 1.5;
+
+$gutter:					$grid-gutter-width;
+$half-gutter:				$grid-gutter-width / 2;
+$quarter-gutter:			$grid-gutter-width / 4;
+
+
+
+
+/*-------------------
+    Media queries
+--------------------*/
+
+$xs: 480px;
+$sm: 768px;
+$md: 912px;
+$lg: 1280 + $double-gutter * 2;
+$xl: 1440px;
+
+
+
+
+/*-------------------
+        Fonts
+--------------------*/
+
+$sans-serif: 'tw-sans-serif', helvetica, arial, sans-serif;
+$mono: 'tw-mono', 'Courier New', courier;
+
+$lh-copy: 1.5;
+$lh-title: 1.25;
+$lh-solid: 1;
+
+
+
+
+/*-------------------
+        Colors
+--------------------*/
+
+$black: #000;
+$white: #fff;
+
+$brand: $black;
+$brand-dark: mix($black, $brand, 15%);
+
+$light: $white;
+$dark: $black;
+
+$grey-1: mix($white, $dark, 20%);
+$grey-2: mix($white, $dark, 30%);
+$grey-3: mix($white, $dark, 40%);
+$grey-4: mix($white, $dark, 50%);
+$grey-5: mix($white, $dark, 60%);
+$grey-6: mix($white, $dark, 70%);
+$grey-7: mix($white, $dark, 80%);
+$grey-8: mix($white, $dark, 90%);
+$grey-9: mix($white, $dark, 95%);

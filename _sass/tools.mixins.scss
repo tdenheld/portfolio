@@ -1,0 +1,77 @@
+/*-------------------
+		Mixins
+--------------------*/
+
+
+
+// font
+// ------------------------------
+
+// convert px to rem
+@function toRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+// set font style
+@mixin font($size, $weight, $factor) {
+	font-weight: $weight;
+	font-size: toRem($size);
+	line-height: $factor;
+}
+
+
+
+// media queries
+// ------------------------------
+@mixin xs { @media (min-width: $xs) { @content; }} 
+@mixin sm { @media (min-width: $sm) { @content; }}
+@mixin md { @media (min-width: $md) { @content; }}
+@mixin lg { @media (min-width: $lg) { @content; }}
+@mixin xl { @media (min-width: $xl) { @content; }}
+
+// max-width breakpoints
+@mixin xs-max { @media (max-width: $xs) { @content; }}
+@mixin sm-max { @media (max-width: $sm) { @content; }}
+@mixin md-max { @media (max-width: $md) { @content; }}
+@mixin lg-max { @media (max-width: $lg) { @content; }}
+@mixin xl-max { @media (max-width: $xl) { @content; }}
+
+// exclusive breakpoints (min-max)
+@mixin sm-ex { @media (min-width: $sm) and (max-width: $md) { @content; }}
+@mixin md-ex { @media (min-width: $md) and (max-width: $lg) { @content; }}
+@mixin lg-ex { @media (min-width: $lg) and (max-width: $xl) { @content; }}
+
+
+
+// spacers
+// ------------------------------
+@mixin spacer($factor, $property) {
+	$size: $gutter / 4; // 6 pixels 
+    
+    @if $factor == 0 {
+	    #{$property}: $factor;
+    } @else {
+	    #{$property}: $size * $factor;
+    }
+}
+
+
+
+// lay-out
+// ------------------------------
+@mixin full($p) {
+	position: $p;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+}
+
+@mixin bg($s) {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: $s;
+}

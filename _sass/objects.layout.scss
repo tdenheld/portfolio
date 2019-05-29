@@ -1,0 +1,46 @@
+.app {
+    // push footer to bottom
+    display: grid;
+    grid-template-rows: 1fr max-content;
+    height: 100%;
+}
+
+.content {
+    margin-top: 152px;
+    
+    @include sm {
+        margin-top: 228px;
+    }
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 $gutter;
+    width: 100%;
+    max-width: 1280 + $double-gutter * 2;
+
+    @include md {
+        padding: 0 $double-gutter;
+    }
+}
+
+.section {
+    margin-bottom: 64px;
+
+    @include sm {
+        margin-bottom: 100px;
+    }
+}
+
+.center {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-bg {
+    @include full(absolute);
+    @include bg(cover);
+}

@@ -1,0 +1,24 @@
+.grid {
+    display: grid;
+    @include full(fixed);
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: $gutter;
+
+    @include sm {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include md {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include lg {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+.grid__col {
+    border-left: 1px solid $grey-9;
+    border-right: 1px solid $grey-9;
+    height: 100%;
+}
