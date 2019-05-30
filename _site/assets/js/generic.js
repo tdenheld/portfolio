@@ -115,7 +115,7 @@ function imgHover() {
             } else if ($('.touch')[0]) {
                 link.click(function () {
                     add();
-                    setTimeout(remove, 1000);
+                    setTimeout(remove, 1300);
                 });
             };
         });
