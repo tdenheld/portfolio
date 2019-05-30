@@ -3,7 +3,7 @@
         margin-bottom: 36px;
 
         @include sm {
-            margin-bottom: 48px;
+            margin-bottom: $double-gutter;
         }
     }
 

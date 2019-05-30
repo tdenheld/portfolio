@@ -6,7 +6,7 @@
 }
 
 .content {
-    margin-top: 152px;
+    margin-top: 136px;
     
     @include sm {
         margin-top: 228px;
@@ -26,10 +26,10 @@
 }
 
 .section {
-    margin-bottom: 64px;
+    margin-bottom: $double-gutter;
 
     @include sm {
-        margin-bottom: 100px;
+        margin-bottom: 96px;
     }
 }
 

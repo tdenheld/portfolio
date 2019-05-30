@@ -39,4 +39,8 @@
     @include sm {
         margin-left: 32px;
     }
+
+    svg {
+        fill: $brand;
+    }
 }
