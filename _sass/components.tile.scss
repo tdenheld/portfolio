@@ -1,0 +1,13 @@
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $brand;
+    height: 240px;
+    text-align: center;
+    background-color: $light;
+
+    @include lg {
+        height: 434px;
+    }
+}

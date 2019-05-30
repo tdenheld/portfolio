@@ -14,10 +14,19 @@
     </div>
 </section>
 
-<section class="section bg-white">
+<section class="section">
     <div class="container">
-        <div class="work">
-            
+        <div class="g g-2-md g-4-lg col-gap-4">
+            {% for entry in site.posts %}
+            <a class="tile" href="{{ entry.url }}">
+                <div>
+                    <h2 class="f24">
+                        {{ entry.title }}
+                    </h2>
+                    <p class="mono f12">{{ entry.role }}</p>
+                </div>
+            </a>
+            {% endfor %}
         </div>
     </div>
 </section>
