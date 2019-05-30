@@ -7,7 +7,11 @@
     text-align: center;
     background-color: $light;
 
-    @include lg {
+    @include sm {
+        height: 280px;
+    }
+
+    @include md {
         height: 360px;
     }
 }
