@@ -21,10 +21,8 @@
         top: -50px;
         width: 280px;
         height: 150px;
+        @include bg(contain);
         background-image: url("/assets/img/sharp.png");
-        background-position: 50% 50%;
-        background-size: contain;
-        background-repeat: no-repeat;
         opacity: 0;
         transition: $fade-link;
 
