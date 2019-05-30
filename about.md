@@ -9,7 +9,7 @@ I made my first digital designs with a <span class="sharp js-img-hover"><u>Sharp
 
 During my studies (CMD), I started as an intern at a small digital advertising agency. Soon I was developing banners and microsites for clients like Mitsubishi or Greenpeace. On top of that I was offered a contract after my internship.
 
-![Portret of Tibor den Held](/assets/img/portret-wink.gif)
+![Portret of Tibor den Held](/assets/img/portret.gif)
 
 About 4 years later I wrapped up my BSc, quit the agency job and started freelancing. I wanted more freedom and sit at the table with clients to do my own consulting. Besides I was part of a corporation with other creatives. In this period I worked for SnappCar, KPN, Tivoli Utrecht, Doornroosje and many more. 
 
