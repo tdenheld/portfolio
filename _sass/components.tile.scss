@@ -7,7 +7,7 @@
     background-color: $light;
 
     @include sm {
-        height: 280px;
+        height: 240px;
     }
 
     @include md {
@@ -17,7 +17,7 @@
 
 .tile__title {
     @include font(16px, normal, $lh-title);
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 
     @include xs {
         font-size: toRem(18px);
