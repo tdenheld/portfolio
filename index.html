@@ -5,9 +5,11 @@
     <div class="container">
         <header class="txt">
             <h1>
-                <span class="txt__body db">Tibor den Held</span>
+                <span class="txt__body db">
+                    {{ site.data.home.intro.name }}
+                </span>
                 <span class="txt__heading">
-                    Utrecht based digital maker who is fond of designing with code.
+                    {{ site.data.home.intro.description }}
                 </span>
             </h1>
         </header>
@@ -18,15 +20,21 @@
     <div class="container">
         <div class="g g-2 g-4-md gap-4">
             {% for entry in site.posts %}
-            <a class="tile" href="{{ entry.url }}">
-                <div>
-                    <h2 class="tile__title">
-                        {{ entry.title }}
-                    </h2>
-                    <p class="tile__role">{{ entry.role }}</p>
-                </div>
-            </a>
+            {% include tile.html %}
             {% endfor %}
         </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <article class="txt">
+            <p class="txt__body mb-3">
+                {{ site.data.home.about.description }}
+            </p>
+            <a href="/about" class="arrow-link">
+                {{ site.data.home.about.link }}
+            </a>
+        </article>
     </div>
 </section>

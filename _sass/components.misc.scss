@@ -1,33 +1,28 @@
 // misc
 // --------------------------------------------------
 
-.sharp {
+.arrow-link {
     position: relative;
-    cursor: pointer;
+    font-family: $mono;
+    font-size: toRem(16px);
 
-    u {
-        position: relative;
-        z-index: 1;
+    &:after {
+        content: '';
+        position: absolute;
+        width: calc(100% - 20px);
+        height: calc(100% + 2px);
+        top: 0;
+        left: 20px;
+        border-bottom: 1px solid rgba($brand, 0);
+        transform: scaleX(0);
+        transform-origin: 0 0;
         transition: $fade-link;
-
-        &.is-active {
-            opacity: 0;
-        }
     }
 
-    span {
-        position: absolute;
-        left: -54px;
-        top: -50px;
-        width: 280px;
-        height: 150px;
-        @include bg(contain);
-        background-image: url("/assets/img/sharp.png");
-        opacity: 0;
-        transition: $fade-link;
-
-        &.is-active {
-            opacity: 1;
+    &:hover {
+        &:after {
+            border-bottom: 1px solid rgba($brand, 1);
+            transform: scaleX(1);
         }
     }
 }

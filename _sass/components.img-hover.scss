@@ -1,0 +1,38 @@
+// image hover
+// --------------------------------------------------
+
+.img-hover {
+    position: relative;
+    cursor: pointer;
+
+    u {
+        position: relative;
+        z-index: 1;
+        transition: $fade-link;
+
+        &.is-active {
+            opacity: 0;
+        }
+    }
+
+    span {
+        position: absolute;
+        @include bg(contain);
+        opacity: 0;
+        transition: $fade-link;
+
+        &.is-active {
+            opacity: 1;
+        }
+    }
+}
+
+.img-hover--sharp {
+    span {
+        left: -54px;
+        top: -50px;
+        width: 280px;
+        height: 150px;
+        background-image: url("/assets/img/sharp.png");
+    }
+}

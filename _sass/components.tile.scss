@@ -1,9 +1,12 @@
 .tile {
+    position: relative;
     @include center;
     padding: $half-gutter;
     height: 172px;
     border: 1px solid $brand;
     text-align: center;
+    border-radius: 2px;
+    overflow: hidden;
     background-color: $light;
 
     @include sm {
@@ -12,6 +15,12 @@
 
     @include md {
         height: 380px;
+    }
+
+    &:hover {
+        .tile__img {
+            opacity: 1;
+        }
     }
 }
 
@@ -34,5 +43,19 @@
 
     @include sm {
         font-size: toRem(12px);
+    }
+}
+
+.tile__img {
+    @include center;
+    @include full(absolute);
+    padding: $half-gutter;
+    background-color: $brand;
+    opacity: 0;
+    transition: $fade-all;
+
+    svg {
+        width: 100%;
+        fill: $light;
     }
 }
