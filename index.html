@@ -16,14 +16,14 @@
 
 <section class="section">
     <div class="container">
-        <div class="g g-2 g-4-lg col-gap-4">
+        <div class="g g-2 g-4-lg gap-4">
             {% for entry in site.posts %}
             <a class="tile" href="{{ entry.url }}">
                 <div>
-                    <h2 class="f24">
+                    <h2 class="tile__title">
                         {{ entry.title }}
                     </h2>
-                    <p class="mono f12">{{ entry.role }}</p>
+                    <p class="tile__role">{{ entry.role }}</p>
                 </div>
             </a>
             {% endfor %}

@@ -651,6 +651,7 @@
 
 // font sizes
 // ----------------------------------------------------------------------
+.f10 {font-size: toRem(10px);}
 .f12 {font-size: toRem(12px);}
 .f14 {font-size: toRem(14px);}
 .f16 {font-size: toRem(16px);}
@@ -672,6 +673,8 @@
 .f96 {font-size: toRem(96px);}
 
 @include sm {
+    .f12-sm {font-size: toRem(12px);}
+    .f14-sm {font-size: toRem(14px);}
 	.f16-sm {font-size: toRem(16px);}
 	.f18-sm {font-size: toRem(18px);}
 	.f20-sm {font-size: toRem(20px);}
@@ -691,6 +694,8 @@
 	.f96-sm {font-size: toRem(96px);}
 }
 @include md {
+    .f12-md {font-size: toRem(12px);}
+    .f14-md {font-size: toRem(14px);}
 	.f16-md {font-size: toRem(16px);}
 	.f18-md {font-size: toRem(18px);}
 	.f20-md {font-size: toRem(20px);}
@@ -710,6 +715,8 @@
 	.f96-md {font-size: toRem(96px);}
 }
 @include lg {
+    .f12-lg {font-size: toRem(12px);}
+    .f14-lg {font-size: toRem(14px);}
 	.f16-lg {font-size: toRem(16px);}
 	.f18-lg {font-size: toRem(18px);}
 	.f20-lg {font-size: toRem(20px);}

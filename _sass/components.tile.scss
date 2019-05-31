@@ -1,9 +1,8 @@
 .tile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid $brand;
+    @include center;
+    padding: $half-gutter;
     height: 172px;
+    border: 1px solid $brand;
     text-align: center;
     background-color: $light;
 
@@ -12,6 +11,28 @@
     }
 
     @include md {
-        height: 360px;
+        height: 380px;
+    }
+}
+
+.tile__title {
+    @include font(16px, normal, $lh-title);
+    margin-bottom: 2px;
+
+    @include xs {
+        font-size: toRem(18px);
+    }
+
+    @include sm {
+        font-size: toRem(24px);
+    }
+}
+
+.tile__role {
+    font-family: $mono;
+    @include font(10px, normal, $lh-title);
+
+    @include sm {
+        font-size: toRem(12px);
     }
 }

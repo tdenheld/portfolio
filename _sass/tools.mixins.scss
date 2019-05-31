@@ -70,6 +70,12 @@
 	width: 100%;
 }
 
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin bg($s) {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
