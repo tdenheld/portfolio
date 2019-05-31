@@ -1,13 +1,34 @@
+.tile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include sm {
+        grid-gap: $gutter;
+    }
+
+    @include md {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 .tile {
     position: relative;
     @include center;
+    margin-top: -1px;
     padding: $half-gutter;
     height: 172px;
     border: 1px solid $brand;
     text-align: center;
-    border-radius: 2px;
     overflow: hidden;
     background-color: $light;
+
+    &:nth-child(even) {
+        margin-left: -1px;
+    }
+
+    @include sm {
+        margin: 0;
+    }
 
     @include sm {
         height: 240px;

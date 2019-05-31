@@ -18,7 +18,7 @@
 
 <section class="section">
     <div class="container">
-        <div class="g g-2 g-4-md gap-4">
+        <div class="tile-grid">
             {% for entry in site.posts %}
             {% include tile.html %}
             {% endfor %}
@@ -29,7 +29,7 @@
 <section class="section">
     <div class="container">
         <article class="txt">
-            <p class="txt__body mb-3">
+            <p class="txt__body mb-2 mb-3-sm">
                 {{ site.data.home.about.description }}
             </p>
             <a href="/about" class="arrow-link">

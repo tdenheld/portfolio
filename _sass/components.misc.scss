@@ -4,7 +4,11 @@
 .arrow-link {
     position: relative;
     font-family: $mono;
-    font-size: toRem(16px);
+    font-size: toRem(14px);
+
+    @include sm {
+        font-size: toRem(16px);
+    }
 
     &:after {
         content: '';
