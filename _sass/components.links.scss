@@ -13,14 +13,19 @@
     &:after {
         content: '';
         position: absolute;
-        width: calc(100% - 20px);
+        width: calc(100% - 18px);
         height: calc(100% + 2px);
         top: 0;
-        left: 20px;
+        left: 18px;
         border-bottom: 1px solid rgba($brand, 0);
         transform: scaleX(0);
         transform-origin: 0 0;
         transition: $fade-link;
+
+        @include sm {
+            width: calc(100% - 20px);
+            left: 20px;
+        }
     }
 
     &:hover {
