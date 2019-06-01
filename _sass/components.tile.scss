@@ -43,11 +43,12 @@
 }
 
 .tile__title {
-    @include font(16px, normal, $lh-title);
+    @include font(16px, bold, $lh-title);
     margin-bottom: 3px;
 
     @include xs {
         font-size: toRem(18px);
+        font-weight: normal;
     }
 
     @include sm {
