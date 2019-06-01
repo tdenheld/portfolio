@@ -16,7 +16,7 @@
     @include center;
     margin-top: -1px;
     padding: $half-gutter;
-    height: 170px;
+    height: 180px;
     border: 1px solid $brand;
     text-align: center;
     overflow: hidden;
@@ -26,28 +26,8 @@
         margin-left: -1px;
     }
 
-    &:nth-child(2) {
-        height: 130px;
-        align-self: end;
-    }
-
-    &:nth-child(3) {
-        height: 120px;
-    }
-
-    &:nth-child(4) {
-        height: 160px;
-    }
-
     @include sm {
         height: 240px;
-
-        &:nth-child(2), 
-        &:nth-child(3), 
-        &:nth-child(4) {
-            height: initial;
-            align-self: initial;
-        }
 
         &:nth-child(even) {
             margin: 0;
