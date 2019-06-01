@@ -27,6 +27,7 @@
     }
 
     @include sm {
+        padding: $gutter;
         height: 240px;
 
         &:nth-child(even) {

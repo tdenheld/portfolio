@@ -17,6 +17,7 @@
 .header__logo {
     position: relative;
     top: 6px;
+
     svg {
         stroke: $brand;
         height: 60px;
@@ -44,5 +45,14 @@
 
     svg {
         fill: $brand;
+        transition: all 500ms $ease;
+    }
+}
+
+.header__item--settings {
+    &:hover {
+        svg {
+            transform: rotate(90deg);
+        }
     }
 }
