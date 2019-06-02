@@ -1,9 +1,9 @@
 .modal {
-    opacity: 0;
-    transform: scale(0);
-    transform-origin: 50% 100%;
     @include full(fixed);
     @include center;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: 50% 70%;
     background-color: $light;
     z-index: 999;
 

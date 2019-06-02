@@ -129,27 +129,21 @@ imgHover();
 // ------------------------------------------------------------
 function settings() {
     const obj = $('.js-settings');
+    let tween;
+
     if (obj[0]) {
         obj.click(() => {
-            $('body').append('<div class="modal"><p>Settings</p></div>');
-            TweenLite.to('.modal', 0.5, {
+            tween = TweenLite.to('.modal', 0.5, {
                 ease: Power3.easeInOut,
                 autoAlpha: 1,
-                scale: 1,
-                display: 'flex'
+                scale: 1
             });
         });
-    };
-    $('.modal p').click(function () {
-        TweenLite.to('.modal', 0.5, {
-            ease: Power3.easeInOut,
-            autoAlpha: 0,
-            scale: 0,
-            onComplete() {
-                $('body').remove('.modal');
-            }
+
+        $('.modal p').click(function () {
+            tween.reverse();
         });
-    });
+    };
 };
 settings();
 
