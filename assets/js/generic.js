@@ -129,19 +129,28 @@ imgHover();
 // ------------------------------------------------------------
 function settings() {
     const obj = $('.js-settings');
-    let tween;
+    const modal = '.js-settings-modal';
+    const close = $('.js-settings-close');
 
     if (obj[0]) {
-        obj.click(() => {
-            tween = TweenLite.to('.modal', 0.5, {
-                ease: Power3.easeInOut,
-                autoAlpha: 1,
-                scale: 1
-            });
+        const tl = new TimelineMax({
+            paused: true
         });
+        tl.to(modal, 0.6, {
+            ease: Power3.easeInOut,
+            opacity: 1,
+            scale: 1,
+            display: 'block'
+        }).to(close, 0.4, {
+            ease: Power3.easeInOut,
+            scale: 1,
+        }, '-=0.15');
 
-        $('.modal p').click(function () {
-            tween.reverse();
+        obj.click(() => {
+            tl.play();
+        });
+        close.click(function () {
+            tl.reverse();
         });
     };
 };
