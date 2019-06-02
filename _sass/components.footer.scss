@@ -1,14 +1,17 @@
 .footer {
-    display: grid;
-    align-items: center;
     margin-bottom: $gutter;
-
-    @include xs {
-        grid-template-columns: 1fr max-content;
-    }
 
     @include md {
         margin-bottom: 64px;
+    }
+}
+
+.footer__grid {
+    display: grid;
+    align-items: center;
+
+    @include xs {
+        grid-template-columns: 1fr max-content;
     }
 }
 
@@ -36,10 +39,12 @@
 }
 
 .footer__disclaimer {
+    display: none;
     margin-top: $quarter-gutter;
     font-size: toRem(12px);
 
     @include xs {
+        display: block;
         margin: 0;
     }
 }

@@ -16,6 +16,8 @@
 - icon: twitter
   url: https://twitter.com/tdenheld
   width: 16
+  pos: top-1px
 - icon: soundcloud
   url: https://soundcloud.com/tiborkocsis
   width: 19
+  pos: top-1px
