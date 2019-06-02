@@ -34,15 +34,15 @@
 
 <body class="{{ page.body }}">
 
-    <main class="app">
+    <main class="main js-main">
         {% include grid.html %}
         {% include header.html %}
         <div class="content">
             {{ content }}
         </div>
         {% include footer.html %}
-        {% include modal.html %}
     </main>
+    {% include modal.html %}
 
     <!-- JAVASCRIPT -->
     <script src="/assets/js/plugins.bundle.min.js"></script>

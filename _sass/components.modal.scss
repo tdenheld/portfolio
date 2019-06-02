@@ -6,6 +6,8 @@
     transform-origin: 100% 0%;
     background-color: $light;
     z-index: 999;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 
     @include sm {
         transform-origin: 50% 70%;

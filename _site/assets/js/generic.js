@@ -131,8 +131,32 @@ function settings() {
     const obj = $('.js-settings');
     const modal = '.js-settings-modal';
     const close = $('.js-settings-close');
+    const main = $('.js-main');
+    let scrollPos;
 
     if (obj[0]) {
+
+        // body scroll lock
+        const body = {
+            lock() {
+                scrollPos = window.scrollY;
+                $('body').css({
+                    'position': 'fixed',
+                    'top': -scrollPos,
+                    'overflow-y': 'hidden',
+                    'width': '100%',
+                    'backface-visibility': 'hidden'
+                });
+                main.hide();
+            },
+            free() {
+                $('body').removeAttr('style');
+                $(window).scrollTop(scrollPos);
+                main.show();
+            }
+        };
+
+        // transition
         const tl = new TimelineMax({
             paused: true
         });
@@ -140,17 +164,21 @@ function settings() {
             ease: Power3.easeInOut,
             opacity: 1,
             scale: 1,
-            display: 'block'
+            display: 'block',
+            onComplete() {
+                body.lock();
+            }
         }).to(close, 0.4, {
             ease: Power3.easeInOut,
             scale: 1,
-        }, '-=0.15');
+        }, '-=0.2');
 
         obj.click(() => {
             tl.play();
         });
         close.click(function () {
             tl.reverse();
+            body.free();
         });
     };
 };
