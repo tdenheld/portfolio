@@ -147,12 +147,16 @@ function settings() {
                     'width': '100%',
                     'backface-visibility': 'hidden'
                 });
-                main.hide();
+                main.css({
+                    'opacity': '0'
+                });
             },
             free() {
                 $('body').removeAttr('style');
                 $(window).scrollTop(scrollPos);
-                main.show();
+                main.css({
+                    'opacity': '1'
+                });
             }
         };
 
@@ -164,17 +168,16 @@ function settings() {
             ease: Power3.easeInOut,
             opacity: 1,
             scale: 1,
-            display: 'block',
-            onComplete() {
-                body.lock();
-            }
+            display: 'block'
         }).to(close, 0.4, {
             ease: Power3.easeInOut,
             scale: 1,
         }, '-=0.2');
 
+        // execution
         obj.click(() => {
             tl.play();
+            tl.eventCallback('onComplete', body.lock);
         });
         close.click(function () {
             tl.reverse();
