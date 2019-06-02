@@ -1,0 +1,13 @@
+.modal {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: 50% 100%;
+    @include full(fixed);
+    @include center;
+    background-color: $light;
+    z-index: 999;
+
+    p {
+        cursor: pointer;
+    }
+}

@@ -100,16 +100,17 @@ function imgHover() {
                 link.addClass('is-active');
                 img.addClass('is-active');
             };
+
             function remove() {
                 link.removeClass('is-active');
                 img.removeClass('is-active');
             };
 
             if ($('.no-touch')[0]) {
-                link.mouseenter(function () {
+                link.mouseenter(() => {
                     add();
                 });
-                link.mouseleave(function () {
+                link.mouseleave(() => {
                     remove();
                 });
             } else if ($('.touch')[0]) {
@@ -122,6 +123,35 @@ function imgHover() {
     };
 };
 imgHover();
+
+
+// settings
+// ------------------------------------------------------------
+function settings() {
+    const obj = $('.js-settings');
+    if (obj[0]) {
+        obj.click(() => {
+            $('body').append('<div class="modal"><p>Settings</p></div>');
+            TweenLite.to('.modal', 0.5, {
+                ease: Power3.easeInOut,
+                autoAlpha: 1,
+                scale: 1,
+                display: 'flex'
+            });
+        });
+    };
+    $('.modal p').click(function () {
+        TweenLite.to('.modal', 0.5, {
+            ease: Power3.easeInOut,
+            autoAlpha: 0,
+            scale: 0,
+            onComplete() {
+                $('body').remove('.modal');
+            }
+        });
+    });
+};
+settings();
 
 
 // preloader
@@ -143,7 +173,7 @@ function loader() {
                 ease: Power3.easeInOut,
                 autoAlpha: 0,
                 display: 'none',
-                onComplete: function () {
+                onComplete() {
                     TweenLite.set(content, {
                         display: 'block',
                     });

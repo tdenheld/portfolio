@@ -1,10 +1,14 @@
 .footer {
     display: grid;
     align-items: center;
-    margin-bottom: 64px;
+    margin-bottom: $gutter;
 
     @include xs {
         grid-template-columns: 1fr max-content;
+    }
+
+    @include md {
+        margin-bottom: 64px;
     }
 }
 
