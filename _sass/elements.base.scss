@@ -31,12 +31,15 @@ button:focus,
 button:visited,
 input[type='button'],
 input[type='submit'] {
-	outline: none;
-	transition: $fade-all;
+    outline: none;
+    transition: $fade-all;
 }
 
 hr {
-    height: 1px;
     border: 0;
-    border-top: 1px solid $grey-7;
+    clear: both;
+    display: block;
+    width: 100%;
+    background-color: $brand;
+    height: 1px;
 }

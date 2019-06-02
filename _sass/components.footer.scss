@@ -1,0 +1,41 @@
+.footer {
+    display: grid;
+    align-items: center;
+    margin-bottom: 64px;
+
+    @include xs {
+        grid-template-columns: 1fr max-content;
+    }
+}
+
+.footer__soci {
+    display: flex;
+    align-items: center;
+    margin-left: -7px;
+}
+
+.footer__icon {
+    @include center;
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+    transition: $fade-all;
+
+    svg {
+        width: 100%;
+        fill: $brand;
+    }
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.footer__disclaimer {
+    margin-top: $quarter-gutter;
+    font-size: toRem(12px);
+
+    @include xs {
+        margin: 0;
+    }
+}

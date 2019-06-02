@@ -1,0 +1,14 @@
+<footer class="footer container">
+    <div class="footer__soci">
+        {% for entry in site.data.footer %}
+        <a href="{{ entry.url }}" target="_blank" class="footer__icon">
+            <span class="lh-none" style="width:{{ entry.width }}px;">
+                {% include svg/icons/{{ entry.icon }}.svg %}
+            </span>
+        </a>
+        {% endfor %}
+    </div>
+    <p class="footer__disclaimer">
+        {{ "now" | date: "%Y" }} © Tibor den Held 
+    </p>
+</footer>
