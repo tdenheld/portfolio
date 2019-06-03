@@ -168,7 +168,10 @@ function settings() {
             ease: Power3.easeInOut,
             opacity: 1,
             scale: 1,
-            display: 'block'
+            display: 'block',
+            onComplete() {
+                body.lock();
+            }
         }).to(close, 0.4, {
             ease: Power3.easeInOut,
             scale: 1,
@@ -177,7 +180,6 @@ function settings() {
         // execution
         obj.click(() => {
             tl.play();
-            tl.eventCallback('onComplete', body.lock);
         });
         close.click(function () {
             tl.reverse();

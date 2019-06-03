@@ -1,5 +1,6 @@
-.rich-text {
-    h1, p {
+.rich-txt {
+    h1,
+    p {
         margin-bottom: 36px;
 
         @include sm {
@@ -9,6 +10,15 @@
 
     h1 {
         @extend .txt__heading;
+    }
+
+    h2 {
+        @extend .txt__subheading;
+        margin-bottom: 12px;
+
+        @include sm {
+            margin-bottom: $gutter;
+        }
     }
 
     p {

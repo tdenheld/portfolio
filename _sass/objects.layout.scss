@@ -26,6 +26,7 @@
 }
 
 .section {
+    position: relative;
     margin-bottom: $double-gutter;
 
     @include sm {

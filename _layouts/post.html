@@ -1,10 +1,30 @@
 ---
 layout: default
+no-grid: true
 ---
 
 <section class="section">
-    <div class="container rich-text">
-        <h1>{{ page.title }}</h1>
-        {{ content }}
+    <div class="container">
+        <div class="txt rich-txt">
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.description }}</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <img src="{{ page.hero }}" />
+        {% for entry in page.section %}
+        {% if entry.title %}
+        <div class="txt rich-txt mt-8 mt-16-sm">
+            <h2>{{ entry.title }}</h2>
+            <p>{{ entry.description }}</p>
+        </div>
+        {% endif %}
+        <div class="pa-4 pa-8-sm" style="background-color: {{ page.bg-color }};">
+            <img src="{{ entry.img }}" />
+        </div>
+        {% endfor %}
     </div>
 </section>

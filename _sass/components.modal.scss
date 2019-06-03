@@ -2,7 +2,7 @@
     @include full(fixed);
     display: none;
     opacity: 0;
-    transform: scale(0);
+    transform: scale(0.5);
     transform-origin: 100% 0%;
     background-color: $light;
     z-index: 999;
@@ -10,17 +10,17 @@
     -webkit-overflow-scrolling: touch;
 
     @include sm {
-        transform-origin: 50% 70%;
+        transform-origin: 50% 50%;
     }
 }
 
 .modal__close {
     @include center;
     position: absolute;
-    top: 18px;
-    right: 18px;
-    width: 35px;
-    height: 35px;
+    top: 12px;
+    right: 12px;
+    width: 48px;
+    height: 48px;
     cursor: pointer;
     transform: scale(0);
 
@@ -38,8 +38,8 @@
     }
 
     @include sm {
-        top: 64px;
-        right: $double-gutter;
+        top: 56px;
+        right: 36px;
 
         svg {
             width: 24px;

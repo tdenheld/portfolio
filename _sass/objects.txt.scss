@@ -10,6 +10,14 @@
     }
 }
 
+.txt__subheading {
+    @include font(24px, bold, $lh-title);
+
+    @include sm {
+        font-size: toRem(32px);
+    }
+}
+
 .txt__heading {
     @include font(32px, bold, $lh-title);
 

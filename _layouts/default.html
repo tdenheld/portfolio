@@ -32,10 +32,13 @@
 
 </head>
 
-<body class="{{ page.body }}">
+<body>
 
     <main class="main js-main">
+        {% unless page.no-grid %}
         {% include grid.html %}
+        {% endunless %}
+
         {% include header.html %}
         <div class="content">
             {{ content }}
