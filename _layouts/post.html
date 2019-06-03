@@ -22,9 +22,11 @@ no-grid: true
             <p>{{ entry.description }}</p>
         </div>
         {% endif %}
+        {% if entry.img %}
         <div class="pa-4 pa-8-sm" style="background-color: {{ page.bg-color }};">
-            <img src="{{ entry.img }}" />
+            <img src="{{ entry.img }}" alt="{{ entry.title }}" />
         </div>
+        {% endif %}
         {% endfor %}
     </div>
 </section>
@@ -32,13 +34,13 @@ no-grid: true
 <section class="section">
     <div class="container">
         <h2 class="txt__subheading mb-2 mb-4-sm">More work</h2>
-        <div class="tile-grid">
+        <div class="tile-grid tile-grid--related">
             {% for entry in site.posts %}
-            {% capture i %}{{ page.title }}{% endcapture %}
-            {% if entry.title==i %}
-            {% continue %}
-            {% endif %}
-            {% include tile.html %}
+                {% capture i %}{{ page.title }}{% endcapture %}
+                {% if entry.title==i %}
+                {% continue %}
+                {% endif %}
+                {% include tile.html %}
             {% endfor %}
         </div>
     </div>

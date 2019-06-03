@@ -6,6 +6,7 @@ body {
     font-weight: normal;
     line-height: $lh-copy;
     color: $brand;
+    -webkit-font-smoothing: antialiased;
 }
 
 
