@@ -28,3 +28,14 @@ no-grid: true
         {% endfor %}
     </div>
 </section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="txt__subheading mb-2 mb-4-sm">More work</h2>
+        <div class="tile-grid">
+            {% for entry in site.posts %}
+            {% include tile.html %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
