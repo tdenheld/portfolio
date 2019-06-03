@@ -1,2 +1,15 @@
 // misc
 // --------------------------------------------------
+
+.meta {
+    display: grid;
+    grid-column-gap: $gutter;
+
+    @include md {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    @include lg {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
