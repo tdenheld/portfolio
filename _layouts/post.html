@@ -14,6 +14,28 @@ no-grid: true
 
 <section class="section">
     <div class="container">
+        <div class="g g-2-sm g-3-md gap-4">
+            <div>
+                <hr class="mxw-50 ml-0">
+                <h3 class="f12 f14-sm mb-2-sm">Role</h3>
+                <p class="txt__body">{{ page.role }}</p>
+            </div>
+            <div>
+                <hr class="mxw-50 ml-0">
+                <h3 class="f12 f14-sm mb-2-sm">Technologies</h3>
+                <p class="txt__body">{{ page.technologies }}</p>
+            </div>
+            <div>
+                <hr class="mxw-50 ml-0">
+                <h3 class="f12 f14-sm mb-2-sm">When</h3>
+                <p class="txt__body">{{ page.when }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
         <img src="{{ page.hero }}" />
         {% for entry in page.section %}
         {% if entry.title %}
@@ -37,11 +59,11 @@ no-grid: true
         <h2 class="txt__subheading mb-2 mb-4-sm">More work</h2>
         <div class="tile-grid tile-grid--related">
             {% for entry in site.posts %}
-                {% capture i %}{{ page.title }}{% endcapture %}
-                {% if entry.title==i %}
-                {% continue %}
-                {% endif %}
-                {% include tile.html %}
+            {% capture i %}{{ page.title }}{% endcapture %}
+            {% if entry.title==i %}
+            {% continue %}
+            {% endif %}
+            {% include tile.html %}
             {% endfor %}
         </div>
     </div>

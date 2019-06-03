@@ -61,10 +61,12 @@ $lh-solid: 1;
 $black: #000;
 $white: #fff;
 
-$brand: #033;
+$brand: #224;
 $brand-dark: mix($black, $brand, 15%);
 
-$light:      mix($white, $brand, 90%);
+$bg: #764;
+
+$light:      mix($white, $bg, 90%);
 $dark:       mix($black, $brand, 75%);
 $dark-grey:  mix($light, $dark, 15%);
 
