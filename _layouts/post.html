@@ -34,6 +34,10 @@ no-grid: true
         <h2 class="txt__subheading mb-2 mb-4-sm">More work</h2>
         <div class="tile-grid">
             {% for entry in site.posts %}
+            {% capture i %}{{ page.title }}{% endcapture %}
+            {% if entry.title==i %}
+            {% continue %}
+            {% endif %}
             {% include tile.html %}
             {% endfor %}
         </div>
