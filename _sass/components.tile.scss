@@ -16,7 +16,7 @@
         grid-template-columns: repeat(3, 1fr);
 
         .tile {
-            height: 200px;
+            height: 260px;
         }
     }
 }
@@ -53,6 +53,15 @@
         .tile__img {
             opacity: 1;
         }
+
+        .tile__arrow {
+            color: $light;
+
+            @include sm {
+                border-color: rgba($light, 0);
+                background-color: rgba($light, 0.1);
+            }
+        }
     }
 }
 
@@ -75,6 +84,25 @@
 
     @include sm {
         font-size: toRem(12px);
+    }
+}
+
+.tile__arrow {
+    position: absolute;
+    bottom: 16px;
+    left: calc(50% - 12px);
+    font-size: toRem(12px);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    z-index: 1;
+    transition: $fade-all;
+
+    @include sm {
+        bottom: 32px;
+        border: 1px solid $grey-8;
+        background-color: $grey-9;
+        font-size: toRem(14px);
     }
 }
 

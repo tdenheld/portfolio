@@ -18,17 +18,17 @@ no-grid: true
             <div class="mb-4">
                 <hr class="mxw-50 ml-0">
                 <h3 class="f12 f14-sm">Role</h3>
-                <p class="f18 fw-b">{{ page.role }}</p>
+                <p class="f18">{{ page.role }}</p>
             </div>
             <div class="mb-4">
                 <hr class="mxw-50 ml-0">
                 <h3 class="f12 f14-sm">Technologies</h3>
-                <p class="f18 fw-b">{{ page.technologies }}</p>
+                <p class="f18">{{ page.technologies }}</p>
             </div>
             <div class="mb-4">
                 <hr class="mxw-50 ml-0">
                 <h3 class="f12 f14-sm">When</h3>
-                <p class="f18 fw-b">{{ page.when }}</p>
+                <p class="f18">{{ page.when }}</p>
             </div>
         </div>
     </div>
@@ -37,22 +37,25 @@ no-grid: true
 <section class="section">
     <div class="container">
         <img src="{{ page.hero }}" />
-        {% for entry in page.section %}
+    </div>
+</section>
+
+{% for entry in page.section %}
+<section class="section">
+    <div class="container">
         {% if entry.title %}
-        <div class="txt rich-txt mt-8 mt-16-sm">
+        <div class="txt rich-txt">
             <hr class="mxw-50 ml-0">
             <h2>{{ entry.title }}</h2>
             <p>{{ entry.description }}</p>
         </div>
         {% endif %}
         {% if entry.img %}
-        <div class="pa-4 pa-8-sm" style="background-color: {{ page.bg-color }};">
-            <img src="{{ entry.img }}" alt="{{ entry.title }}" />
-        </div>
+        <img src="{{ entry.img }}" alt="{{ entry.title }}" />
         {% endif %}
-        {% endfor %}
     </div>
 </section>
+{% endfor %}
 
 <section class="section">
     <div class="container">

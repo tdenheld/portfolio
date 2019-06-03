@@ -4,8 +4,9 @@
             {{ entry.title }}
         </h2>
         <p class="tile__role">
-            {{ entry.role }}
+            {{ entry.when }}
         </p>
+        <div class="tile__arrow">→</div>
     </div>
     <figure class="tile__img">
         {% include svg/logos/{{ entry.title | replace: " ", "-" | downcase }}.svg %}
