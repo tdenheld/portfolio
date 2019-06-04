@@ -34,7 +34,12 @@
     }
 
     &:hover {
-        opacity: 0.6;
+        @keyframes scale-io {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.17);}
+            100% {transform: scale(1);}
+        }
+        animation: scale-io 380ms $ease both;
     }
 }
 
