@@ -41,7 +41,7 @@ no-grid: true
 </section>
 
 {% for entry in page.section %}
-<section class="section">
+<section class="section {{ entry.class }}">
     <div class="container">
         {% if entry.title %}
         <div class="txt rich-txt">
