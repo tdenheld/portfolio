@@ -15,7 +15,11 @@
 
 .modal__container {
     @include center;
-    height: 100vh;
+    height: calc(100vh - 60px);
+
+    @include sm {
+        height: 100vh;
+    }
 }
 
 .modal__wrapper {

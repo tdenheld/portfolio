@@ -129,10 +129,11 @@ imgHover();
 // ------------------------------------------------------------
 function settings() {
     const obj = $('.js-settings');
-    const modal = '.js-settings-modal';
+    const modal = $('.js-settings-modal');
     const submit = $('.js-settings-submit');
-    const close = $('.js-settings-close');
-    const stag = '.js-settings-stag';
+    const closeModal = $('.js-settings-close, .js-settings-submit');
+    const closeBtn = $('.js-settings-close');
+    const stag = $('.js-settings-stag');
     const main = $('.js-main');
     let scrollPos;
 
@@ -171,7 +172,7 @@ function settings() {
         const tl = new TimelineMax({
             paused: true
         });
-        tl.to(modal, 0.7, {
+        tl.to(modal, 0.5, {
             ease: Power4.easeInOut,
             scaleX: 1,
             display: 'block',
@@ -179,24 +180,23 @@ function settings() {
                 body.lock();
             }
         }).staggerFromTo(stag, 0.5, {
-            ease: Elastic.easeOut.config(1, 0.3),
-            delay: 1,
             opacity: 0,
             x: 40
         }, {
+            ease: Power3.easeInOut,
             opacity: 1,
             x: 0
-        }, 0.07).to(close, 0.4, {
+        }, 0.05).to(closeBtn, 0.4, {
             ease: Power3.easeInOut,
             scale: 1,
-        }, '-=1.08');
+        }, '-=1');
 
         // execution
         obj.click(() => {
-            tl.play();
+            tl.play().timeScale(1);
         });
-        close.click(function () {
-            tl.reverse();
+        closeModal.click(function () {
+            tl.reverse().timeScale(1.75);
             body.free();
         });
     };

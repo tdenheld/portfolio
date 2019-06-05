@@ -1,6 +1,6 @@
 .button {
     padding: 0 $gutter;
-    min-width: 180px;
+    width: 50%;
     height: 36px;
     font-family: $mono;
     @include font(14px, normal, 30px);
