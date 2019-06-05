@@ -180,16 +180,18 @@ function settings() {
                 body.lock();
             }
         }).staggerFromTo(stag, 0.5, {
+            lazy: true,
+            autoCSS: true,
             opacity: 0,
             x: 40
         }, {
             ease: Power3.easeInOut,
             opacity: 1,
             x: 0
-        }, 0.05).to(closeBtn, 0.4, {
+        }, 0.05, '-=0.2').to(closeBtn, 0.4, {
             ease: Power3.easeInOut,
             scale: 1,
-        }, '-=1');
+        }, '-=0.45');
 
         // execution
         obj.click(() => {
