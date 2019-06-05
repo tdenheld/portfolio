@@ -169,9 +169,9 @@ function settings() {
             opacity: 1,
             scale: 1,
             display: 'block',
-            onComplete() {
-                body.lock();
-            }
+            // onComplete() {
+            //     body.lock();
+            // }
         }).to(close, 0.4, {
             ease: Power3.easeInOut,
             scale: 1,
@@ -183,7 +183,7 @@ function settings() {
         });
         close.click(function () {
             tl.reverse();
-            body.free();
+            // body.free();
         });
     };
 };

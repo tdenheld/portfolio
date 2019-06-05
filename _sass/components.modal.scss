@@ -6,12 +6,15 @@
     transform-origin: 100% 0%;
     background-color: $light;
     z-index: 999;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
 
     @include sm {
         transform-origin: 50% 50%;
     }
+}
+
+.modal--scroll {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .modal__close {
