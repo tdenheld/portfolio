@@ -130,7 +130,9 @@ imgHover();
 function settings() {
     const obj = $('.js-settings');
     const modal = '.js-settings-modal';
+    const submit = $('.js-settings-submit');
     const close = $('.js-settings-close');
+    const stag = '.js-settings-stag';
     const main = $('.js-main');
     let scrollPos;
 
@@ -138,25 +140,30 @@ function settings() {
 
         // body scroll lock
         const body = {
+            noTouch: $('.no-touch'),
             lock() {
-                scrollPos = window.scrollY;
-                $('body').css({
-                    'position': 'fixed',
-                    'top': -scrollPos,
-                    'overflow-y': 'hidden',
-                    'width': '100%',
-                    'backface-visibility': 'hidden'
-                });
-                main.css({
-                    'opacity': '0'
-                });
+                if (this.noTouch[0]) {
+                    scrollPos = window.scrollY;
+                    $('body').css({
+                        'position': 'fixed',
+                        'top': -scrollPos,
+                        'overflow-y': 'hidden',
+                        'width': '100%',
+                        'backface-visibility': 'hidden'
+                    });
+                    main.css({
+                        'opacity': '0'
+                    });
+                };
             },
             free() {
-                $('body').removeAttr('style');
-                $(window).scrollTop(scrollPos);
-                main.css({
-                    'opacity': '1'
-                });
+                if (this.noTouch[0]) {
+                    $('body').removeAttr('style');
+                    $(window).scrollTop(scrollPos);
+                    main.css({
+                        'opacity': '1'
+                    })
+                };
             }
         };
 
@@ -164,18 +171,25 @@ function settings() {
         const tl = new TimelineMax({
             paused: true
         });
-        tl.to(modal, 0.6, {
-            ease: Power3.easeInOut,
-            opacity: 1,
-            scale: 1,
+        tl.to(modal, 0.7, {
+            ease: Power4.easeInOut,
+            scaleX: 1,
             display: 'block',
-            // onComplete() {
-            //     body.lock();
-            // }
-        }).to(close, 0.4, {
+            onComplete() {
+                body.lock();
+            }
+        }).staggerFromTo(stag, 0.5, {
+            ease: Elastic.easeOut.config(1, 0.3),
+            delay: 1,
+            opacity: 0,
+            x: 40
+        }, {
+            opacity: 1,
+            x: 0
+        }, 0.07).to(close, 0.4, {
             ease: Power3.easeInOut,
             scale: 1,
-        }, '-=0.2');
+        }, '-=1.08');
 
         // execution
         obj.click(() => {
@@ -183,7 +197,7 @@ function settings() {
         });
         close.click(function () {
             tl.reverse();
-            // body.free();
+            body.free();
         });
     };
 };

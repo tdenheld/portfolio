@@ -1,20 +1,26 @@
 .modal {
     @include full(fixed);
     display: none;
-    opacity: 0;
-    transform: scale(0.5);
+    transform: scaleX(0);
     transform-origin: 100% 0%;
-    background-color: $light;
+    background-color: $grey-9;
     z-index: 999;
-
-    @include sm {
-        transform-origin: 50% 50%;
-    }
+    overflow: hidden;
 }
 
 .modal--scroll {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+}
+
+.modal__container {
+    @include center;
+    height: 100vh;
+}
+
+.modal__wrapper {
+    width: 100%;
+    max-width: 400px;
 }
 
 .modal__close {
