@@ -1,5 +1,5 @@
 .dark {
-    background-color: $dark-grey;
+    background-color: $brand;
     color: $grey-8;
 
     svg {
@@ -24,7 +24,7 @@
     }
 
     .tile {
-        background-color: $dark-grey;
+        background-color: $brand;
         border-color: $light;
 
         &:hover {
@@ -32,16 +32,16 @@
                 background-color: $light;
 
                 svg {
-                    fill: $dark-grey;
+                    fill: $brand;
                 }
             }
 
             .tile__arrow {
-                color: $dark-grey;
+                color: $brand;
 
                 @include sm {
-                    border-color: rgba($dark-grey, 0);
-                    background-color: rgba($dark-grey, 0.1);
+                    border-color: rgba($brand, 0);
+                    background-color: rgba($brand, 0.1);
                 }
             }
         }
@@ -55,7 +55,7 @@
     }
 
     .modal {
-        background-color: $dark-grey;
+        background-color: $brand;
     }
 
     .modal__close {
@@ -66,7 +66,7 @@
 
     .button {
         background-color: $light;
-        color: $dark-grey;
+        color: $brand;
     }
 
     .toggle__button {
