@@ -1,0 +1,85 @@
+.dark {
+    background-color: $dark-grey;
+    color: $grey-8;
+
+    svg {
+        fill: $grey-8;
+    }
+
+    .header__logo {
+        svg {
+            stroke: $grey-8;
+        }
+    }
+
+    .header__item,
+    .link {
+        &:after {
+            border-color: $light;
+        }
+    }
+
+    .grid__col {
+        border-color: rgba($light, 0.07);
+    }
+
+    .tile {
+        background-color: $dark-grey;
+        border-color: $light;
+
+        &:hover {
+            .tile__img {
+                background-color: $light;
+
+                svg {
+                    fill: $dark-grey;
+                }
+            }
+
+            .tile__arrow {
+                color: $dark-grey;
+
+                @include sm {
+                    border-color: rgba($dark-grey, 0);
+                    background-color: rgba($dark-grey, 0.1);
+                }
+            }
+        }
+    }
+
+    .tile__arrow {  
+        @include sm {
+            border-color: rgba($light, 0.15);
+            background-color: rgba($light, 0.075);
+        }
+    }
+
+    .modal {
+        background-color: $dark-grey;
+    }
+
+    .modal__close {
+        svg {
+            stroke: $light;
+        }
+    }
+
+    .button {
+        background-color: $light;
+        color: $dark-grey;
+    }
+
+    .toggle__button {
+        border-color: $light;
+        color: $light;
+
+        &:hover,
+        &.is-active {
+            background-color: rgba($light, 0.1);
+        }
+    }
+
+    hr {
+        background-color: $light;
+    }
+}
