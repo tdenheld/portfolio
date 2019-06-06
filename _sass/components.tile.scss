@@ -37,6 +37,7 @@
     }
 
     @include sm {
+        margin: 0;
         padding: $gutter;
         height: 240px;
 

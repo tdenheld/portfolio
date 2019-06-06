@@ -313,16 +313,16 @@
                 <h2 class="txt__heading mb-6 js-settings-stag">Settings</h2>
                 <fieldset class="mb-6">
                     <legend class="mb-1 js-settings-stag">Appearance</legend>
-                    <div class="toggle js-settings-stag">
-                        <button class="toggle__button">Dark</button>
-                        <button class="toggle__button is-active">Light</button>
+                    <div class="toggle js-settings-toggle js-settings-stag" toggle="appearance">
+                        <button class="toggle__button js-settings-btn">Dark</button>
+                        <button class="toggle__button js-settings-btn is-active">Light</button>
                     </div>
                 </fieldset>
                 <fieldset class="mb-6">
                     <legend class="mb-1 js-settings-stag">Typography</legend>
-                    <div class="toggle js-settings-stag">
-                        <button class="toggle__button is-active">Sans</button>
-                        <button class="toggle__button">Serif</button>
+                    <div class="toggle js-settings-toggle js-settings-stag" toggle="typography">
+                        <button class="toggle__button js-settings-btn is-active">Sans</button>
+                        <button class="toggle__button js-settings-btn">Serif</button>
                     </div>
                 </fieldset>
                 <fieldset class="txt-r js-settings-stag">
@@ -336,6 +336,8 @@
     <!-- JAVASCRIPT -->
     <script src="/assets/js/plugins.bundle.min.js"></script>
     <script src="/assets/js/generic.js"></script>
+    <script src="/assets/js/img-hover.js"></script>
+    <script src="/assets/js/settings.js"></script>
 
 </body>
 

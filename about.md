@@ -15,8 +15,8 @@ About 4 years later I wrapped up my BSc, quit the agency job and started freelan
 
 I freelanced for about 6 years. After becoming a dad I wanted a more stable income. Besides I was ready for the next step: to work for a large design agency with big clients on a regular basis. While freelancing, it frustrated me that after delivering I was no longer listened to. Often resulting in mediocre developed products.
 
-So I applied to Digitas and I came to work for Dutch Railways. An account won through a European tender. Much was new to me. Forced to work with Sketch in an Agile environment. I never expected getting so much fun out of working on one large platform like www.ns.nl.
+So I applied to Digitas and I came to work for Dutch Railways. An account won through a European tender. Plenty was new to me. Forced to work with Sketch in an Agile environment. Yet, I never expected getting so much fun out of working on one large platform like <a href="https://ns.nl" target="_blank">ns.nl</a>.
 
-In my spare time I love to play with cameras and synthesizers. Mail me at hoi@tk305.com, google me or check my CV.
+In my spare time I love to play with cameras and synthesizers. Mail me at <a href="mailto:hoi@tk305.com" target="_blank">hoi@tk305.com</a>, google me or check my CV.
 
 

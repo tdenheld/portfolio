@@ -24,4 +24,8 @@
     p {
         @extend .txt__body;
     }
+
+    a {
+        text-decoration: underline;
+    }
 }
