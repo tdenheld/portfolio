@@ -80,34 +80,43 @@ function settings() {
         function toggle() {
             const obj = '.js-settings-toggle';
             const body = $('body');
+            let active;
 
             $(obj).each(function () {
                 const toggleBtn = $('.js-settings-btn', this);
+                const prop = $(this).attr('toggle');
+                body.addClass(localStorage.getItem(prop));
+
+                toggleBtn.each(function () {
+                    const thisVal = $(this).text().toLowerCase();
+                    const localVal = localStorage.getItem(prop);
+
+                    if (thisVal == localVal) {
+                        toggleBtn.removeClass('is-active');
+                        $(this).addClass('is-active');
+                    };
+                });
+
+                function check() {
+                    toggleBtn.each(function () {
+                        if ($(this).hasClass('is-active')) {
+                            active = $(this).text().toLowerCase();
+                        };
+                    });
+                };
 
                 toggleBtn.click(function () {
+                    check();
                     toggleBtn.removeClass('is-active');
                     $(this).toggleClass('is-active');
+
+                    const val = $(this).text().toLowerCase();
+                    localStorage.setItem(prop, val);
+                    body.removeClass(active).addClass(localStorage.getItem(prop));
                 });
             });
         };
         toggle();
-
-        // radio1.click(() => {
-        //     if (dark.hasClass('is-active')) {
-        //         localStorage.setItem('appearance', 'dark');
-        //     } else {
-        //         localStorage.setItem('appearance', 'light');
-        //     };
-        //     $('body').removeClass().addClass(localStorage.getItem('appearance'));
-        // });
-
-        // radio2.click(() => {
-        //     if (serif.hasClass('is-active')) {
-        //         $('body').addClass('serif');
-        //     } else {
-        //         $('body').removeClass('serif');
-        //     };
-        // });
     };
 };
 settings();
