@@ -25,22 +25,22 @@
 }
 
 .header__nav {
+    position: relative;
+    top: -5px;
     display: flex;
     align-items: center;
-    font-size: toRem(16px);
-    line-height: 27px;
-
-    @include sm {
-        font-size: toRem(18px);
-    }
 }
 
 .header__item {
+    @include center;
     margin-left: $gutter;
+    height: 36px;
+    @include font(16px, normal, $lh-solid);
     cursor: pointer;
 
     @include sm {
         margin-left: 32px;
+        font-size: toRem(18px);
     }
 
     svg {
@@ -50,6 +50,16 @@
 }
 
 .header__item--settings {
+    position: relative;
+    top: 1px;
+    width: 36px;
+    margin-left: 16px;
+    margin-right: -8px;
+
+    @include sm {
+        margin-left: 24px;
+    }
+
     &:hover {
         svg {
             transform: rotate(90deg);

@@ -25,7 +25,7 @@ function settings() {
                     'opacity': '0'
                 });
             },
-            free() {
+            unlock() {
                 $('body').removeAttr('style');
                 $(window).scrollTop(this.scrollPos);
                 this.main.css({

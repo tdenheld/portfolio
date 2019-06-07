@@ -29,6 +29,12 @@
     }
 }
 
+.link--nav {
+    &:after {
+        height: 32px;
+    }
+}
+
 .link--arrow {
     font-family: $mono;
     font-size: toRem(14px);
@@ -38,13 +44,18 @@
     }
 
     &:after {
-        width: calc(100% - 18px);
+        width: calc(100% - 22px);
         height: calc(100% + 3px);
-        left: 18px;
+        left: 22px;
 
         @include sm {
-            width: calc(100% - 20px);
-            left: 20px;
+            width: calc(100% - 24px);
+            left: 24px;
         }
+    }
+
+    span {
+        margin-right: 4px;
+        font-family: $mono;
     }
 }
