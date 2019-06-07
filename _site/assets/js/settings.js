@@ -64,7 +64,6 @@ function settings() {
         });
         closeModal.click(function () {
             tl.reverse().timeScale(1.75);
-            body.free();
         });
 
         // store settings to local storage and activate
