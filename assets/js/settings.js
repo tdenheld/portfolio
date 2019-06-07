@@ -10,32 +10,27 @@ function settings() {
         // body scroll lock
         // ------------------------------
         const body = {
-            noTouch: $('.no-touch'),
             main: $('.js-main'),
             scrollPos: window.scrollY,
             lock() {
-                if (this.noTouch[0]) {
-                    this.scrollPos = window.scrollY;
-                    $('body').css({
-                        'position': 'fixed',
-                        'top': -this.scrollPos,
-                        'overflow-y': 'hidden',
-                        'width': '100%',
-                        'backface-visibility': 'hidden'
-                    });
-                    this.main.css({
-                        'opacity': '0'
-                    });
-                };
+                this.scrollPos = window.scrollY;
+                $('body').css({
+                    'position': 'fixed',
+                    'top': -this.scrollPos,
+                    'overflow-y': 'hidden',
+                    'width': '100%',
+                    'backface-visibility': 'hidden'
+                });
+                this.main.css({
+                    'opacity': '0'
+                });
             },
             free() {
-                if (this.noTouch[0]) {
-                    $('body').removeAttr('style');
-                    $(window).scrollTop(this.scrollPos);
-                    this.main.css({
-                        'opacity': '1'
-                    });
-                };
+                $('body').removeAttr('style');
+                $(window).scrollTop(this.scrollPos);
+                this.main.css({
+                    'opacity': '1'
+                });
             }
         };
 
@@ -48,9 +43,6 @@ function settings() {
             ease: Power4.easeInOut,
             scaleX: 1,
             display: 'block',
-            onComplete() {
-                body.lock();
-            }
         }).staggerFromTo(stag, 0.5, {
             lazy: true,
             autoCSS: true,
