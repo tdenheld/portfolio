@@ -4,7 +4,7 @@
 
 @charset "UTF-8";
 
-// custom font
+// sans
 @font-face {
 	font-family: 'tw-sans-serif';
 	src: url('/assets/fonts/tw-regular.otf');
@@ -19,6 +19,7 @@
 	font-style: bold;
 }
 
+// mono
 @font-face {
 	font-family: 'tw-mono';
 	src: url('/assets/fonts/tw-mono.otf');

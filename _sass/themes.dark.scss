@@ -28,14 +28,6 @@
         border-color: $light;
 
         &:hover {
-            .tile__img {
-                background-color: $light;
-
-                svg {
-                    fill: $brand;
-                }
-            }
-
             .tile__arrow {
                 color: $brand;
 
@@ -44,6 +36,14 @@
                     background-color: rgba($brand, 0.1);
                 }
             }
+        }
+    }
+
+    .tile__img {
+        background-color: $light;
+
+        svg {
+            fill: $brand;
         }
     }
 

@@ -79,7 +79,7 @@ function settings() {
         // ------------------------------
         function toggle() {
             const obj = '.js-settings-toggle';
-            const body = $('body');
+            const body = $('html, body');
             let active;
 
             $(obj).each(function () {

@@ -1,0 +1,14 @@
+.serif {
+    font-family: $serif;
+
+    .button,
+    .link,
+    .toggle__button,
+    .tile__role {
+        font-family: $serif;
+    }
+
+    .tile__arrow {
+        font-family: $mono;
+    }
+}
