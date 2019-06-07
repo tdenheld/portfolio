@@ -32,8 +32,8 @@
                 color: $brand;
 
                 @include sm {
-                    border-color: rgba($brand, 0);
-                    background-color: rgba($brand, 0.1);
+                    border-color: rgba($brand, 0.1);
+                    background-color: rgba($brand, 0.05);
                 }
             }
         }
@@ -49,8 +49,8 @@
 
     .tile__arrow {  
         @include sm {
-            border-color: rgba($light, 0.15);
-            background-color: rgba($light, 0.075);
+            border-color: rgba($light, 0);
+            background-color: rgba($light, 0.1);
         }
     }
 

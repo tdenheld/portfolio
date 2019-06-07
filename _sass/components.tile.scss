@@ -79,7 +79,7 @@
     }
 }
 
-.tile__role {
+.tile__subtitle {
     font-family: $mono;
     @include font(10px, normal, $lh-title);
 
@@ -93,6 +93,7 @@
     bottom: 16px;
     left: calc(50% - 12px);
     font-size: toRem(12px);
+    font-family: $mono;
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -113,7 +114,7 @@
     padding: $half-gutter;
     background-color: $brand;
     opacity: 0;
-    transition: $fade-all;
+    transition: opacity 300ms $ease;
 
     svg {
         height: 100%;
