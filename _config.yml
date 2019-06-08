@@ -20,7 +20,6 @@ defaults:
       path: ""
     values:
       layout: "default"
-      title: "Tibor den Held /// Digital Design"
   - scope:
       path: ""
       type: "posts"

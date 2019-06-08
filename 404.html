@@ -1,13 +1,23 @@
 ---
 layout: default
+title: Page not found
 ---
 
 <section class="section">
     <div class="container">
-        <header class="mxw-600">
-            <h1 class="f48 f72-sm fw-b mb-2">Oops!</h1>
-            <p class="f24 f36-sm lh-title mb-2">We can't seem to find the page you're looking for.</p>
-            <p>Error code: 404</p>
+        <header class="mxw-600 mb-4">
+            <h1 class="f48 f72-sm fw-b mb-2">
+                {{ site.data.page-not-found.title }}
+            </h1>
+            <h2 class="f24 f36-sm lh-title">
+                {{ site.data.page-not-found.description }}
+            </h2>
         </header>
+        <p class="mb-4">
+            {{ site.data.page-not-found.error }}
+        </p>
+        <a href="/" class="button button--primairy">
+            {{ site.data.page-not-found.button }}
+        </a>
     </div>
 </section>
