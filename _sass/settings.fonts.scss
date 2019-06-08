@@ -6,15 +6,15 @@
 
 // sans
 @font-face {
-	font-family: 'tw-sans-serif';
-	src: url('/assets/fonts/tw-regular.otf');
+	font-family: 'tw-sans';
+	src: url('/assets/fonts/sans-regular.otf');
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'tw-sans-serif';
-	src: url('/assets/fonts/tw-bold.otf');
+	font-family: 'tw-sans';
+	src: url('/assets/fonts/sans-bold.otf');
 	font-weight: 700;
 	font-style: bold;
 }
@@ -22,7 +22,22 @@
 // mono
 @font-face {
 	font-family: 'tw-mono';
-	src: url('/assets/fonts/tw-mono.otf');
+	src: url('/assets/fonts/mono.otf');
 	font-weight: 400;
 	font-style: normal;
+}
+
+// serif
+@font-face {
+	font-family: 'tw-serif';
+	src: url('/assets/fonts/serif-regular.otf');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'tw-serif';
+	src: url('/assets/fonts/serif-bold.otf');
+	font-weight: 700;
+	font-style: bold;
 }
