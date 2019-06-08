@@ -1,34 +1,7 @@
 .serif {
     font-family: $serif;
 
-    .button,
-    .link,
-    .toggle__button,
-    .tile__subtitle,
-    .mono {
+    .tile__subtitle {
         font-family: $serif;
-    }
-
-    .link--nav {
-        top: 2px;
-
-        &:after {
-            height: 28px;
-        }
-    }
-
-    .arrow-link {
-        span {
-            position: relative;
-            top: 2px;
-
-            @include sm {
-                top: 1px;
-            }
-
-            &:after {
-                height: calc(100% - 2px);
-            }
-        }
     }
 }

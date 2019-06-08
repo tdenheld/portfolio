@@ -17,6 +17,6 @@ I freelanced for about 6 years. After becoming a dad I wanted a more stable inco
 
 So I applied to Digitas and I came to work for Dutch Railways. An account won through a European tender. Plenty was new to me. Forced to work with Sketch in an Agile environment. Yet, I never expected getting so much fun out of working on one large platform like <a href="https://ns.nl" target="_blank">ns.nl</a>.
 
-In my spare time I love to play with cameras and synthesizers. Mail me at <a href="mailto:hoi@tk305.com" target="_blank">hoi@tk305.com</a>, google me or check my CV.
+In my spare time I love to play with cameras and synthesizers. Mail me at <a href="mailto:hoi@tk305.com" target="_blank">hoi@tk305.com</a>, <a href='http://www.google.com/search?q=Tibor+den+Held' target='_blank'>google me</a> or check my <a href="/cv">CV</a>.
 
 
