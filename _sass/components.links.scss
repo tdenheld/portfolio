@@ -35,7 +35,10 @@
     }
 }
 
-.link--arrow {
+.arrow-link {
+    display: inline-flex;
+    align-items: center;
+    height: 36px;
     font-family: $mono;
     font-size: toRem(14px);
 
@@ -43,18 +46,16 @@
         font-size: toRem(16px);
     }
 
-    &:after {
-        width: calc(100% - 18px);
-        height: calc(100% + 3px);
-        left: 18px;
-
-        @include sm {
-            width: calc(100% - 20px);
-            left: 20px;
-        }
+    &:before {
+        font-family: $mono;
+        content: '→';
+        margin-right: $half-gutter;
     }
 
     span {
-        font-family: $mono;
+        @extend .link;
+        &:after {
+            height: calc(100% + 1px);
+        }
     }
 }
