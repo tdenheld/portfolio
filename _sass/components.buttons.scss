@@ -1,4 +1,6 @@
 .button {
+    position: relative;
+    overflow: hidden;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +13,11 @@
     text-align: center;
     border: 1px solid $brand;
     border-radius: 100px;
-    transition: $fade-link;
+    transition: $fade-all;
+
+    &:hover {
+        box-shadow: 0 2px 18px rgba($brand, 0.2);
+    }
 }
 
 .button--primairy {
@@ -29,7 +35,6 @@
         margin-left: 0;
     }
 
-    &:hover,
     &.is-active {
         background-color: rgba($dark-grey, 0.1);
     }
