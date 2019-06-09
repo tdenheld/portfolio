@@ -47,7 +47,7 @@
         }
     }
 
-    .tile__arrow {  
+    .tile__arrow {
         @include sm {
             border-color: rgba($light, 0);
             background-color: rgba($light, 0.1);
@@ -68,17 +68,21 @@
         border-color: $light;
 
         &:hover {
-            box-shadow: 0 2px 18px rgba($light, 0.2);
+            background-color: rgba($light, 0.1);
         }
     }
 
     .button--primairy {
         background-color: $light;
         color: $brand;
+
+        &:hover {
+            background-color: $light;
+            box-shadow: 0 4px 18px rgba($white, 0.18);
+        }
     }
 
     .button--toggle {
-        border-color: $light;
         color: $light;
 
         &.is-active {

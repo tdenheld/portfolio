@@ -16,7 +16,7 @@
     transition: $fade-all;
 
     &:hover {
-        box-shadow: 0 2px 18px rgba($brand, 0.2);
+        background-color: rgba($dark-grey, 0.1);
     }
 }
 
@@ -24,6 +24,11 @@
     border: none;
     background-color: $brand;
     color: $light;
+
+    &:hover {
+        background-color: $brand;
+        box-shadow: 0 4px 18px rgba($brand, 0.36);
+    }
 }
 
 .button--toggle {
