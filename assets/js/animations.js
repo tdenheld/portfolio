@@ -72,4 +72,6 @@ function splitText(className, delay) {
         }, 0.05, "+=0");
     };
 };
-splitText('h1', 0.25);
+$(function(){
+    splitText('h1', 0.25);
+});
