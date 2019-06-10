@@ -7,11 +7,11 @@ description: Fashion by Circle of Gentlemen stands for beautiful qualities and s
 hero: /assets/img/uploads/cg-hero.jpg
 section:
     - title: The Circle
-      description: Concept of the winning design was a menu in the shape of a circle. Which can rotated and clicked to navigate through the website. Besides, the models were clickable and served as a shortcut to the collection page.
+      description: Concept of the winning design was a menu in the shape of a circle. Which uses rotation to navigate the website. Besides, the models were clickable and served as a shortcut to the collection page.
       img: /assets/img/uploads/cg-1.jpg
     - img: /assets/img/uploads/cg-2.jpg
     - title: Bright Side
-      description: In the summer of 2012 we made some style changes. We have moved away from circular navigation. Also, I took the opportunity to make the website lighter.
+      description: In the summer of 2012 we made some style changes. We moved away from circular navigation. Also, I took the opportunity to make the website lighter.
       img: /assets/img/uploads/cg-3.jpg
     - img: /assets/img/uploads/cg-4.jpg
     - title: Flash is dead

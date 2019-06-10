@@ -64,12 +64,12 @@ function splitText(className, delay) {
             // an array of all the divs that wrap each character
             chars = mySplitText.words;
 
-        tl.staggerFrom(chars, 0.7, {
+        tl.staggerFrom(chars, 0.9, {
             opacity: 0,
             y: -15,
             ease: Back.easeOut,
             delay: delay,
-        }, 0.03, "+=0");
+        }, 0.05, "+=0");
     };
 };
-splitText('h1', 0.1);
+splitText('h1', 0.25);
