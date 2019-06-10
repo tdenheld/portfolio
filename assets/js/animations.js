@@ -52,6 +52,7 @@ function liquidHover() {
 };
 liquidHover();
 
+
 // split text
 // ------------------------------------------------------------
 function splitText(className, delay) {
@@ -71,5 +72,4 @@ function splitText(className, delay) {
         }, 0.03, "+=0");
     };
 };
-
 splitText('h1', 0.1);

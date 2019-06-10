@@ -66,10 +66,6 @@
 
     .button {
         border-color: $light;
-
-        &:hover {
-            background-color: rgba($light, 0.1);
-        }
     }
 
     .button--primairy {
