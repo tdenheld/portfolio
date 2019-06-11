@@ -7,7 +7,7 @@ title: About
 
 I made my first digital designs with a <span class="img-hover img-hover--sharp js-img-hover"><u>Sharp MZ-700</u></span> – a computer with tapes to load programs – no kidding! I remember drawing a map of the Netherlands with using only pipes, dashed and slashes. Later, at the age of 15, I discovered photoshop and was blown away about the possibilities.
 
-During my studies (CMD), I started as an intern at a small digital advertising agency. Soon I was developing banners and microsites for clients like Mitsubishi or Greenpeace. On top of that I was offered a contract after my internship.
+During my studies (CMD), I started as an intern at a small digital agency. Soon I was developing banners and microsites for clients like Mitsubishi or Greenpeace. On top of that I was offered a contract after my internship.
 
 ![Portret of Tibor den Held](/assets/img/portret.gif)
 
