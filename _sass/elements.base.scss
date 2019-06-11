@@ -25,12 +25,6 @@ a {
     color: inherit;
 }
 
-h1 {
-    @extend .a;
-    @extend .a-fi;
-    @extend .a-dur-100;
-}
-
 button,
 button:hover,
 button:active,
