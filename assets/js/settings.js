@@ -34,7 +34,7 @@ function settings() {
             }
         };
 
-        // transition
+        // transition of modal
         // ------------------------------
         const tl = new TimelineMax({
             paused: true
@@ -57,7 +57,7 @@ function settings() {
             scale: 1,
         }, '-=0.45');
 
-        // execution
+        // open close modal
         // ------------------------------
         obj.click(() => {
             tl.play().timeScale(1);

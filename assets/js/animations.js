@@ -57,11 +57,10 @@ liquidHover();
 function splitText(className, delay) {
     if ($(className)[0]) {
         var tl = new TimelineMax,
-            mySplitText = new SplitText(className, {
-                type: 'words,chars'
+            st = new SplitText(className, {
+                type: 'words'
             }),
-            // an array of all the divs that wrap each character
-            chars = mySplitText.words;
+            chars = st.words;
 
         tl.staggerFrom(chars, 0.9, {
             opacity: 0,
