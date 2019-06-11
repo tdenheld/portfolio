@@ -53,6 +53,10 @@
     &:hover {
         .tile__img {
             opacity: 1;
+
+            svg {
+                transform: scale(1);
+            }
         }
 
         .tile__arrow {
@@ -119,5 +123,7 @@
     svg {
         height: 100%;
         fill: $light;
+        transform: scale(0.85);
+        transition: transform 1.5s $ease-out;
     }
 }
