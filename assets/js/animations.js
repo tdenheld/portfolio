@@ -17,7 +17,6 @@ function liquidHover() {
                 mySplitText = new SplitText(obj, {
                     type: 'words,chars'
                 }),
-                // an array of all the divs that wrap each character
                 chars = mySplitText.chars;
 
             tl.staggerFromTo(chars, 0.3, {
