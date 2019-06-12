@@ -3,6 +3,12 @@
 function liquidHover() {
     const liquid = $('.js-liquid-hover');
 
+    if (liquid[0] && $('.no-touch')[0]) {
+        liquid.each(function () {
+            tween(this);
+        });
+    };
+
     function tween(className) {
         const obj = $('span', className);
         const newY = $(className).attr('y');
@@ -42,19 +48,13 @@ function liquidHover() {
 
         $(className).hoverIntent(handlerIn, handlerOut);
     };
-
-    if (liquid[0]) {
-        liquid.each(function () {
-            tween(this);
-        });
-    };
 };
 liquidHover();
 
 
 // split text
 // ------------------------------------------------------------
-function splitText(className, delay) {
+function splitText(className) {
     if ($(className)[0]) {
         var tl = new TimelineMax,
             st = new SplitText(className, {
@@ -66,10 +66,9 @@ function splitText(className, delay) {
             opacity: 0,
             y: -15,
             ease: Back.easeOut,
-            delay: delay,
         }, 0.05, "+=0");
     };
 };
 $(function(){
-    splitText('h1', 0.25);
+    splitText('h1');
 });
