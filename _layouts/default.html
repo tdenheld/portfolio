@@ -35,18 +35,18 @@
 
 <body>
 
-    <main class="main js-main a a-fi a-del-50 a-dur-250">
-        {% unless page.no-grid %}
-        {% include grid.html %}
-        {% endunless %}
-
-        {% include header.html %}
-        <div class="content">
-            {{ content }}
-        </div>
-        {% include footer.html %}
-    </main>
-    {% include modal.html %}
+    <div class="full-fixed center js-loader"></div>
+    <div class="js-loaded dn">
+        <main class="main js-main a a-fi a-del-50 a-dur-250">
+            {% include grid.html %}
+            {% include header.html %}
+            <div class="content">
+                {{ content }}
+            </div>
+            {% include footer.html %}
+        </main>
+        {% include modal.html %}
+    </div>
 
     <!-- JAVASCRIPT -->
     <script src="/assets/js/plugins.bundle.min.js"></script>

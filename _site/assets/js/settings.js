@@ -98,6 +98,7 @@ function settings() {
 
                 toggleBtn.click(function () {
                     check();
+                    splitChars('.js-settings-label');
                     toggleBtn.removeClass('is-active');
                     $(this).toggleClass('is-active');
 

@@ -54,7 +54,7 @@ liquidHover();
 
 // split text
 // ------------------------------------------------------------
-function splitText(className) {
+function splitWords(className) {
     if ($(className)[0]) {
         var tl = new TimelineMax,
             st = new SplitText(className, {
@@ -69,6 +69,18 @@ function splitText(className) {
         }, 0.05, "+=0");
     };
 };
-$(function(){
-    splitText('h1');
-});
+
+function splitChars(className) {
+    if ($(className)[0]) {
+        var tl = new TimelineMax,
+            st = new SplitText(className, {
+                type: 'words, chars'
+            }),
+            chars = st.chars;
+
+        tl.staggerFrom(chars, 2, {
+            opacity: 0,
+            ease: Back.easeOut,
+        }, 0.01, "+=0");
+    };
+};

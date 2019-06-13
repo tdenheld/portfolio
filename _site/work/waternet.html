@@ -35,9 +35,10 @@
 
 <body>
 
-    <main class="main js-main a a-fi a-del-50 a-dur-250">
-        
-        <div class="container grid">
+    <div class="full-fixed center js-loader"></div>
+    <div class="js-loaded dn">
+        <main class="main js-main a a-fi a-del-50 a-dur-250">
+            <div class="container grid">
     <div class="grid__col"></div>
     <div class="grid__col"></div>
     <div class="grid__col"></div>
@@ -51,9 +52,7 @@
     <div class="grid__col"></div>
     <div class="grid__col"></div>
 </div>
-        
-
-        <header class="header">
+            <header class="header">
     <div class="container header__container">
         <figure class="header__logo">
             <a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69 77">
@@ -82,8 +81,8 @@
         </div>
     </div>
 </header>
-        <div class="content">
-            <section class="section">
+            <div class="content">
+                <section class="section">
     <div class="container">
         <div class="txt rich-txt">
             <h1>Waternet</h1>
@@ -110,7 +109,7 @@
                 <h3 class="meta">When</h3>
                 <p class="f18">2013</p>
             </li>
-        </div>
+        </ul>
     </div>
 </section>
 
@@ -244,8 +243,8 @@
         </div>
     </div>
 </section>
-        </div>
-        <footer class="footer container">
+            </div>
+            <footer class="footer container">
     <div class="footer__grid">
         <div class="footer__soci">
             
@@ -297,8 +296,8 @@
         </p>
     </div>
 </footer>
-    </main>
-    <div class="modal js-settings-modal">
+        </main>
+        <div class="modal js-settings-modal">
     <div class="container">
         <div class="modal__close js-settings-close">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37">
@@ -311,9 +310,9 @@
         </div>
         <div class="modal__container">
             <div class="modal__wrapper">
-                <h2 class="txt__heading mb-6 js-settings-stag">Settings</h2>
+                <h2 class="txt__heading mb-6 js-settings-stag js-settings-label">Settings</h2>
                 <fieldset class="mb-6">
-                    <legend class="mb-1 js-settings-stag">Appearance</legend>
+                    <legend class="mb-1 js-settings-stag js-settings-label">Appearance</legend>
                     <div class="toggle js-settings-toggle js-settings-stag" toggle="appearance">
                         <button class="button button--toggle js-settings-btn js-liquid-hover" y="0">
                             <span>Dark</span>
@@ -324,7 +323,7 @@
                     </div>
                 </fieldset>
                 <fieldset class="mb-6">
-                    <legend class="mb-1 js-settings-stag">Typography</legend>
+                    <legend class="mb-1 js-settings-stag js-settings-label">Typography</legend>
                     <div class="toggle js-settings-toggle js-settings-stag" toggle="typography">
                         <button class="button button--toggle js-settings-btn js-liquid-hover is-active" y="0">
                             <span>Sans</span>
@@ -343,6 +342,7 @@
         </div>
     </div>
 </div>
+    </div>
 
     <!-- JAVASCRIPT -->
     <script src="/assets/js/plugins.bundle.min.js"></script>
