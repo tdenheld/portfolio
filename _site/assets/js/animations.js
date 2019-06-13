@@ -69,6 +69,9 @@ function splitWords(className) {
         }, 0.05, "+=0");
     };
 };
+$(function () {
+    splitWords('h1');
+});
 
 function splitChars(className) {
     if ($(className)[0]) {

@@ -99,8 +99,8 @@ function loader() {
 
         // load website
         window.addEventListener('load', function () {
-            TweenLite.to(loader, 0.1, {
-                delay: 0,
+            TweenLite.to(loader, 0.3, {
+                delay: 0.7,
                 ease: Power3.easeInOut,
                 autoAlpha: 0,
                 display: 'none',
@@ -108,7 +108,6 @@ function loader() {
                     TweenLite.set(content, {
                         display: 'block',
                     });
-                    splitWords('h1');
                 }
             });
         });
