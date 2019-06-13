@@ -2,7 +2,6 @@
     display: grid;
     @include full(fixed);
     grid-template-columns: repeat(2, 1fr);
-    z-index: -1;
 
     @include sm {
         grid-template-columns: repeat(4, 1fr);
