@@ -5,9 +5,9 @@ title: About
 
 # Hi, I am Tibor den Held. Raised by two art historians and fascinated with computers since the late 80s.
 
-I made my first digital designs with a <span class="img-hover img-hover--sharp js-img-hover"><u>Sharp MZ-700</u></span> – a computer with tapes to load programs – no kidding! I remember drawing a map of the Netherlands with using only pipes, dashed and slashes. Later, at the age of 15, I discovered photoshop and was blown away about the possibilities.
+I made my first digital designs with a <span class="img-hover img-hover--sharp js-img-hover"><u>Sharp MZ-700</u></span> – a computer with tapes to load programs – no kidding! I remember drawing a map of the Netherlands with using only pipes, dashed and slashes. Later, at the age of 15, I discovered photoshop and the possibilities blew me away.
 
-During my studies (CMD), I started as an intern at a small digital agency. Soon I was developing banners and microsites for clients like Mitsubishi or Greenpeace. On top of that I was offered a contract after my internship.
+During my studies (CMD), I started as an intern at a small digital agency. Soon I was developing banners and microsites for clients like Mitsubishi or Greenpeace. On top of that they offered me a contract after my internship.
 
 ![Portret of Tibor den Held](/assets/img/portret.gif)
 
@@ -16,6 +16,8 @@ About 4 years later I wrapped up my BSc, quit the agency job and started freelan
 I freelanced for about 6 years. After becoming a dad I wanted a more stable income. Besides I was ready for the next step: to work for a large design agency with big clients on a regular basis. While freelancing, it frustrated me that after delivering I was no longer listened to. Often resulting in mediocre developed products.
 
 So I applied to Digitas and I came to work for Dutch Railways. An account won through a European tender. Plenty was new to me. Forced to work with Sketch in an Agile environment. Yet, I never expected getting so much fun out of working on one large platform like <a href="https://ns.nl" target="_blank">ns.nl</a>.
+
+In terms of visual design it is less exciting. The style already existed. Regarding UX it is all the more interesting. Especially the combination with prototyping. I picked up my coding skills, improved it hugely and now design about 70% of the projects directly in HTML. Which is great for development because they can take over a lot of the structure and transitions.
 
 In my spare time I love to play with cameras and synthesizers. Mail me at <a href="mailto:hoi@tk305.com" target="_blank">hoi@tk305.com</a>, <a href='http://www.google.com/search?q=Tibor+den+Held' target='_blank'>google me</a> or check my <a href="/cv">CV</a>.
 
