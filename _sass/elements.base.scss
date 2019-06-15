@@ -5,9 +5,11 @@ body {
     font-family: $sans;
     font-size: 16px;
     font-weight: normal;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
     line-height: $lh-copy;
     color: $brand;
-    -webkit-font-smoothing: antialiased;
 }
 
 
