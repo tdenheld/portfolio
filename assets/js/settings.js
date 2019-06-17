@@ -70,8 +70,28 @@ function settings() {
         // ------------------------------
         function toggle() {
             const obj = '.js-settings-toggle';
+            const label = $('.js-settings-label');
             const body = $('html, body');
             let active;
+
+            function toggleFX() {
+                label.each(function () {
+                    const tl = new TimelineMax,
+                        mySplitText = new SplitText(this, {
+                            type: 'words,chars'
+                        }),
+                        chars = mySplitText.chars;
+
+                    tl.staggerFromTo(chars, 0.6, {
+                        opacity: 0,
+                        x: 4
+                    }, {
+                        opacity: 1,
+                        x: 0,
+                        ease: Back.easeOut
+                    }, 0.03);
+                });
+            };
 
             $(obj).each(function () {
                 const toggleBtn = $('.js-settings-btn', this);
@@ -98,7 +118,7 @@ function settings() {
 
                 toggleBtn.click(function () {
                     check();
-                    splitChars('.js-settings-label');
+                    toggleFX();
                     toggleBtn.removeClass('is-active');
                     $(this).toggleClass('is-active');
 

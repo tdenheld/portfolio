@@ -1,5 +1,29 @@
-// button hover
+// button & link liquid hover effect
 // ------------------------------------------------------------
+function liquidFX(obj, y) {
+    const tl = new TimelineMax,
+        mySplitText = new SplitText(obj, {
+            type: 'words,chars'
+        }),
+        chars = mySplitText.chars;
+
+    tl.staggerFromTo(chars, 0.3, {
+        opacity: 1,
+        y: 0,
+    }, {
+        opacity: 0,
+        y: -y,
+        ease: Power2.easeInOut
+    }, 0.01).staggerFromTo(chars, 0.4, {
+        opacity: 0,
+        y: y
+    }, {
+        opacity: 1,
+        y: 0,
+        ease: Back.easeOut
+    }, 0.02);
+};
+
 function liquidHover() {
     const liquid = $('.js-liquid-hover');
 
@@ -19,27 +43,7 @@ function liquidHover() {
         };
 
         function handlerIn() {
-            const tl = new TimelineMax,
-                mySplitText = new SplitText(obj, {
-                    type: 'words,chars'
-                }),
-                chars = mySplitText.chars;
-
-            tl.staggerFromTo(chars, 0.3, {
-                opacity: 1,
-                y: 0,
-            }, {
-                opacity: 0,
-                y: -y,
-                ease: Power2.easeInOut
-            }, 0.01).staggerFromTo(chars, 0.4, {
-                opacity: 0,
-                y: y
-            }, {
-                opacity: 1,
-                y: 0,
-                ease: Back.easeOut
-            }, 0.02);
+            liquidFX(obj, y);
         }
 
         function handlerOut() {
