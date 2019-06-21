@@ -56,6 +56,7 @@ function liquidHover() {
 liquidHover();
 
 
+
 // split text
 // ------------------------------------------------------------
 function splitWords(className) {
@@ -73,6 +74,7 @@ function splitWords(className) {
         }, 0.05, '+=0');
     };
 };
+
 $(function () {
     splitWords('h1');
 });
@@ -91,6 +93,7 @@ function splitChars(className) {
         }, 0.01, '+=0');
     };
 };
+
 
 
 // scroll magic

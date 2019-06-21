@@ -1,8 +1,9 @@
 .footer {
-    margin-bottom: $gutter;
+    overflow: hidden;
+    padding-bottom: $gutter;
 
     @include md {
-        margin-bottom: 64px;
+        padding-bottom: 64px;
     }
 }
 
