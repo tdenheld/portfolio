@@ -14,26 +14,26 @@ layout: default
 <section class="section">
     <div class="container">
         <ul class="g g-4-md g-6-lg col-gap-4 row-gap-4">
-            <li>
-                <hr class="mxw-50 ml-0">
-                <h3 class="meta">Role</h3>
-                <p class="f18">{{ page.role }}</p>
+            <li class="js-scroll-magic">
+                <hr class="mxw-50 ml-0 js-tr tr-stag">
+                <h3 class="meta js-tr tr-stag">Role</h3>
+                <p class="f18 js-tr tr-stag">{{ page.role }}</p>
             </li>
-            <li>
-                <hr class="mxw-50 ml-0">
-                <h3 class="meta">Technologies</h3>
-                <p class="f18">{{ page.technologies }}</p>
+            <li class="js-scroll-magic">
+                <hr class="mxw-50 ml-0 js-tr tr-stag">
+                <h3 class="meta js-tr tr-stag">Technologies</h3>
+                <p class="f18 js-tr tr-stag">{{ page.technologies }}</p>
             </li>
-            <li>
-                <hr class="mxw-50 ml-0">
-                <h3 class="meta">When</h3>
-                <p class="f18">{{ page.when }}</p>
+            <li class="js-scroll-magic">
+                <hr class="mxw-50 ml-0 js-tr tr-stag">
+                <h3 class="meta js-tr tr-stag">When</h3>
+                <p class="f18 js-tr tr-stag">{{ page.when }}</p>
             </li>
         </ul>
     </div>
 </section>
 
-<section class="section">
+<section class="section js-scroll-magic js-tr tr-si tr-1000">
     <div class="container">
         <img src="{{ page.hero }}" />
     </div>
@@ -43,14 +43,14 @@ layout: default
 <section class="section {{ entry.class }}">
     <div class="container">
         {% if entry.title %}
-        <div class="txt rich-txt">
-            <hr class="mxw-50 ml-0">
-            <h2>{{ entry.title }}</h2>
-            <p>{{ entry.description }}</p>
+        <div class="txt rich-txt js-scroll-magic">
+            <hr class="mxw-50 ml-0 js-tr tr-stag">
+            <h2 class="js-tr tr-stag">{{ entry.title }}</h2>
+            <p class="js-tr tr-stag">{{ entry.description }}</p>
         </div>
         {% endif %}
         {% if entry.img %}
-        <img src="{{ entry.img }}" alt="{{ entry.title }}" />
+        <img src="{{ entry.img }}" alt="{{ entry.title }}" class="js-scroll-magic js-tr tr-si tr-1000" />
         {% endif %}
     </div>
 </section>
@@ -58,8 +58,8 @@ layout: default
 
 <section class="section">
     <div class="container">
-        <h2 class="txt__subheading mb-2 mb-4-sm">More work</h2>
-        <div class="tile-grid tile-grid--related">
+        <h2 class="txt__subheading mb-2 mb-4-sm js-scroll-magic js-tr tr-stag">More work</h2>
+        <div class="tile-grid tile-grid--related js-scroll-magic">
             {% for entry in site.posts %}
             {% capture i %}{{ page.title }}{% endcapture %}
             {% if entry.title==i %}

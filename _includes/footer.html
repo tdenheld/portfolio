@@ -1,15 +1,15 @@
-<footer class="footer container">
+<footer class="footer container js-scroll-magic" hook="1">
     <div class="footer__grid">
         <div class="footer__soci">
             {% for entry in site.data.footer %}
-            <a href="{{ entry.url }}" target="_blank" class="footer__icon">
+            <a href="{{ entry.url }}" target="_blank" class="footer__icon js-tr tr-stag">
                 <span class="lh-none pos-r {{ entry.pos }}" style="width:{{ entry.width }}px;">
                     {% include svg/icons/{{ entry.icon }}.svg %}
                 </span>
             </a>
             {% endfor %}
         </div>
-        <p class="footer__disclaimer">
+        <p class="footer__disclaimer js-tr tr-stag">
             {{ "now" | date: "%Y" }} © Tibor den Held
         </p>
     </div>
