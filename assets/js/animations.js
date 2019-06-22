@@ -131,7 +131,7 @@ function scrollMagic() {
 
     if (richTxt[0]) {
         richTxt.each(function (i) {
-            $(this).addClass('js-tr tr-si tr-900');
+            $(this).addClass('js-tr tr-fi-up tr-1500');
             scrollTrig(this);
         });
     };

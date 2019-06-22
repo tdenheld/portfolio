@@ -44,7 +44,8 @@
 
 .tr-fi-up {
 	opacity: 0;
-	transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 40px, 0);
+    transition-timing-function: $ease-out;
 	
 	&.is-active {
 		opacity: 1;
