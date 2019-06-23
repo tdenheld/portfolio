@@ -50,7 +50,8 @@ layout: default
         </div>
         {% endif %}
         {% if entry.img %}
-        <img src="{{ entry.img }}" alt="{{ entry.title }}" class="js-scroll-magic js-tr tr-fi-up tr-1500" />
+        <img src="{{ entry.img }}" alt="{{ entry.title }}" 
+             class="{% unless entry.no-scroll-magic %}js-scroll-magic js-tr tr-fi-up tr-1500{% endunless %}" />
         {% endif %}
     </div>
 </section>
