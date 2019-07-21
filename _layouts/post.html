@@ -42,11 +42,17 @@ layout: default
 {% for entry in page.section %}
 <section class="section {{ entry.class }}">
     <div class="container">
-        {% if entry.title %}
+        {% if entry.title or entry.description %}
         <div class="txt rich-txt js-scroll-magic">
+            {% if entry.title %}
             <hr class="mxw-50 ml-0 js-tr tr-stag">
             <h2 class="js-tr tr-stag">{{ entry.title }}</h2>
-            <p class="js-tr tr-stag">{{ entry.description }}</p>
+            {% endif %}
+            {% if entry.description %}
+            {% for paragraph in entry.description %}
+            <p class="js-tr tr-stag">{{ paragraph }}</p>
+            {% endfor %}
+            {% endif %}
         </div>
         {% endif %}
         {% if entry.img %}
