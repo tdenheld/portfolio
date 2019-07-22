@@ -34,6 +34,10 @@
     }
 }
 
+.section--tight {
+    margin-top: -$gutter;
+}
+
 .center {
     position: relative;
     @include center;

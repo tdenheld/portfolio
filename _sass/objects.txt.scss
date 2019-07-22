@@ -2,11 +2,11 @@
     max-width: 844px;
 }
 
-.txt__body {
-    font-size: toRem(18px);
+.txt__heading {
+    @include font(32px, bold, $lh-title);
 
     @include sm {
-        font-size: toRem(24px);
+        font-size: toRem(56px);
     }
 }
 
@@ -18,10 +18,21 @@
     }
 }
 
-.txt__heading {
-    @include font(32px, bold, $lh-title);
+.txt__body {
+    font-size: toRem(18px);
 
     @include sm {
-        font-size: toRem(56px);
+        font-size: toRem(24px);
+    }
+}
+
+.txt__caption {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: toRem(3px);
+    font-size: toRem(10px);
+
+    @include sm {
+        font-size: toRem(12px);
     }
 }

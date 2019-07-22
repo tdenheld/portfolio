@@ -4,19 +4,23 @@ role: Lead Designer<br>Creative Developer
 technologies: HTML5, CSS3, JS<br>Sketch, Figma, Adobe
 when: 2016 – Current
 description: NS is the leading railway company of The Netherlands, transporting over 600.000 people who between them travel over 1.1 million times a day. As their Lead Designer, I continually assist NS in optimizing their online services.
-hero: /assets/img/uploads/ns-hero.jpg
 section:
+    - img: /assets/img/uploads/ns-hero.jpg
     - title: Homepage hero image
       description:
-      - "Since I started as a designer at NS, I've been playing with the idea of putting the planner at the top of the website. With our CRO-team we tested this hypothesis: if we turn over the planner and the hero, the conversion on the hero goes up without shrinking on planned trips."
-      - The results were scintillating. There was no significant difference in planned trips. So that's still going well. But there were 35% more clicks on the hero and 100% more views of the target page per session!
-      img: /assets/img/uploads/ns-home.jpg
+        - "Since I started as a designer at NS, I've been playing with the idea of putting the planner at the top of the website. With our CRO-team we tested this hypothesis: if we turn over the planner and the hero, the conversion on the hero goes up without shrinking on planned trips."
+        - The results were scintillating. There was no significant difference in planned trips. So that's still going well. But there were 35% more clicks on the hero and 100% more views of the target page per session!
+      grid:
+        - caption: Control
+          img: /assets/img/uploads/ns-ab-1.jpg
+        - caption: Variation 1 (+35%)
+          img: /assets/img/uploads/ns-ab-2.jpg
 
     - title: Travel planner
       description: I designed various functionalities such as displaying weather forecast at an arrival location, showing the train composition of all train types, adding several personalized planning options and more. The challenge in adding all these features lies in subtlety. The trick is to limit the cognitive load as much as possible.
-      img: /assets/img/uploads/ns-planner-1.jpg
-      class: mb-4 mb-12-sm
+      img: /assets/img/uploads/ns-home.jpg
 
+    - img: /assets/img/uploads/ns-planner-1.jpg
     - img: /assets/img/uploads/ns-weather.svg
 
     - title: NS Flex

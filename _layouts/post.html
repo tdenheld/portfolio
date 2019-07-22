@@ -33,14 +33,8 @@ layout: default
     </div>
 </section>
 
-<section class="section js-scroll-magic js-tr tr-fi-up tr-1500">
-    <div class="container">
-        <img src="{{ page.hero }}" />
-    </div>
-</section>
-
 {% for entry in page.section %}
-<section class="section {{ entry.class }}">
+<section class="section {{ entry.class }} {% unless entry.title %}section--tight{% endunless %}">
     <div class="container">
         {% if entry.title %}
         <div class="txt rich-txt js-scroll-magic">
@@ -51,10 +45,22 @@ layout: default
             {% endfor %}
         </div>
         {% endif %}
+
         {% if entry.img %}
-        <img src="{{ entry.img }}" 
-            alt="{{ entry.img | replace: '/assets/img/uploads/', '' }}"
+        <img src="{{ entry.img }}" alt="{{ entry.img | replace: '/assets/img/uploads/', '' }}"
             class="{% unless entry.no-scroll-magic %}js-scroll-magic js-tr tr-fi-up tr-1500{% endunless %}" />
+        {% endif %}
+
+        {% if entry.grid %}
+        <div class="g g-2-sm col-gap-4 row-gap-6">
+            {% for col in entry.grid %}
+            <div class="js-scroll-magic">
+                <figcaption class="txt__caption mb-2 js-tr tr-stag">{{ col.caption }}</figcaption>
+                <img src="{{ col.img }}" alt="{{ col.img | replace: '/assets/img/uploads/', '' }}"
+                    class="js-tr tr-stag" />
+            </div>
+            {% endfor %}
+        </div>
         {% endif %}
     </div>
 </section>

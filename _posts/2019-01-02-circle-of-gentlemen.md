@@ -4,8 +4,8 @@ role: Visual / UX Designer
 technologies: Adobe Photoshop<br>Adobe Illustrator
 when: 2010 – 2016
 description: Fashion by Circle of Gentlemen stands for beautiful qualities and sophisticated style brought together in elegant collections. In 2010, I was invited to a website design pitch and won. Untill 2016, we have been working closely together to display a beautiful online collection every six months.
-hero: /assets/img/uploads/cg-hero.jpg
 section:
+    - img: /assets/img/uploads/cg-hero.jpg
     - title: The Circle
       description: Concept of the winning design was a menu in the shape of a circle. Which uses rotation to navigate the website. Besides, the models were clickable and served as a shortcut to the collection page.
       img: /assets/img/uploads/cg-1.jpg
