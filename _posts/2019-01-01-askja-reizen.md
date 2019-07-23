@@ -15,13 +15,13 @@ section:
     - img: /assets/img/uploads/ar-5.jpg
       class: mb-0
     - img: /assets/img/uploads/ar-6.jpg
-      class: mb-0 mt-0
+      class: mv-0
       no-scroll-magic: true
     - img: /assets/img/uploads/ar-7.jpg
-      class: mb-0 mt-0
+      class: mv-0
       no-scroll-magic: true
     - img: /assets/img/uploads/ar-8.jpg
-      class: mb-0 mt-0
+      class: mv-0
       no-scroll-magic: true
     - img: /assets/img/uploads/ar-9.jpg
       class: mt-0

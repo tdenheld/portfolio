@@ -27,10 +27,11 @@
 }
 
 .txt__caption {
-    text-transform: uppercase;
+    font-family: $sans;
     font-weight: bold;
-    letter-spacing: toRem(3px);
     font-size: toRem(10px);
+    text-transform: uppercase;
+    letter-spacing: toRem(3px);
 
     @include sm {
         font-size: toRem(12px);
