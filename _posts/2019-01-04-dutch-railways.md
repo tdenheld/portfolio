@@ -31,5 +31,4 @@ section:
       description: I participated in modernising the NS railway shop, a platform for the best deals for a day out by train. I was free to introduce a new design direction separate from the regular NS styling. Although it had to remain family of the NS brand. I took a bolder and more active approach to ensuring the feeling of being on offer.
       img: /assets/img/uploads/ns-spoordeelwinkel-1.jpg
     - img: /assets/img/uploads/ns-spoordeelwinkel-2.jpg
-    - img: /assets/img/uploads/ns-spoordeelwinkel-3.jpg
 ---
