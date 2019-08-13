@@ -24,7 +24,7 @@ section:
     - img: /assets/img/uploads/ns-weather.svg
 
     - title: NS Flex
-      description: We had to deliver 3 campaign pages from scratch within a couple of months. That's lightning speed for a large enterprise like NS, so we had to use a different way of working than usual. In a pressure cooker with a marketer and UX designer I created a full responsive <a href="https://ns-flex.netlify.com" target="_blank">prototype</a>. Which is been build as a static website by the development team. And it's a success! Sales were hitting target 2 months shy. While not cannibalizing classic subscriptions.
+      description: We had to deliver 3 campaign pages from scratch within a couple of months. That's lightning speed for a large enterprise like NS, so we had to use a different way of working than usual. In a pressure cooker with a marketer and UX designer, I created a full responsive <a href="https://ns-flex.netlify.com" target="_blank">prototype</a>. Which is been build as a static website by the development team. And it's a success! Sales were hitting target 2 months shy. While not cannibalizing classic subscriptions.
       img: /assets/img/uploads/ns-flex.jpg
       
     - title: Spoordeelwinkel
