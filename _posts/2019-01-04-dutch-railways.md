@@ -16,10 +16,12 @@ section:
         - "Since I started as a designer at NS, I've been playing with the idea of putting the planner on top of the website. With our CRO-team we tested this hypothesis: if we turn over the planner and the hero, the conversion on the hero goes up without shrinking on planned trips."
         - The results were scintillating. There was no significant difference in planned trips. But there were 35% more clicks on the hero and 100% more views of the target page per session!
       grid:
-        - caption: Control
-          img: /assets/img/uploads/ns-ab-1.jpg
-        - caption: Variation 1 (+35%)
-          img: /assets/img/uploads/ns-ab-2.jpg
+        class: g-2-sm col-gap-4 row-gap-6
+        items:
+          - caption: Control
+            img: /assets/img/uploads/ns-ab-1.jpg
+          - caption: Variation 1 (+35%)
+            img: /assets/img/uploads/ns-ab-2.jpg
 
     - title: Travel planner
       description: I designed various functionalities such as displaying weather forecast at an arrival location, showing the train composition of all train types, adding several personalized planning options and more. The challenge in adding all these features lies in subtlety. The trick is to limit the cognitive load as much as possible.

@@ -316,7 +316,23 @@
 @for $i from 0 through 12 {
 	.gap-#{$i} { @include spacer($i, grid-gap); }
 	.col-gap-#{$i} { @include spacer($i, grid-column-gap); }
-	.row-gap-#{$i} { @include spacer($i, grid-row-gap); }
+    .row-gap-#{$i} { @include spacer($i, grid-row-gap); }
+        
+    @include sm {
+        .gap-#{$i}-sm { @include spacer($i, grid-gap); }
+	    .col-gap-#{$i}-sm { @include spacer($i, grid-column-gap); }
+        .row-gap-#{$i}-sm { @include spacer($i, grid-row-gap); }
+    }
+    @include md {
+        .gap-#{$i}-md { @include spacer($i, grid-gap); }
+	    .col-gap-#{$i}-md { @include spacer($i, grid-column-gap); }
+        .row-gap-#{$i}-md { @include spacer($i, grid-row-gap); }
+    }
+    @include lg {
+        .gap-#{$i}-lg { @include spacer($i, grid-gap); }
+	    .col-gap-#{$i}-lg { @include spacer($i, grid-column-gap); }
+        .row-gap-#{$i}-lg { @include spacer($i, grid-row-gap); }
+    }
 }
 
 // fractions
