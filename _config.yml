@@ -20,6 +20,9 @@ defaults:
       path: ""
     values:
       layout: "default"
+      og:
+        img: /assets/img/og.png
+        description: Utrecht based digital maker who is fond of designing with code.
   - scope:
       path: ""
       type: "posts"
