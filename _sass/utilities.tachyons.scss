@@ -313,6 +313,14 @@
 
 // gap
 // -------------------------
+.gap-1px { grid-gap: 1px; }
+.col-gap-1px { grid-column-gap: 1px; }
+.row-gap-1px { grid-row-gap: 1px; }
+
+.gap-2px { grid-gap: 2px; }
+.col-gap-2px { grid-column-gap: 2px; }
+.row-gap-2px { grid-row-gap: 2px; }
+
 @for $i from 0 through 12 {
 	.gap-#{$i} { @include spacer($i, grid-gap); }
 	.col-gap-#{$i} { @include spacer($i, grid-column-gap); }

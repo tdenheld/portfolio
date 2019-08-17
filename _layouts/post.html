@@ -46,14 +46,16 @@ layout: default
         </div>
         {% endif %}
 
-        {% if entry.caption %}
-        <figcaption class="txt__caption mb-2 js-scroll-magic js-tr tr-stag">{{ entry.caption }}</figcaption>
-        {% endif %}
+        <div class="js-scroll-magic">
+            {% if entry.caption %}
+            <figcaption class="txt__caption mb-2 js-tr tr-stag">{{ entry.caption }}</figcaption>
+            {% endif %}
 
-        {% if entry.img %}
-        <img src="{{ entry.img }}" alt="{{ entry.img | replace: '/assets/img/uploads/', '' }}"
-            class="{% unless entry.no-scroll-magic %}js-scroll-magic js-tr tr-fi-up tr-1500{% endunless %}" />
-        {% endif %}
+            {% if entry.img %}
+            <img src="{{ entry.img }}" alt="{{ entry.img | replace: '/assets/img/uploads/', '' }}"
+                class="{% unless entry.no-scroll-magic %}js-tr tr-fi-up tr-1500{% endunless %}" />
+            {% endif %}
+        </div>
 
         {% if entry.grid %}
         <div class="g {{ entry.grid.class }}">

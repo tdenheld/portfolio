@@ -16,13 +16,13 @@ section:
     - title: Plentiful images
       description: Askja asked me to renew their website from head to toe. A huge product database of travel experiences was a welcome starting point. An extensive card sorting session has served as the basis of the user experience.
       grid:
-        class: g-2 g-3-md gap-1 gap-4-sm
+        class: g-2 g-3-md gap-2px gap-4-sm
         items:
-          - img: /assets/img/uploads/ar-ph-1.jpg
+          - img: /assets/img/uploads/ar-ph-5.jpg
           - img: /assets/img/uploads/ar-ph-2.jpg
           - img: /assets/img/uploads/ar-ph-3.jpg
           - img: /assets/img/uploads/ar-ph-4.jpg
-          - img: /assets/img/uploads/ar-ph-5.jpg
+          - img: /assets/img/uploads/ar-ph-1.jpg
           - img: /assets/img/uploads/ar-ph-6.jpg
     - title: Users landing
       description: Analytics showed us that users barely land on the homepage. Instead they come from a search engine on a country page directly. The challenge was to make that page feel like a home page – a soft landing.
