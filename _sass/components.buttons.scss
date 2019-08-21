@@ -10,6 +10,7 @@
 
     font-family: $mono;
     @include font(14px, normal, 0);
+    color: $brand;
     text-align: center;
     border: 1px solid $brand;
     border-radius: 100px;
