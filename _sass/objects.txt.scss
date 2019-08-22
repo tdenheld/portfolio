@@ -10,6 +10,13 @@
     }
 }
 
+.txt__heading--xl {
+    @include lg {
+        font-size: toRem(96px);
+        letter-spacing: toRem(-0.9px);
+    }
+}
+
 .txt__subheading {
     @include font(20px, bold, $lh-title);
 
