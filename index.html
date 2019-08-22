@@ -5,15 +5,23 @@ index: true
 <section class="section">
     <div class="container">
         <header>
-            <h1>
-                <span class="f20 f40-sm db">
+            <h1 class="mb-6 mb-8-sm">
+                <div class="txt__body f40-lg">
                     {{ site.data.home.intro.name }}
-                </span>
-                <span class="txt__heading txt__heading--xl">
+                </div>
+                <div class="txt__heading txt__heading--xl">
                     {{ site.data.home.intro.description }}
-                </span>
+                </div>
             </h1>
         </header>
+        <article class="txt js-scroll-magic">
+            <p class="txt__body mb-2 js-tr tr-stag">
+                {{ site.data.home.about.description }}
+            </p>
+            <a href="/about" class="arrow-link js-tr tr-stag">
+                <span>{{ site.data.home.about.link }}</span>
+            </a>
+        </article>
     </div>
 </section>
 
@@ -24,18 +32,5 @@ index: true
             {% include tile.html %}
             {% endfor %}
         </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <article class="txt js-scroll-magic">
-            <p class="txt__body mb-2 js-tr tr-stag">
-                {{ site.data.home.about.description }}
-            </p>
-            <a href="/about" class="arrow-link js-tr tr-stag">
-                <span>{{ site.data.home.about.link }}</span>
-            </a>
-        </article>
     </div>
 </section>

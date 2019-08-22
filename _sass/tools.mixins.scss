@@ -9,8 +9,8 @@
 
 // convert px to rem
 @function toRem($size) {
-  $remSize: $size / 16px;
-  @return #{$remSize}rem;
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
 }
 
 // set font style
