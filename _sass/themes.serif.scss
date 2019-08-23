@@ -1,6 +1,10 @@
 .serif {
     font-family: $serif;
 
+    .txt__heading {
+        letter-spacing: 0;
+    }
+
     .tile__subtitle {
         font-family: $serif;
     }
