@@ -35,7 +35,7 @@ layout: default
 
 {% for entry in page.section %}
 <section class="section {{ entry.class }} {% unless entry.title %}section--tight{% endunless %}">
-    <div class="container">
+    <article class="container">
         {% if entry.title %}
         <div class="txt rich-txt js-scroll-magic">
             <hr class="mxw-50 ml-0 js-tr tr-stag">
@@ -70,7 +70,7 @@ layout: default
             {% endfor %}
         </div>
         {% endif %}
-    </div>
+    </article>
 </section>
 {% endfor %}
 

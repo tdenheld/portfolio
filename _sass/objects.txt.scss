@@ -6,10 +6,11 @@
 // ------------------------
 .txt__heading {
     @include font(36px, bold, $lh-title);
+    letter-spacing: toRem(-0.6px);
 
     @include sm {
         font-size: toRem(60px);
-        line-height: 1.1;
+        letter-spacing: toRem(-1px);
     }
 }
 
@@ -17,6 +18,7 @@
     @include lg {
         font-size: toRem(96px);
         letter-spacing: toRem(-2px);
+        line-height: 1.1;
     }
 }
 
