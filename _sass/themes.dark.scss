@@ -88,6 +88,20 @@ $dark-light: #ccc;
         }
     }
 
+    .rich-txt {
+        img {
+            filter: grayscale(1);
+        }
+    }
+
+    .img-hover {
+        filter: grayscale(1);
+    }
+
+    img {
+        filter: brightness(0.88);
+    }
+
     hr {
         background-color: $dark-light;
     }
