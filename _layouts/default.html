@@ -33,7 +33,7 @@
 
 </head>
 
-<body>
+<body class="{{ page.title | downcase | replace: ' ', '-' }}">
 
     <main class="main js-main a a-fi a-del-50 a-dur-250">
         {% include grid.html %}

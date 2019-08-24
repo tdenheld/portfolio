@@ -1,91 +1,94 @@
+$dark-dark: #222;
+$dark-light: #ccc;
+
 .dark {
-    background-color: $brand;
-    color: $grey-8;
+    background-color: $dark-dark;
+    color: $dark-light;
 
     svg {
-        fill: $grey-8;
+        fill: $dark-light;
     }
 
     .header__logo {
         svg {
-            stroke: $grey-8;
+            stroke: $dark-light;
         }
     }
 
     .header__item,
     .link {
         &:after {
-            border-color: $light;
+            border-color: $dark-light;
         }
     }
 
     .grid__col {
-        border-color: rgba($light, 0.07);
+        border-color: rgba($dark-light, 0.07);
     }
 
     .tile {
-        background-color: $brand;
-        border-color: $light;
+        background-color: $dark-dark;
+        border-color: $dark-light;
 
         &:hover {
             .tile__arrow {
-                color: $brand;
+                color: $dark-dark;
 
                 @include sm {
-                    border-color: rgba($brand, 0.1);
-                    background-color: rgba($brand, 0.05);
+                    border-color: rgba($dark-dark, 0.1);
+                    background-color: rgba($dark-dark, 0.05);
                 }
             }
         }
     }
 
     .tile__img {
-        background-color: $light;
+        background-color: $dark-light;
 
         svg {
-            fill: $brand;
+            fill: $dark-dark;
         }
     }
 
     .tile__arrow {
         @include sm {
-            border-color: rgba($light, 0);
-            background-color: rgba($light, 0.1);
+            border-color: rgba($dark-light, 0);
+            background-color: rgba($dark-light, 0.1);
         }
     }
 
     .modal {
-        background-color: $brand;
+        background-color: $dark-dark;
     }
 
     .modal__close {
         svg {
-            stroke: $light;
+            stroke: $dark-light;
         }
     }
 
     .button {
-        border-color: $light;
+        border-color: $dark-light;
     }
 
     .button--primairy {
-        background-color: $light;
-        color: $brand;
+        background-color: $dark-light;
+        color: $dark-dark;
 
         &:hover {
-            background-color: $light;
+            background-color: $dark-light;
         }
     }
 
     .button--toggle {
-        color: $light;
+        color: $dark-light;
 
         &.is-active {
-            background-color: rgba($light, 0.1);
+            background-color: rgba($dark-light, 0.1);
         }
     }
 
     hr {
-        background-color: $light;
+        background-color: $dark-light;
     }
 }

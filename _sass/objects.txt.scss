@@ -38,7 +38,6 @@
 
 .txt__body {
     font-size: toRem(18px);
-    font-family: $serif;
 
     @include sm {
         font-size: toRem(24px);
@@ -47,7 +46,7 @@
 
 .txt__caption {
     font-family: $sans;
-    font-weight: bold;
+    font-weight: 600;
     font-size: toRem(10px);
     text-transform: uppercase;
     letter-spacing: toRem(3px);
