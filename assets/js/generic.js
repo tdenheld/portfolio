@@ -19,8 +19,8 @@ function updateWindowSize() {
         mobile = false;
     } else {
         mobile = true;
-    };
-};
+    }
+}
 updateWindowSize();
 
 // update when resizing
@@ -38,8 +38,8 @@ function toggle() {
         obj.click(function () {
             $(this).toggleClass('is-active');
         });
-    };
-};
+    }
+}
 
 function radio() {
     const obj = $('.js-radio');
@@ -48,8 +48,8 @@ function radio() {
             obj.removeClass('is-active');
             $(this).toggleClass('is-active');
         });
-    };
-};
+    }
+}
 
 function clearSession() {
     const obj = $('.js-clear-session');
@@ -57,8 +57,8 @@ function clearSession() {
         obj.click(function () {
             sessionStorage.clear();
         });
-    };
-};
+    }
+}
 
 function toggleText() {
     const obj = $('.js-toggle-text');
@@ -71,11 +71,11 @@ function toggleText() {
                     $(this).text(txt);
                 } else {
                     $(this).text(initTxt);
-                };
+                }
             });
         });
-    };
-};
+    }
+}
 
 $(function () {
     toggle();
@@ -83,6 +83,33 @@ $(function () {
     clearSession();
     toggleText();
 });
+
+
+
+// scroll to
+// ------------------------------------------------------------
+function scrollToObject() {
+    const obj = $('.js-scroll-to');
+    const offset = 0;
+
+    if (obj[0]) {
+        obj.click(function () {
+            const element = $(this).attr('href');
+            
+            TweenMax.to(window, .8, {
+                ease: Power3.easeInOut,
+                scrollTo: {
+                    y: element,
+                    offsetY: offset,
+                    autoKill: false,
+                }
+            });
+            return false;
+        });
+    }
+}
+scrollToObject();
+
 
 
 // preloader
@@ -111,6 +138,6 @@ function loader() {
                 }
             });
         });
-    };
-};
+    }
+}
 loader();

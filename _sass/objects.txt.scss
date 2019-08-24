@@ -6,7 +6,7 @@
 // ------------------------
 .txt__heading {
     @include font(36px, bold, $lh-title);
-    letter-spacing: toRem(-0.6px);
+    letter-spacing: toRem(-0.3px);
 
     @include sm {
         font-size: toRem(60px);
