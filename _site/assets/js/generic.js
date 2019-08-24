@@ -90,7 +90,7 @@ $(function () {
 // ------------------------------------------------------------
 function scrollToObject() {
     const obj = $('.js-scroll-to');
-    const offset = 20;
+    const offset = 50;
 
     if (obj[0]) {
         obj.click(function () {

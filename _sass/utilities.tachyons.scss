@@ -786,6 +786,19 @@
 	.lh-copy-lg  { line-height: 1.5; }
 }
 
+// letter spacings
+// ----------------------------------------------------------------------
+.ls-normal { letter-spacing: initial; }
+.ls-min-2 { letter-spacing: toRem(-2px); }
+.ls-min-1 { letter-spacing: toRem(-1px); }
+.ls-min-08 { letter-spacing: toRem(-0.8px); }
+.ls-min-07 { letter-spacing: toRem(-0.7px); }
+.ls-min-06 { letter-spacing: toRem(-0.6px); }
+.ls-min-05 { letter-spacing: toRem(-0.5px); }
+.ls-min-03 { letter-spacing: toRem(-0.3px); }
+.ls-2 { letter-spacing: toRem(2px); }
+.ls-4 { letter-spacing: toRem(4px); }
+
 // font colors
 // ----------------------------------------------------------------------
 .f-brand {color: $brand;}

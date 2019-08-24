@@ -10,11 +10,14 @@
 
     @include sm {
         font-size: toRem(60px);
-        letter-spacing: toRem(-1px);
     }
 }
 
 .txt__heading--xl {
+    @include sm {
+        letter-spacing: toRem(-1px);
+    }
+
     @include lg {
         font-size: toRem(96px);
         letter-spacing: toRem(-2px);
