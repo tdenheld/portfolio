@@ -29,6 +29,7 @@
 // ------------------------
 .txt__subheading {
     @include font(24px, bold, $lh-title);
+    letter-spacing: initial;
 
     @include sm {
         font-size: toRem(40px);
@@ -37,6 +38,7 @@
 
 .txt__body {
     font-size: toRem(18px);
+    font-family: $serif;
 
     @include sm {
         font-size: toRem(24px);

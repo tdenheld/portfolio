@@ -36,7 +36,6 @@
     margin-left: $gutter;
     height: 36px;
     @include font(16px, normal, $lh-solid);
-    font-family: $sans;
     cursor: pointer;
 
     @include sm {
