@@ -5,7 +5,6 @@ heading: Hi, I am Tibor den Held. Raised by two art historians and fascinated wi
 
 og:
   img: /assets/img/portret.gif
-
 ---
 
 I made my first digital designs with a <span class="img-hover img-hover--sharp js-img-hover"><u>Sharp MZ-700</u></span> — a computer with tapes to load programs. I remember drawing a map of the Netherlands with using only pipes, dashed and slashes. Later, at the age of 15, I discovered photoshop and the possibilities blew me away.
