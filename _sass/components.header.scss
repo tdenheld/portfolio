@@ -37,6 +37,7 @@
     height: 36px;
     @include font(16px, normal, $lh-solid);
     cursor: pointer;
+    font-family: $sans;
 
     @include sm {
         margin-left: 32px;
