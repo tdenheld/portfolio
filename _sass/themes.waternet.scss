@@ -1,0 +1,90 @@
+.waternet {
+    color: #009ddb;
+
+    svg {
+        fill: #009ddb;
+    }
+
+    .header__logo {
+        svg {
+            stroke: #009ddb;
+        }
+    }
+
+    .header__item,
+    .link {
+        &:after {
+            border-color: #009ddb;
+        }
+    }
+
+    .grid__col {
+        border-color: rgba(#009ddb, 0.1);
+    }
+
+    .tile {
+        background-color: $light;
+        border-color: #009ddb;
+
+        &:hover {
+            .tile__arrow {
+                color: $light;
+
+                @include sm {
+                    border-color: rgba($light, 0.1);
+                    background-color: rgba($light, 0.05);
+                }
+            }
+        }
+    }
+
+    .tile__img {
+        background-color: #009ddb;
+
+        svg {
+            fill: $light;
+        }
+    }
+
+    .tile__arrow {
+        @include sm {
+            border-color: rgba(#009ddb, 0);
+            background-color: rgba(#009ddb, 0.1);
+        }
+    }
+
+    .modal {
+        background-color: $light;
+    }
+
+    .modal__close {
+        svg {
+            stroke: #009ddb;
+        }
+    }
+
+    .button {
+        border-color: #009ddb;
+    }
+
+    .button--primairy {
+        background-color: #009ddb;
+        color: $light;
+
+        &:hover {
+            background-color: #009ddb;
+        }
+    }
+
+    .button--toggle {
+        color: #009ddb;
+
+        &.is-active {
+            background-color: rgba(#009ddb, 0.1);
+        }
+    }
+
+    hr {
+        background-color: #009ddb;
+    }
+}

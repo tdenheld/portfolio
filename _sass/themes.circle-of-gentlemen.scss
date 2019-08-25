@@ -1,0 +1,90 @@
+.circle-of-gentlemen {
+    color: #111;
+
+    svg {
+        fill: #111;
+    }
+
+    .header__logo {
+        svg {
+            stroke: #111;
+        }
+    }
+
+    .header__item,
+    .link {
+        &:after {
+            border-color: #111;
+        }
+    }
+
+    .grid__col {
+        border-color: rgba(#111, 0.07);
+    }
+
+    .tile {
+        background-color: $light;
+        border-color: #111;
+
+        &:hover {
+            .tile__arrow {
+                color: $light;
+
+                @include sm {
+                    border-color: rgba($light, 0.1);
+                    background-color: rgba($light, 0.05);
+                }
+            }
+        }
+    }
+
+    .tile__img {
+        background-color: #111;
+
+        svg {
+            fill: $light;
+        }
+    }
+
+    .tile__arrow {
+        @include sm {
+            border-color: rgba(#111, 0);
+            background-color: rgba(#111, 0.1);
+        }
+    }
+
+    .modal {
+        background-color: $light;
+    }
+
+    .modal__close {
+        svg {
+            stroke: #111;
+        }
+    }
+
+    .button {
+        border-color: #111;
+    }
+
+    .button--primairy {
+        background-color: #111;
+        color: $light;
+
+        &:hover {
+            background-color: #111;
+        }
+    }
+
+    .button--toggle {
+        color: #111;
+
+        &.is-active {
+            background-color: rgba(#111, 0.1);
+        }
+    }
+
+    hr {
+        background-color: #111;
+    }
+}
