@@ -22,7 +22,7 @@ defaults:
       layout: "default"
       og:
         img: /assets/img/og.png
-        description: Utrecht based digital maker who is fond of designing with code.
+        description: Multidisciplinary designer who codes. Working with large online platforms as well as tasteful campaign websites. Currently serving as lead product designer & creative developer at Dutch Railways (NS).
   - scope:
       path: ""
       type: "posts"

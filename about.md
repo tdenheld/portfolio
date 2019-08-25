@@ -5,7 +5,6 @@ heading: Hi, I am Tibor den Held. Raised by two art historians and fascinated wi
 
 og:
   img: /assets/img/portret.gif
-  description: I'm intrigued with digital product design, prototyping and branding. Working with large online platforms as well as tasteful campaign websites. Currently serving as lead product designer & creative developer at Dutch Railways (NS).
 
 ---
 
