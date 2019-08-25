@@ -75,18 +75,8 @@ function splitWords(className) {
     };
 };
 
-function splitHeader() {
-    const obj = 'h1';
-    const words = $(obj).text().split(' ');
-    let amount = words.length;
-    
-    if (amount > 5) {
-        splitWords(obj);
-    };
-};
-
 $(function () {
-    splitHeader();
+    splitWords('.js-split-words');
 });
 
 function splitChars(className) {

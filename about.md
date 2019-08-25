@@ -1,14 +1,13 @@
 ---
 layout: article
 title: About
+heading: Hi, I am Tibor den Held. Raised by two art historians and fascinated with computers since the late 80s.
 
 og:
   img: /assets/img/portret.gif
   description: I'm intrigued with digital product design, prototyping and branding. Working with large online platforms as well as tasteful campaign websites. Currently serving as lead product designer & creative developer at Dutch Railways (NS).
 
 ---
-
-# Hi, I am Tibor den Held. Raised by two art historians and fascinated with computers since the late 80s.
 
 I made my first digital designs with a <span class="img-hover img-hover--sharp js-img-hover"><u>Sharp MZ-700</u></span> — a computer with tapes to load programs. I remember drawing a map of the Netherlands with using only pipes, dashed and slashes. Later, at the age of 15, I discovered photoshop and the possibilities blew me away.
 
