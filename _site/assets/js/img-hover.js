@@ -10,12 +10,12 @@ function imgHover() {
             function add() {
                 link.addClass('is-active');
                 img.addClass('is-active');
-            };
+            }
 
             function remove() {
                 link.removeClass('is-active');
                 img.removeClass('is-active');
-            };
+            }
 
             if ($('.no-touch')[0]) {
                 link.mouseenter(() => {
@@ -29,8 +29,8 @@ function imgHover() {
                     add();
                     setTimeout(remove, 1300);
                 });
-            };
+            }
         });
-    };
-};
+    }
+}
 imgHover();

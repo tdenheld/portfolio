@@ -22,7 +22,7 @@ function liquidFX(obj, y) {
         y: 0,
         ease: Back.easeOut
     }, 0.02);
-};
+}
 
 function liquidHover() {
     const liquid = $('.js-liquid-hover');
@@ -31,7 +31,7 @@ function liquidHover() {
         liquid.each(function () {
             tween(this);
         });
-    };
+    }
 
     function tween(className) {
         const obj = $('span', className);
@@ -40,7 +40,7 @@ function liquidHover() {
 
         if (newY != null) {
             y = newY;
-        };
+        }
 
         function handlerIn() {
             liquidFX(obj, y);
@@ -48,11 +48,11 @@ function liquidHover() {
 
         function handlerOut() {
             return false;
-        };
+        }
 
         $(className).hoverIntent(handlerIn, handlerOut);
-    };
-};
+    }
+}
 liquidHover();
 
 
@@ -72,8 +72,8 @@ function splitWords(className) {
             y: -15,
             ease: Back.easeOut,
         }, 0.05, '+=0');
-    };
-};
+    }
+}
 
 $(function () {
     splitWords('.js-split-words');
@@ -91,8 +91,8 @@ function splitChars(className) {
             opacity: 0,
             ease: Back.easeOut,
         }, 0.01, '+=0');
-    };
-};
+    }
+}
 
 
 
@@ -113,7 +113,7 @@ function scrollMagic() {
         var customHook = $(obj).attr('hook');
         if (customHook != null) {
             hook = customHook;
-        };
+        }
         var scrll = new ScrollMagic.Scene({
                 triggerElement: obj,
             })
@@ -123,25 +123,25 @@ function scrollMagic() {
                 $('.js-tr', obj).toggleClass('is-active');
                 if ($(obj).hasClass('js-tr')) {
                     $(obj).toggleClass('is-active');
-                };
+                }
             })
             //.addIndicators()
             .addTo(controller);
-    };
+    }
 
     if (richTxt[0]) {
         richTxt.each(function (i) {
             $(this).addClass('js-tr tr-fi-up tr-1500');
             scrollTrig(this);
         });
-    };
+    }
 
     if (section[0]) {
         section.each(function (i) {
             scrollTrig(this);
         });
-    };
-};
+    }
+}
 
 $(function () {
     scrollMagic();

@@ -86,6 +86,35 @@ $(function () {
 
 
 
+// body scroll lock
+// ------------------------------------------------------------
+const body = {
+    main: $('.js-main'),
+    scrollPos: window.scrollY,
+    lock() {
+        this.scrollPos = window.scrollY;
+        $('body').css({
+            'position': 'fixed',
+            'top': -this.scrollPos,
+            'overflow-y': 'hidden',
+            'width': '100%',
+            'backface-visibility': 'hidden'
+        });
+        this.main.css({
+            'opacity': '0'
+        });
+    },
+    unlock() {
+        $('body').removeAttr('style');
+        $(window).scrollTop(this.scrollPos);
+        this.main.css({
+            'opacity': '1'
+        });
+    }
+};
+
+
+
 // scroll to
 // ------------------------------------------------------------
 function scrollToObject() {
@@ -95,16 +124,17 @@ function scrollToObject() {
     if (obj[0]) {
         obj.click(function () {
             const element = $(this).attr('href');
-            
-            TweenMax.to(window, .8, {
-                ease: Power3.easeInOut,
-                scrollTo: {
-                    y: element,
-                    offsetY: offset,
-                    autoKill: false,
-                }
-            });
-            return false;
+            if ($(element)[0]) {
+                TweenMax.to(window, .8, {
+                    ease: Power3.easeInOut,
+                    scrollTo: {
+                        y: element,
+                        offsetY: offset,
+                        autoKill: false,
+                    }
+                });
+                return false;
+            };
         });
     }
 }

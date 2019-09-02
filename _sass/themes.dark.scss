@@ -1,4 +1,4 @@
-$dark-dark: #222;
+$dark-dark: #1a1a1a;
 $dark-light: #ccc;
 
 .dark {
@@ -11,7 +11,7 @@ $dark-light: #ccc;
 
     .header__logo {
         svg {
-            stroke: $dark-light;
+            fill: $dark-light;
         }
     }
 
@@ -84,18 +84,8 @@ $dark-light: #ccc;
         color: $dark-light;
 
         &.is-active {
-            background-color: rgba($dark-light, 0.1);
+            background-color: rgba($dark-light, 0.15);
         }
-    }
-
-    .rich-txt {
-        img {
-            filter: grayscale(1);
-        }
-    }
-
-    .img-hover {
-        filter: grayscale(1);
     }
 
     img {

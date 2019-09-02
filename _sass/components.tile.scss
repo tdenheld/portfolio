@@ -106,8 +106,8 @@
 
     @include sm {
         bottom: 32px;
-        border: 1px solid $brand-light-8;
-        background-color: $brand-light-9;
+        border: 1px solid mix($light, $brand, 90%);
+        background-color: mix($light, $brand, 95%);
         font-size: toRem(14px);
     }
 }

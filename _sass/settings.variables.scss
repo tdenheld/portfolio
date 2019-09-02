@@ -50,7 +50,7 @@ $mono: 'tw-mono', 'Courier New', courier;
 $serif: 'tw-serif', 'Palatino', Georgia, Times, serif;
 
 $lh-copy: 1.55;
-$lh-title: 1.2;
+$lh-title: 1.1;
 $lh-solid: 1;
 
 
@@ -63,24 +63,13 @@ $lh-solid: 1;
 $black: #000;
 $white: #fff;
 
-$brand: #05A;
+$brand: #111;
 $brand-dark: mix($black, $brand, 15%);
 
 $bg: #764;
 
 $light:      mix($white, $bg, 90%);
-$dark:       mix($black, $brand, 75%);
-
-$brand-light:       mix($light, $brand, 10%);
-$brand-light-1:     mix($light, $brand, 20%);
-$brand-light-2:     mix($light, $brand, 30%);
-$brand-light-3:     mix($light, $brand, 40%);
-$brand-light-4:     mix($light, $brand, 50%);
-$brand-light-5:     mix($light, $brand, 60%);
-$brand-light-6:     mix($light, $brand, 70%);
-$brand-light-7:     mix($light, $brand, 80%);
-$brand-light-8:     mix($light, $brand, 90%);
-$brand-light-9:     mix($light, $brand, 95%);
+$dark:       mix($black, $brand, 0%);
 
 $grey:       mix($light, $dark, 10%);
 $grey-1:     mix($light, $dark, 20%);

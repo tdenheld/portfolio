@@ -17,10 +17,10 @@
 .header__logo {
     position: relative;
     top: 6px;
+    width: 50px;
 
     svg {
-        stroke: $brand;
-        height: 60px;
+        fill: $brand;
     }
 }
 

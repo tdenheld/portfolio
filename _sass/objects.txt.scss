@@ -2,37 +2,49 @@
     max-width: 844px;
 }
 
-
-// ------------------------
-.txt__heading {
-    @include font(36px, bold, $lh-title);
+.txt__heading-l {
+    @include font(56px, bold, $lh-title);
     letter-spacing: toRem(-0.3px);
 
     @include sm {
-        font-size: toRem(60px);
-    }
-}
-
-.txt__heading--xl {
-    @include sm {
+        font-size: toRem(96px);
         letter-spacing: toRem(-1px);
     }
 
     @include lg {
-        font-size: toRem(96px);
+        font-size: toRem(130px);
         letter-spacing: toRem(-2px);
         line-height: 1.1;
     }
 }
 
+.txt__heading-m {
+    @include font(40px, bold, $lh-title);
+    letter-spacing: toRem(-0.3px);
 
-// ------------------------
-.txt__subheading {
-    @include font(24px, bold, $lh-title);
+    @include sm {
+        font-size: toRem(60px);
+        letter-spacing: toRem(-0.6px);
+    }
+
+    @include lg {
+        font-size: toRem(90px);
+        letter-spacing: toRem(-1px);
+    }
+}
+
+.txt__heading-s {
+    @include font(32px, bold, $lh-title);
     letter-spacing: initial;
 
     @include sm {
         font-size: toRem(40px);
+        letter-spacing: toRem(-0.3px);
+    }
+
+    @include lg {
+        font-size: toRem(60px);
+        letter-spacing: toRem(-0.6px);
     }
 }
 

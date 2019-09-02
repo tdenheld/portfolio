@@ -18,8 +18,8 @@
 }
 
 .grid__col {
-    border-left: 1px solid $brand-light-8;
-    border-right: 1px solid $brand-light-8;
+    border-left: 1px solid mix($light, $brand, 92%);
+    border-right: 1px solid mix($light, $brand, 92%);
     height: 100vh;
 
     @include sm-max {

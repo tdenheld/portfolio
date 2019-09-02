@@ -1,6 +1,6 @@
 .rich-txt {
     h1 {
-        @extend .txt__heading;
+        @extend .txt__heading-m;
         margin-bottom: $one-half-gutter;
 
         @include sm {
@@ -9,7 +9,7 @@
     }
 
     h2 {
-        @extend .txt__subheading;
+        @extend .txt__heading-s;
         margin-bottom: $gutter;
     }
 
