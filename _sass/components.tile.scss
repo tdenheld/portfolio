@@ -3,15 +3,15 @@
     position: relative;
     padding: $gutter 0;
     height: 128px;
-    border-top: 1px solid rgba($brand, 0.2);
+    border-bottom: 1px solid rgba($brand, 0.2);
     overflow: hidden;
 
     @include sm {
         height: 240px;
     }
 
-    &:last-child {
-        border-bottom: 1px solid rgba($brand, 0.2);
+    &:first-child {
+        border-top: 1px solid rgba($brand, 0.2);
     }
 
     &:hover {
