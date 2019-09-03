@@ -15,7 +15,7 @@ index: true
             </h1>
         </header>
         <article class="txt js-scroll-magic">
-            <p class="txt__body mb-2 js-tr tr-stag">
+            <p class="txt__body pb-3-sm js-tr tr-stag">
                 {{ site.data.home.about.description }}
             </p>
         </article>
@@ -23,11 +23,7 @@ index: true
 </section>
 
 <section class="section" id="work">
-    <div class="container">
-        <div class="tile-grid js-scroll-magic">
-            {% for entry in site.posts %}
-            {% include tile.html %}
-            {% endfor %}
-        </div>
-    </div>
+    {% for entry in site.posts %}
+    {% include tile.html %}
+    {% endfor %}
 </section>

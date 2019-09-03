@@ -7,14 +7,13 @@
     letter-spacing: toRem(-0.3px);
 
     @include sm {
-        font-size: toRem(96px);
+        font-size: toRem(90px);
         letter-spacing: toRem(-1px);
     }
 
     @include lg {
-        font-size: toRem(130px);
-        letter-spacing: toRem(-2px);
-        line-height: 1.1;
+        font-size: toRem(120px);
+        letter-spacing: toRem(-1.2px);
     }
 }
 

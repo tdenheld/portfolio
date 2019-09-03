@@ -7,9 +7,13 @@
 
 .content {
     margin-top: 134px;
-    
+
     @include sm {
-        margin-top: 226px;
+        margin-top: 160px;
+    }
+    
+    @include md {
+        margin-top: 210px;
     }
 }
 

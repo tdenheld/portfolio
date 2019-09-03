@@ -1,129 +1,49 @@
-.tile-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    @include sm {
-        grid-gap: $gutter;
-    }
-
-    @include md {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-.tile-grid--related {
-    @include md {
-        grid-template-columns: repeat(3, 1fr);
-
-        .tile {
-            height: 260px;
-        }
-    }
-}
-
 .tile {
+    display: block;
     position: relative;
-    @include center;
-    margin-top: -1px;
-    padding: $half-gutter;
-    height: 180px;
-    border: 1px solid $brand;
-    text-align: center;
+    padding: $gutter 0;
+    height: 128px;
+    border-top: 1px solid rgba($brand, 0.2);
     overflow: hidden;
-    background-color: $light;
-
-    &:nth-child(even) {
-        margin-left: -1px;
-    }
 
     @include sm {
-        margin: 0;
-        padding: $gutter;
         height: 240px;
-
-        &:nth-child(even) {
-            margin: 0;
-        }
     }
 
-    @include md {
-        height: 400px;
+    &:last-child {
+        border-bottom: 1px solid rgba($brand, 0.2);
     }
 
     &:hover {
-        .tile__img {
-            opacity: 1;
-
-            svg {
-                transform: scale(1);
-            }
-        }
-
-        .tile__arrow {
-            color: $light;
-
-            @include sm {
-                border-color: rgba($light, 0);
-                background-color: rgba($light, 0.1);
-            }
-        }
+        background-color: rgba($brand, 0.05);
     }
 }
 
 .tile__title {
-    @include font(16px, normal, $lh-title);
-    margin-bottom: 3px;
-
-    @include xs {
-        font-size: toRem(18px);
-    }
+    @include font(24px, 600, $lh-title);
+    margin-bottom: 4px;
 
     @include sm {
-        font-size: toRem(24px);
+        font-size: toRem(36px);
+        letter-spacing: toRem(-0.3px);
+    }
+
+    @include lg {
+        font-size: toRem(48px);
+        letter-spacing: toRem(-0.5px);
     }
 }
 
 .tile__subtitle {
     font-family: $mono;
-    @include font(10px, normal, $lh-title);
+    @include font(12px, normal, $lh-title);
 
     @include sm {
-        font-size: toRem(12px);
-    }
-}
-
-.tile__arrow {
-    position: absolute;
-    bottom: 16px;
-    left: calc(50% - 12px);
-    font-size: toRem(12px);
-    font-family: $mono;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    z-index: 1;
-    transition: $fade-all;
-
-    @include sm {
-        bottom: 32px;
-        border: 1px solid mix($light, $brand, 90%);
-        background-color: mix($light, $brand, 95%);
         font-size: toRem(14px);
     }
 }
 
-.tile__img {
-    @include center;
-    @include full(absolute);
-    padding: $half-gutter;
-    background-color: $brand;
-    opacity: 0;
-    transition: opacity 300ms $ease;
-
-    svg {
-        height: 100%;
-        fill: $light;
-        transform: scale(0.85);
-        transition: transform 1.5s $ease-out;
-    }
+.tile__arrow {
+    font-size: toRem(20px);
+    font-family: $mono;
 }

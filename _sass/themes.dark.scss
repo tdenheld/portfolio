@@ -22,38 +22,11 @@ $dark-light: #ccc;
         }
     }
 
-    .grid__col {
-        border-color: rgba($dark-light, 0.07);
-    }
-
     .tile {
-        background-color: $dark-dark;
-        border-color: $dark-light;
+        border-color: rgba($dark-light, 0.1);
 
         &:hover {
-            .tile__arrow {
-                color: $dark-dark;
-
-                @include sm {
-                    border-color: rgba($dark-dark, 0.1);
-                    background-color: rgba($dark-dark, 0.05);
-                }
-            }
-        }
-    }
-
-    .tile__img {
-        background-color: $dark-light;
-
-        svg {
-            fill: $dark-dark;
-        }
-    }
-
-    .tile__arrow {
-        @include sm {
-            border-color: rgba($dark-light, 0);
-            background-color: rgba($dark-light, 0.1);
+            background-color: rgba($dark-light, 0.05);
         }
     }
 

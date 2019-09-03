@@ -35,13 +35,13 @@
     @include center;
     margin-left: $gutter;
     height: 36px;
-    @include font(16px, normal, $lh-solid);
+    @include font(14px, normal, $lh-solid);
+    font-family: $mono;
     cursor: pointer;
-    font-family: $sans;
 
     @include sm {
         margin-left: 32px;
-        font-size: toRem(18px);
+        font-size: toRem(16px);
     }
 
     svg {

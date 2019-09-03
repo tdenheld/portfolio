@@ -75,16 +75,11 @@ layout: default
 {% endfor %}
 
 <section class="section">
-    <div class="container">
-        <h2 class="txt__heading-s mb-2 mb-4-sm js-scroll-magic js-tr tr-stag">More work</h2>
-        <div class="tile-grid tile-grid--related js-scroll-magic">
-            {% for entry in site.posts %}
-            {% capture i %}{{ page.title }}{% endcapture %}
-            {% if entry.title==i %}
-            {% continue %}
-            {% endif %}
-            {% include tile.html %}
-            {% endfor %}
-        </div>
-    </div>
+    {% capture i %}{{ page.title }}{% endcapture %}
+    {% for entry in site.posts %}
+    {% if entry.title==i %}
+    {% continue %}
+    {% endif %}
+    {% include tile.html %}
+    {% endfor %}
 </section>
