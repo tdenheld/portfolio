@@ -21,6 +21,6 @@ So I applied to Digitas and I came to work for Dutch Railways. An account won th
 
 In terms of visual design it is less exciting. The style already existed. Regarding UX it is all the more interesting. Especially the combination with prototyping. I picked up my coding skills, improved it hugely and now design about 80% of the projects directly in HTML. Now and then I'm even used as a front-end developer to write production code :)
 
-In my spare time I love to play with cameras and synthesizers. Mail me at <a href="mailto:hoi@tk305.com" target="_blank">hoi@tk305.com</a>, <a href='http://www.google.com/search?q=Tibor+den+Held' target='_blank'>google me</a> or check my <a href="/cv">CV</a>.
+In my spare time I love to play with cameras and synthesizers. Mail me at <a href="mailto:hoi@tk305.com" target="_blank">hoi@tk305.com</a> or google my <a href='http://www.google.com/search?q=Tibor+den+Held' target='_blank'>full name</a>.
 
 
