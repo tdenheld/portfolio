@@ -2,12 +2,12 @@
     display: block;
     position: relative;
     padding: $gutter 0;
-    height: 128px;
+    height: 110px;
     border-bottom: 1px solid rgba($brand, 0.2);
     overflow: hidden;
 
     @include sm {
-        height: 240px;
+        height: 160px;
     }
 
     &:first-child {
