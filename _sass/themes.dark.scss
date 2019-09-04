@@ -23,10 +23,11 @@ $dark-light: #ccc;
     }
 
     .tile {
-        border-color: rgba($dark-light, 0.1);
+        border-color: rgba($dark-light, 0.2);
 
-        &:hover {
-            background-color: rgba($dark-light, 0.05);
+        &:before {
+            background-color: rgba($dark-light, 0.04);
+            transition: opacity 350ms $ease;
         }
     }
 

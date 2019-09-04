@@ -14,8 +14,18 @@
         border-top: 1px solid rgba($brand, 0.2);
     }
 
-    &:hover {
+    &:before {
+        content: '';
+        @include full(absolute);
         background-color: rgba($brand, 0.05);
+        opacity: 0;
+        transition: opacity 2s $ease-out;
+    }
+
+    &:hover {
+        &:before {
+            opacity: 1;
+        }
     }
 }
 
@@ -24,13 +34,8 @@
     margin-bottom: 4px;
 
     @include sm {
-        font-size: toRem(36px);
-        letter-spacing: toRem(-0.3px);
-    }
-
-    @include lg {
-        font-size: toRem(48px);
-        letter-spacing: toRem(-0.5px);
+        font-size: toRem(40px);
+        letter-spacing: toRem(-0.4px);
     }
 }
 
