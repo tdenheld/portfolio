@@ -17,10 +17,10 @@ About 4 years later I wrapped up my BSc, quit the agency job and started freelan
 
 I freelanced for about 6 years. After becoming a dad I wanted a more stable income. Besides I was ready for the next step: to work for a large design agency with big clients on a regular basis. While freelancing, it frustrated me that after delivering I was no longer listened to. Often resulting in mediocre developed products.
 
-So I applied to Digitas and I came to work for Dutch Railways. An account won through a European tender. Plenty was new to me. Forced to work with Sketch in an Agile environment. Dealing with an IT department of about 8 development teams. Yet, I never expected getting so much fun out of working on one large platform like <a href="https://ns.nl" target="_blank">ns.nl</a>.
+So I applied to Digitas and I came to work for Dutch Railways. An account won through a European tender. Plenty was new to me. Forced to work with Sketch in an Agile environment. Dealing with an IT department of about 8 development teams. Yet, I never expected getting so much fun out of working on one large platform like <a href="https://ns.nl" target="_blank" rel="noreferrer">ns.nl</a>.
 
 In terms of visual design it is less exciting. The style already existed. Regarding UX it is all the more interesting. Especially the combination with prototyping. I picked up my coding skills, improved it hugely and now design about 80% of the projects directly in HTML. Now and then I'm even used as a front-end developer to write production code :)
 
-In my spare time I love to play with cameras and synthesizers. Mail me at <a href="mailto:hoi@tk305.com" target="_blank">hoi@tk305.com</a> or google my <a href='http://www.google.com/search?q=Tibor+den+Held' target='_blank'>full name</a>.
+In my spare time I love to play with cameras and synthesizers. Mail me at <a href="mailto:hoi@tk305.com" target="_blank" rel="noreferrer">hoi@tk305.com</a> or google my <a href="http://www.google.com/search?q=Tibor+den+Held" target="_blank" rel="noreferrer">full name</a>.
 
 
