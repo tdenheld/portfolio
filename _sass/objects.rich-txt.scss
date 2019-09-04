@@ -1,9 +1,11 @@
 .rich-txt {
     h1 {
-        @extend .txt__heading-m;
+        @include font(48px, bold, $lh-title);
         margin-bottom: $one-half-gutter;
 
         @include sm {
+            font-size: toRem(96px);
+            letter-spacing: toRem(-0.6px);
             margin-bottom: $double-gutter;
         }
     }

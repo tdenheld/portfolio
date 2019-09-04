@@ -1,11 +1,11 @@
 .serif {
     font-family: $serif;
 
-    .txt__heading-m {
-        letter-spacing: 0;
-    }
-
     .tile__subtitle {
         font-family: $serif;
+    }
+
+    .txt__body {
+        letter-spacing: 0;
     }
 }

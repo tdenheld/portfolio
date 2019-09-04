@@ -3,55 +3,31 @@
 }
 
 .txt__heading-l {
-    @include font(56px, bold, $lh-title);
-    letter-spacing: toRem(-0.3px);
-
-    @include sm {
-        font-size: toRem(90px);
-        letter-spacing: toRem(-1px);
-    }
-
-    @include lg {
-        font-size: toRem(120px);
-        letter-spacing: toRem(-1.2px);
-    }
-}
-
-.txt__heading-m {
-    @include font(40px, bold, $lh-title);
-    letter-spacing: toRem(-0.3px);
+    @include font(36px, bold, $lh-title);
 
     @include sm {
         font-size: toRem(60px);
-        letter-spacing: toRem(-0.6px);
     }
 
     @include lg {
-        font-size: toRem(90px);
-        letter-spacing: toRem(-1px);
+        font-size: toRem(72px);
     }
 }
 
 .txt__heading-s {
-    @include font(32px, bold, $lh-title);
-    letter-spacing: initial;
+    @include font(28px, bold, $lh-title);
 
     @include sm {
-        font-size: toRem(40px);
-        letter-spacing: toRem(-0.3px);
-    }
-
-    @include lg {
-        font-size: toRem(60px);
-        letter-spacing: toRem(-0.6px);
+        font-size: toRem(48px);
     }
 }
 
 .txt__body {
     font-size: toRem(18px);
+    letter-spacing: toRem(0.15px);
 
     @include sm {
-        font-size: toRem(24px);
+        font-size: toRem(22px);
     }
 }
 

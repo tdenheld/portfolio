@@ -2,7 +2,7 @@
     display: block;
     position: relative;
     padding: $gutter 0;
-    height: 110px;
+    height: 108px;
     border-bottom: 1px solid rgba($brand, 0.2);
     overflow: hidden;
 
@@ -30,12 +30,11 @@
 }
 
 .tile__title {
-    @include font(24px, 600, $lh-title);
+    @include font(20px, 600, $lh-title);
     margin-bottom: 4px;
 
     @include sm {
-        font-size: toRem(40px);
-        letter-spacing: toRem(-0.4px);
+        font-size: toRem(24px);
     }
 }
 
