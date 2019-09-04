@@ -2,7 +2,7 @@
     <div class="footer__grid">
         <div class="footer__soci">
             {% for entry in site.data.footer %}
-            <a href="{{ entry.url }}" target="_blank" rel="noreferrer" alt="{{ entry.icon }}" class="footer__icon js-tr tr-stag">
+            <a href="{{ entry.url }}" target="_blank" rel="noreferrer" type="{{ entry.icon }}" class="footer__icon js-tr tr-stag">
                 <span class="lh-none pos-r {{ entry.pos }}" style="width:{{ entry.width }}px;">
                     {% include svg/icons/{{ entry.icon }}.svg %}
                 </span>
