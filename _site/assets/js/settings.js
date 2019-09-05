@@ -65,7 +65,7 @@ function settings() {
 
         $(toggle).each(function () {
             const toggleBtn = $('.js-settings-btn', this);
-            const prop = $(this).attr('toggle');
+            const prop = $(this).attr('data-toggle');
             body.addClass(localStorage.getItem(prop));
 
             toggleBtn.each(function () {

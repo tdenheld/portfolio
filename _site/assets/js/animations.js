@@ -35,7 +35,7 @@ function liquidHover() {
 
     function tween(className) {
         const obj = $('span', className);
-        const newY = $(className).attr('y');
+        const newY = $(className).attr('data-y');
         let y = 6;
 
         if (newY != null) {
@@ -110,7 +110,7 @@ function scrollMagic() {
 
     function scrollTrig(obj) {
         var hook = 0.94;
-        var customHook = $(obj).attr('hook');
+        var customHook = $(obj).attr('data-hook');
         if (customHook != null) {
             hook = customHook;
         }
