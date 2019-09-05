@@ -14,17 +14,10 @@
         border-top: 1px solid rgba($brand, 0.2);
     }
 
-    &:before {
-        content: '';
-        @include full(absolute);
-        background-color: rgba($brand, 0.05);
-        opacity: 0;
-        transition: opacity 2s $ease-out;
-    }
-
     &:hover {
-        &:before {
-            opacity: 1;
+        .link:after {
+            border-bottom: 1px solid rgba($brand, 1);
+            transform: scaleX(1);
         }
     }
 }
@@ -48,6 +41,12 @@
 }
 
 .tile__arrow {
-    font-size: toRem(20px);
+    position: relative;
+    font-size: toRem(16px);
     font-family: $mono;
+
+    @include sm {
+        top: -3px;
+        font-size: toRem(20px);
+    }
 }

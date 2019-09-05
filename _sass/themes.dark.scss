@@ -29,6 +29,12 @@ $dark-light: #ccc;
             background-color: rgba($dark-light, 0.04);
             transition: opacity 350ms $ease;
         }
+
+        &:hover {
+            .link:after {
+                border-color: rgba($dark-light, 1);
+            }
+        }
     }
 
     .modal {

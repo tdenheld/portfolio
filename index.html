@@ -5,7 +5,7 @@ index: true
 <section class="section">
     <div class="container">
         <header class="mb-4 mb-6-sm">
-            <h1 class="f20 f30-sm mb-1 js-split-words">
+            <h1 class="txt__body f20 f30-sm mb-1 js-split-words">
                 {{ site.data.home.name }}
             </h1>
             <p class="txt__heading-l pb-6-sm js-split-words">
@@ -16,7 +16,9 @@ index: true
 </section>
 
 <section class="section" id="work">
-    {% for entry in site.posts %}
-    {% include tile.html %}
-    {% endfor %}
+    <div class="container">
+        {% for entry in site.posts %}
+        {% include tile.html %}
+        {% endfor %}
+    </div>
 </section>

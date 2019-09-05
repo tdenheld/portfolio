@@ -1,15 +1,13 @@
 <a class="tile js-scroll-magic js-tr tr-fi-up tr-1500" href="{{ entry.url }}">
-    <div class="container">
-        <div class="g g-1-m">
-            <header>
-                <h2 class="tile__title js-tr tr-stag">
-                    {{ entry.title }}
-                </h2>
-                <p class="tile__subtitle js-tr tr-stag">
-                    {{ entry.when }}
-                </p>
-            </header>
-            <div class="tile__arrow js-tr tr-stag">→</div>
-        </div>
+    <div class="g g-1-m">
+        <header>
+            <h2 class="tile__title js-tr tr-stag">
+                <span class="link">{{ entry.title }}</span>
+            </h2>
+            <p class="tile__subtitle js-tr tr-stag">
+                {{ entry.when }}
+            </p>
+        </header>
+        <div class="tile__arrow js-tr tr-stag">→</div>
     </div>
 </a>
