@@ -119,7 +119,7 @@ const body = {
 // ------------------------------------------------------------
 function scrollToObject() {
     const obj = $('.js-scroll-to');
-    const offset = 140;
+    const offset = 120;
 
     if (obj[0]) {
         obj.click(function () {
