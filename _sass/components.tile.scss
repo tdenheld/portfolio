@@ -40,10 +40,10 @@
 
 .tile__subtitle {
     font-family: $mono;
-    @include font(12px, normal, $lh-title);
+    @include font(10px, normal, $lh-title);
 
     @include sm {
-        font-size: toRem(14px);
+        font-size: toRem(12px);
     }
 }
 
