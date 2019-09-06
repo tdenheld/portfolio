@@ -3,6 +3,15 @@
 }
 
 .txt__heading-l {
+    @include font(48px, bold, $lh-title);
+
+    @include sm {
+        font-size: toRem(96px);
+        letter-spacing: toRem(-0.6px);
+    }
+}
+
+.txt__heading-m {
     @include font(36px, bold, $lh-title);
 
     @include sm {

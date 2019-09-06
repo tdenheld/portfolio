@@ -38,8 +38,17 @@
     }
 }
 
-.section--tight {
-    margin-top: -$gutter;
+.figure {
+    position: relative;
+    margin-bottom: $gutter;
+
+    @include sm {
+        margin-bottom: 72px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .center {

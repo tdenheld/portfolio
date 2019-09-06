@@ -2,18 +2,16 @@
 layout: default
 ---
 
-<section class="section a a-fi">
-    <div class="container rich-txt">
-        <h1 class="mb-4 mb-6-sm">
-            {{ page.title }}
-        </h1>
-        <p class="txt">{{ page.description }}</p>
-    </div>
-</section>
-
 <section class="section">
     <div class="container">
-        <ul class="g g-4-md g-6-lg col-gap-4 row-gap-4">
+        <header class="section a a-fi">
+            <h1 class="txt__heading-l mb-6 mb-8-sm">
+                {{ page.title }}
+            </h1>
+            <p class="txt txt__body">{{ page.description }}</p>
+        </header>
+
+        <ul class="g g-4-md g-6-lg col-gap-4 row-gap-4 section">
             <li class="js-scroll-magic">
                 <hr class="mxw-50 ml-0 js-tr tr-stag">
                 <h3 class="meta js-tr tr-stag">Role</h3>
@@ -30,13 +28,15 @@ layout: default
                 <p class="txt__body f18-sm js-tr tr-stag">{{ page.when }}</p>
             </li>
         </ul>
+
+        <img src="{{ page.hero }}" alt="{{ page.hero | replace: '/assets/img/uploads/', '' }}"
+            class="js-scroll-magic js-tr tr-fi-up tr-1500" />
     </div>
 </section>
 
 {% for entry in page.section %}
-<section class="section {{ entry.class }} {% unless entry.title %}section--tight{% endunless %}">
-    <article class="container">
-        {% if entry.title %}
+<section class="section">
+    <div class="container">
         <div class="txt rich-txt js-scroll-magic">
             <hr class="mxw-50 ml-0 js-tr tr-stag">
             <h2 class="js-tr tr-stag">{{ entry.title }}</h2>
@@ -44,35 +44,19 @@ layout: default
             <p class="js-tr tr-stag">{{ paragraph }}</p>
             {% endfor %}
         </div>
-        {% endif %}
 
-        <div class="js-scroll-magic">
-            {% if entry.caption %}
-            <figcaption class="txt__caption mb-2 js-tr tr-stag">{{ entry.caption }}</figcaption>
-            {% endif %}
-
-            {% if entry.img %}
-            <figure class="{% unless entry.no-scroll-magic %}js-tr tr-fi-up tr-1500{% endunless %}">
-                <img src="{{ entry.img }}" alt="{{ entry.img | replace: '/assets/img/uploads/', '' }}" />
-            </figure>
-            {% endif %}
-        </div>
-
-        {% if entry.grid %}
-        <div class="g {{ entry.grid.class }}">
-            {% for col in entry.grid.items %}
-            <div class="js-scroll-magic">
-                {% if col.caption %}
-                <figcaption class="txt__caption mb-2 js-tr tr-stag">{{ col.caption }}</figcaption>
+        <div class="g {{ entry.grid }}">
+            {% for item in entry.items %}
+            <figure class="{{ item.class }} {% unless entry.grid %}figure{% endunless %} js-scroll-magic">
+                {% if item.caption %}
+                <figcaption class="txt__caption mb-2 js-tr tr-stag">{{ item.caption }}</figcaption>
                 {% endif %}
-                <figure class="js-tr tr-stag">
-                    <img src="{{ col.img }}" alt="{{ col.img | replace: '/assets/img/uploads/', '' }}" />
-                </figure>
-            </div>
+                <img src="{{ item.img }}" alt="{{ item.img | replace: '/assets/img/uploads/', '' }}"
+                    class="{% unless item.no-scroll-magic %}js-tr tr-fi-up tr-1500{% endunless %}" />
+            </figure>
             {% endfor %}
         </div>
-        {% endif %}
-    </article>
+    </div>
 </section>
 {% endfor %}
 
