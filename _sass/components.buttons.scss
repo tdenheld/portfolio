@@ -21,12 +21,22 @@
     border: none;
     background-color: $brand;
     color: $light;
+
+    &:hover {
+        @keyframes scale-io-btn {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.04);}
+            100% {transform: scale(1);}
+        }
+        animation: scale-io-btn 380ms $ease both;
+    }
 }
 
 .button--toggle {
     margin-left: -1px;
     width: 100%;
     border-radius: 0;
+    @extend .link;
 
     &:first-child {
         margin-left: 0;

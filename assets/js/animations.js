@@ -24,37 +24,6 @@ function liquidFX(obj, y) {
     }, 0.02);
 }
 
-function liquidHover() {
-    const liquid = $('.js-liquid-hover');
-
-    if (liquid[0] && $('.no-touch')[0]) {
-        liquid.each(function () {
-            tween(this);
-        });
-    }
-
-    function tween(className) {
-        const obj = $('span', className);
-        const newY = $(className).attr('data-y');
-        let y = 6;
-
-        if (newY != null) {
-            y = newY;
-        }
-
-        function handlerIn() {
-            liquidFX(obj, y);
-        }
-
-        function handlerOut() {
-            return false;
-        }
-
-        $(className).hoverIntent(handlerIn, handlerOut);
-    }
-}
-liquidHover();
-
 
 
 // split text
