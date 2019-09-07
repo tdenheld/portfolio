@@ -11,10 +11,14 @@ og:
   description: Space, silence and impressive nature have been the basis of Askja Reizen for more than twenty years. It is a concept that appeals to more and more people. No wonder, because an active nature holiday is a relief to counterbalance the hustle and bustle of everyday life.
 
 section:
-    - title: Colors & Typefaces
+    - title: Unsolicited rebranding
+      description: 
+        - The existing visual identity no longer fitted in with. The primary colour was too dark. The accent colour too bright. That's why I took the liberty of making a proposal at the beginning of the design process. The client was happy with the new colour scheme.
+        - Afterwards it turned out that a redesign process for the logo was already underway with another party. A little while after the launch I saw that they replaced it. Fortunately, they did keep the colours and typefaces.
       items:
-        - img: /assets/img/uploads/ar-3.svg
+        - img: /assets/img/uploads/ar-2.svg
         - img: /assets/img/uploads/ar-4.svg
+        - img: /assets/img/uploads/ar-3.svg
         
     - title: Plentiful images
       description: Askja asked me to renew their website from head to toe. A huge product database of travel experiences was a welcome starting point. An extensive card sorting session has served as the basis of the user experience.
