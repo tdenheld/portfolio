@@ -22,7 +22,7 @@
     }
 }
 
-.no-touch {
+.no-touchevents {
     .link:hover {
         &:after {
             border-color: rgba($brand, 1);

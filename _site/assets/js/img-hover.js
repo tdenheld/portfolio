@@ -17,17 +17,17 @@ function imgHover() {
                 img.removeClass('is-active');
             }
 
-            if ($('.no-touch')[0]) {
+            if (Modernizr.touchevents) {
+                link.click(function () {
+                    add();
+                    setTimeout(remove, 1300);
+                });
+            } else {
                 link.mouseenter(() => {
                     add();
                 });
                 link.mouseleave(() => {
                     remove();
-                });
-            } else if ($('.touch')[0]) {
-                link.click(function () {
-                    add();
-                    setTimeout(remove, 1300);
                 });
             }
         });

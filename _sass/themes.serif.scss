@@ -11,7 +11,10 @@
 
     .tile {
         .link:after {
-            height: 30px;
+            height: 26px;
+            @include sm {
+                height: 30px;
+            }
         }
     }
 }
