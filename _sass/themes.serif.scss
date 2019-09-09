@@ -8,4 +8,10 @@
     .txt__body {
         letter-spacing: 0;
     }
+
+    .tile {
+        .link:after {
+            height: 30px;
+        }
+    }
 }

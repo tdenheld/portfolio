@@ -42,11 +42,13 @@
 
 .tile__arrow {
     position: relative;
-    font-size: toRem(16px);
-    font-family: $mono;
+    top: 2px;
 
     @include sm {
-        top: -3px;
-        font-size: toRem(20px);
+        top: 0;
+    }
+
+    svg {
+        fill: $brand;
     }
 }

@@ -8,7 +8,8 @@
 @font-face {
     font-family: 'tw-sans';
     font-display: auto;
-	src: url('/assets/fonts/sans-regular.otf');
+	src: url('/assets/fonts/sans-regular.woff2') format('woff2'),
+         url('/assets/fonts/sans-regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -16,7 +17,8 @@
 @font-face {
     font-family: 'tw-sans';
     font-display: auto;
-	src: url('/assets/fonts/sans-semibold.otf');
+	src: url('/assets/fonts/sans-semibold.woff2') format('woff2'),
+         url('/assets/fonts/sans-semibold.woff') format('woff');
 	font-weight: 600;
 	font-style: normal;
 }
@@ -24,7 +26,8 @@
 @font-face {
     font-family: 'tw-sans';
     font-display: auto;
-	src: url('/assets/fonts/sans-bold.otf');
+    src: url('/assets/fonts/sans-bold.woff2') format('woff2'),
+         url('/assets/fonts/sans-bold.woff') format('woff');
 	font-weight: 700;
 	font-style: bold;
 }
@@ -33,7 +36,8 @@
 @font-face {
     font-family: 'tw-mono';
     font-display: auto;
-	src: url('/assets/fonts/mono.otf');
+	src: url('/assets/fonts/mono.woff2') format('woff2'),
+         url('/assets/fonts/mono.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -42,7 +46,8 @@
 @font-face {
     font-family: 'tw-serif';
     font-display: auto;
-	src: url('/assets/fonts/serif-regular.otf');
+	src: url('/assets/fonts/serif-regular.woff2') format('woff2'),
+         url('/assets/fonts/serif-regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -50,7 +55,8 @@
 @font-face {
     font-family: 'tw-serif';
     font-display: auto;
-	src: url('/assets/fonts/serif-bold.otf');
+	src: url('/assets/fonts/serif-bold.woff2') format('woff2'),
+         url('/assets/fonts/serif-bold.woff') format('woff');
 	font-weight: 700;
 	font-style: bold;
 }

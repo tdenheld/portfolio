@@ -31,10 +31,8 @@
     }
 }
 
-.link--nav {
-    &:after {
-        height: 30px;
-    }
+.link--nav:after {
+    height: 30px;
 }
 
 .arrow-link {

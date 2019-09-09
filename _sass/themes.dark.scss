@@ -16,10 +16,9 @@ $dark-light: #ccc;
     }
 
     .header__item,
-    .link {
-        &:after {
-            border-color: $dark-light;
-        }
+    .link:after,
+    .link:hover:after {
+        border-color: $dark-light;
     }
 
     .tile {
@@ -32,7 +31,7 @@ $dark-light: #ccc;
 
         &:hover {
             .link:after {
-                border-color: rgba($dark-light, 1);
+                border-color: $dark-light;
             }
         }
     }
