@@ -36,7 +36,19 @@
     margin-left: -1px;
     width: 100%;
     border-radius: 0;
-    @extend .link;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid rgba($brand, 0);
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: $fade-link;
+    }
 
     &:first-child {
         margin-left: 0;
@@ -44,5 +56,12 @@
 
     &.is-active {
         background-color: rgba($brand, 0.1);
+    }
+}
+
+.no-touchevents {
+    .button--toggle:hover:after {
+        border-color: $brand;
+        transform: scaleX(1);
     }
 }

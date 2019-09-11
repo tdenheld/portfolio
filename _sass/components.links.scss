@@ -7,32 +7,25 @@
         content: '';
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: calc(100% - 1px);
         top: 0;
         left: 0;
         border-bottom: 1px solid rgba($brand, 0);
         transform: scaleX(0);
         transform-origin: 0 0;
         transition: $fade-link;
-
-        @include sm {
-            width: 100%;
-            left: 0;
-        }
     }
 }
 
 .no-touchevents {
-    .link:hover {
-        &:after {
-            border-color: rgba($brand, 1);
-            transform: scaleX(1);
-        }
+    .link:hover:after {
+        border-color: rgba($brand, 1);
+        transform: scaleX(1);
     }
 }
 
 .link--nav:after {
-    height: 30px;
+    height: calc(100% - 7px);
 }
 
 .arrow-link {
@@ -54,6 +47,7 @@
 
     span {
         @extend .link;
+
         &:after {
             height: calc(100% + 1px);
         }

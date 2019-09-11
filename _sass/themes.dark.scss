@@ -62,12 +62,25 @@ $dark-light: #ccc;
     .button--toggle {
         color: $dark-light;
 
+        &:after,
+        &:hover:after {
+            border-color: $dark-light;
+        }
+
         &.is-active {
             background-color: rgba($dark-light, 0.15);
         }
     }
 
     hr {
+        background-color: $dark-light;
+    }
+
+    .cursor--outer {
+        border-color: rgba($dark-light, 0.7);
+    }
+
+    .cursor--inner {
         background-color: $dark-light;
     }
 }
