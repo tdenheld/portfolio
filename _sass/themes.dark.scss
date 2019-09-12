@@ -77,10 +77,6 @@ $dark-light: #ccc;
     }
 
     .cursor--outer {
-        border-color: rgba($dark-light, 0.7);
-    }
-
-    .cursor--inner {
-        background-color: $dark-light;
+        border-color: rgba($white, 0.5);
     }
 }

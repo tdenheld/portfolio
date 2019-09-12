@@ -18,14 +18,14 @@ function cursor() {
 
     function tracking(obj, t) {
         if ($(obj)[0]) {
-            $(document).mouseenter((e) => {
+            $(window).mouseenter((e) => {
                 fade(obj, 0, 1, 0.1);
                 follow(obj, e.clientX, e.clientY, 0);
             });
-            $(document).mouseleave(() => {
+            $(window).mouseleave(() => {
                 fade(obj, 1, 0, 0.7);
             })
-            $(document).mousemove((e) => {
+            $(window).mousemove((e) => {
                 requestAnimationFrame(() => {
                     follow(obj, e.clientX, e.clientY, t);
                 });
@@ -56,6 +56,6 @@ function cursor() {
             sizing(obj, initSize);
         });
     }
-    hover('#js-cursor-outer', 20);
+    hover('#js-cursor-outer', 80);
 }
 cursor();

@@ -1,17 +1,17 @@
 $cursor-outer-size: 40px;
-$cursor-inner-size: 4px;
+$cursor-inner-size: 6px;
 
-// html,
-// body,
-// a,
-// button,
-// * {
-//     cursor: none;
+html,
+body,
+a,
+button,
+* {
+    cursor: none;
 
-//     &:hover {
-//         cursor: none;
-//     }
-// }
+    &:hover {
+        cursor: none;
+    }
+}
 
 .cursor {
     visibility: hidden;
@@ -36,5 +36,6 @@ $cursor-inner-size: 4px;
     top: -$cursor-inner-size / 2;
     left: -$cursor-inner-size / 2;
     background-color: $brand;
+    border: 1px solid $light;
     border-radius: 50%;
 }
