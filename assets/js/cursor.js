@@ -72,7 +72,7 @@ function cursor() {
 
     // execute functions
     tracking('#js-cursor', 0.7);
-    hover('#js-cursor', 380);
+    hover('#js-cursor', 80);
     // followingImgHover('#js-cursor');
 }
 cursor();
