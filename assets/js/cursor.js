@@ -32,8 +32,7 @@ function cursor() {
             });
         }
     }
-    tracking('#js-cursor-outer', 0.5);
-    tracking('#js-cursor-inner', 0);
+    tracking('#js-cursor', 0.7);
 
     // hover states
     // ------------------------------------------------
@@ -56,6 +55,22 @@ function cursor() {
             sizing(obj, initSize);
         });
     }
-    hover('#js-cursor-outer', 80);
+    hover('#js-cursor', 380);
+
+    // image hover
+    // ------------------------------------------------
+    function followingImgHover(obj) {
+        $('.js-tile').mouseover(function () {
+            $(obj).css({
+                'background-image': 'url(' + $(this).attr('data-img') + ')'
+            });
+        });
+        $('.js-tile').mouseout(function () {
+            $(obj).css({
+                'background-image': 'none'
+            });
+        });
+    }
+    // followingImgHover('#js-cursor');
 }
 cursor();

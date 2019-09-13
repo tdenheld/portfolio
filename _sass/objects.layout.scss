@@ -1,4 +1,7 @@
 .main {
+    position: relative;
+    z-index: 1;
+    
     // push footer to bottom
     display: grid;
     grid-template-rows: 1fr max-content;

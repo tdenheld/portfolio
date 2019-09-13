@@ -1,17 +1,4 @@
-$cursor-outer-size: 40px;
-$cursor-inner-size: 6px;
-
-html,
-body,
-a,
-button,
-* {
-    cursor: none;
-
-    &:hover {
-        cursor: none;
-    }
-}
+$cursor-size: 40px;
 
 .cursor {
     visibility: hidden;
@@ -19,23 +6,12 @@ button,
     z-index: 999999;
     backface-visibility: hidden;
     pointer-events: none;
-}
 
-.cursor--outer {
-    width: $cursor-outer-size;
-    height: $cursor-outer-size;
-    top: -$cursor-outer-size / 2;
-    left: -$cursor-outer-size / 2;
+    width: $cursor-size;
+    height: $cursor-size;
+    top: -$cursor-size / 2;
+    left: -$cursor-size / 2;
     border: 1px solid rgba($brand, 0.7);
     border-radius: 50%;
-}
-
-.cursor--inner {
-    width: $cursor-inner-size;
-    height: $cursor-inner-size;
-    top: -$cursor-inner-size / 2;
-    left: -$cursor-inner-size / 2;
-    background-color: $brand;
-    border: 1px solid $light;
-    border-radius: 50%;
+    @include bg(cover);
 }
