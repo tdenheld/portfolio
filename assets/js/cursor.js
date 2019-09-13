@@ -32,7 +32,6 @@ function cursor() {
             });
         }
     }
-    tracking('#js-cursor', 0.7);
 
     // hover states
     // ------------------------------------------------
@@ -55,7 +54,6 @@ function cursor() {
             sizing(obj, initSize);
         });
     }
-    hover('#js-cursor', 380);
 
     // image hover
     // ------------------------------------------------
@@ -71,6 +69,10 @@ function cursor() {
             });
         });
     }
+
+    // execute functions
+    tracking('#js-cursor', 0.7);
+    hover('#js-cursor', 380);
     // followingImgHover('#js-cursor');
 }
 cursor();
