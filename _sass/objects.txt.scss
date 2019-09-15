@@ -1,5 +1,5 @@
 .txt {
-    max-width: 844px;
+    max-width: 750px;
 }
 
 .txt__heading-l {
@@ -33,10 +33,10 @@
 
 .txt__body {
     font-size: toRem(18px);
-    letter-spacing: toRem(0.15px);
+    letter-spacing: toRem(0.2px);
 
     @include sm {
-        font-size: toRem(22px);
+        font-size: toRem(20px);
     }
 }
 
