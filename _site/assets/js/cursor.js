@@ -1,23 +1,25 @@
 function cursor() {
-    function follow(obj, x, y, t) {
-        TweenMax.to(obj, t, {
-            x: x,
-            y: y,
-            ease: Power4.easeOut
-        });
-    }
+    const obj = '#js-cursor';
 
-    function fade(obj, a, b, t) {
-        TweenMax.fromTo(obj, t, {
-            autoAlpha: a
-        }, {
-            autoAlpha: b,
-            ease: Power4.easeOut
-        });
-    }
+    if ($(obj)[0] && !Modernizr.touchevents) {
+        function follow(obj, x, y, t) {
+            TweenMax.to(obj, t, {
+                x: x,
+                y: y,
+                ease: Power4.easeOut
+            });
+        }
 
-    function tracking(obj, t) {
-        if ($(obj)[0]) {
+        function fade(obj, a, b, t) {
+            TweenMax.fromTo(obj, t, {
+                autoAlpha: a
+            }, {
+                autoAlpha: b,
+                ease: Power4.easeOut
+            });
+        }
+
+        function tracking(obj, t) {
             $(window).mouseenter((e) => {
                 fade(obj, 0, 1, 0.1);
                 follow(obj, e.clientX, e.clientY, 0);
@@ -31,48 +33,48 @@ function cursor() {
                 });
             });
         }
-    }
 
-    // hover states
-    // ------------------------------------------------
-    function sizing(obj, size) {
-        TweenMax.to(obj, 0.5, {
-            width: size,
-            height: size,
-            top: -size / 2,
-            left: -size / 2,
-            ease: Power4.easeOut
-        });
-    }
-
-    function hover(obj, size) {
-        const initSize = $(obj).width();
-        $('a, button, .js-settings-close').mouseover(() => {
-            sizing(obj, size);
-        });
-        $('a, button, .js-settings-close').mouseout(() => {
-            sizing(obj, initSize);
-        });
-    }
-
-    // image hover
-    // ------------------------------------------------
-    function followingImgHover(obj) {
-        $('.js-tile').mouseover(function () {
-            $(obj).css({
-                'background-image': 'url(' + $(this).attr('data-img') + ')'
+        // hover states
+        // ------------------------------------------------
+        function sizing(obj, size) {
+            TweenMax.to(obj, 0.5, {
+                width: size,
+                height: size,
+                top: -size / 2,
+                left: -size / 2,
+                ease: Power4.easeOut
             });
-        });
-        $('.js-tile').mouseout(function () {
-            $(obj).css({
-                'background-image': 'none'
-            });
-        });
-    }
+        }
 
-    // execute functions
-    tracking('#js-cursor', 0.7);
-    hover('#js-cursor', 80);
-    // followingImgHover('#js-cursor');
+        function hover(obj, size) {
+            const initSize = $(obj).width();
+            $('a, button, .js-settings-close').mouseover(() => {
+                sizing(obj, size);
+            });
+            $('a, button, .js-settings-close').mouseout(() => {
+                sizing(obj, initSize);
+            });
+        }
+
+        // image hover
+        // ------------------------------------------------
+        function followingImgHover(obj) {
+            $('.js-tile').mouseover(function () {
+                $(obj).css({
+                    'background-image': 'url(' + $(this).attr('data-img') + ')'
+                });
+            });
+            $('.js-tile').mouseout(function () {
+                $(obj).css({
+                    'background-image': 'none'
+                });
+            });
+        }
+
+        // execute functions
+        tracking(obj, 0.7);
+        hover(obj, 80);
+        // followingImgHover('#js-cursor');
+    }
 }
 cursor();
