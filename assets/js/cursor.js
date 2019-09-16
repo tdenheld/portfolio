@@ -48,10 +48,10 @@ function cursor() {
 
         function hover(obj, size) {
             const initSize = $(obj).width();
-            $('a, button, .js-settings-close').mouseover(() => {
+            $('a, button, .js-settings-close, .js-img-hover u').mouseover(() => {
                 sizing(obj, size);
             });
-            $('a, button, .js-settings-close').mouseout(() => {
+            $('a, button, .js-settings-close, .js-img-hover u').mouseout(() => {
                 sizing(obj, initSize);
             });
         }
