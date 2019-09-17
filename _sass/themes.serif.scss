@@ -1,6 +1,10 @@
 .serif {
     font-family: $serif;
 
+    .serif-ns {
+        display: none;
+    }
+
     .txt__body {
         letter-spacing: 0;
     }
