@@ -1,0 +1,17 @@
+.sans {
+    font-family: $sans;
+
+    .serif-ns {
+        display: inline;
+    }
+
+    .txt__body {
+        letter-spacing: toRem(0.2px);
+    }
+
+    .tile {
+        .link:after {
+            height: calc(100% - 1px);
+        }
+    }
+}
