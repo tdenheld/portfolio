@@ -35,6 +35,13 @@
 
 <body>
 
+    
+    <div class="cursor cursor--tile" id="js-cursor-tile">
+    <div class="cursor__img" id="js-cursor-img"></div>
+    <div class="full-absolute bg-light" id="js-cursor-flash"></div>
+    <div class="cursor__noise"></div>
+</div>
+    
     <main class="main js-main a a-fi a-del-50 a-dur-250">
         <header class="header">
     <div class="container header__container">
@@ -83,9 +90,10 @@
 
 <section class="section offset" id="work">
     <div class="container">
-        
-        <a class="tile js-tile js-scroll-magic js-tr tr-fi-up tr-1500" 
-    data-img="/assets/img/uploads/ns-hero.jpg" href="/cases/dutch-railways">
+        <div id="js-tile-group">
+            
+            <a class="tile js-tile js-scroll-magic js-tr tr-fi-up tr-1500" 
+    data-img="/assets/img/uploads/ns-thumb.jpg" href="/cases/dutch-railways">
 
     <div class="g g-1-m">
         <header>
@@ -101,9 +109,9 @@
         </div>
     </div>
 </a>
-        
-        <a class="tile js-tile js-scroll-magic js-tr tr-fi-up tr-1500" 
-    data-img="/assets/img/uploads/wn-hero.jpg" href="/cases/waternet">
+            
+            <a class="tile js-tile js-scroll-magic js-tr tr-fi-up tr-1500" 
+    data-img="/assets/img/uploads/wn-thumb.jpg" href="/cases/waternet">
 
     <div class="g g-1-m">
         <header>
@@ -119,9 +127,9 @@
         </div>
     </div>
 </a>
-        
-        <a class="tile js-tile js-scroll-magic js-tr tr-fi-up tr-1500" 
-    data-img="/assets/img/uploads/cg-hero.jpg" href="/cases/circle-of-gentlemen">
+            
+            <a class="tile js-tile js-scroll-magic js-tr tr-fi-up tr-1500" 
+    data-img="/assets/img/uploads/cg-thumb.jpg" href="/cases/circle-of-gentlemen">
 
     <div class="g g-1-m">
         <header>
@@ -137,9 +145,9 @@
         </div>
     </div>
 </a>
-        
-        <a class="tile js-tile js-scroll-magic js-tr tr-fi-up tr-1500" 
-    data-img="/assets/img/uploads/ar-hero.jpg" href="/cases/askja-reizen">
+            
+            <a class="tile js-tile js-scroll-magic js-tr tr-fi-up tr-1500" 
+    data-img="/assets/img/uploads/ar-thumb.jpg" href="/cases/askja-reizen">
 
     <div class="g g-1-m">
         <header>
@@ -155,7 +163,8 @@
         </div>
     </div>
 </a>
-        
+            
+        </div>
     </div>
 </section>
         </div>

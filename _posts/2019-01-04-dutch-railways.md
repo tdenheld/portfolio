@@ -5,6 +5,7 @@ technologies: HTML5, CSS3, JS<br>Sketch, Figma, Adobe
 when: 2016 – Present
 description: NS is the leading railway company of The Netherlands, transporting over 600.000 people who between them travel over 1.1 million times a day. As their Lead Designer, I continually assist NS in optimizing their online services.
 hero: /assets/img/uploads/ns-hero.jpg
+thumb: /assets/img/uploads/ns-thumb.jpg
 
 og:
   img: /assets/img/uploads/ns-hero.jpg

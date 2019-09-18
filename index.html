@@ -17,8 +17,10 @@ index: true
 
 <section class="section offset" id="work">
     <div class="container">
-        {% for entry in site.posts %}
-        {% include tile.html %}
-        {% endfor %}
+        <div id="js-tile-group">
+            {% for entry in site.posts %}
+            {% include tile.html %}
+            {% endfor %}
+        </div>
     </div>
 </section>

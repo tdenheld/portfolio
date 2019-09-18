@@ -1,35 +1,3 @@
-// global vars
-// ------------------------------------------------------------
-// ------------------------------------------------------------
-var vw = Number;
-var vh = Number;
-var mobile = Boolean;
-var scrolled = false;
-
-
-
-// update screen height
-// ------------------------------------------------------------	
-function updateWindowSize() {
-    vw = $(window).innerWidth();
-    vh = $(window).innerHeight();
-
-    // set breakpoints
-    if (vw > 912) {
-        mobile = false;
-    } else {
-        mobile = true;
-    }
-}
-updateWindowSize();
-
-// update when resizing
-$(window).resize(function () {
-    updateWindowSize();
-});
-
-
-
 // basic functions
 // ------------------------------------------------------------
 function toggle() {

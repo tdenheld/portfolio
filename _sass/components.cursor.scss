@@ -13,5 +13,27 @@ $cursor-size: 40px;
     left: -$cursor-size / 2;
     border: 1px solid rgba($brand, 0.7);
     border-radius: 50%;
+}
+
+.cursor--tile {
+    border: none;
+    border-radius: 0;
+    z-index: 0;
+    width: 480px;
+    height: 280px;
+    left: - 480px / 2;
+    top: - 280px / 2;
+    filter: grayscale(1);
+}
+
+.cursor__img {
+    @include full(absolute);
     @include bg(cover);
+    opacity: 0.8;
+}
+
+.cursor__noise {
+    @include full(absolute);
+    background-image: url('/assets/img/noise.gif');
+    opacity: 0.1;
 }
