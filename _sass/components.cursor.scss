@@ -23,13 +23,12 @@ $cursor-size: 40px;
     height: 280px;
     left: - 480px / 2;
     top: - 280px / 2;
-    filter: grayscale(1);
 }
 
 .cursor__img {
     @include full(absolute);
     @include bg(cover);
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .cursor__noise {

@@ -28,7 +28,7 @@ function cursor() {
                         follow(obj, e.clientX, e.clientY, t);
                     });
                 });
-                $(document).mouseenter((e) => {
+                $(window).mouseenter((e) => {
                     if (fading) {
                         fade(obj, 0, 1, 0.1);
                     }
