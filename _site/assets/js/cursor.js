@@ -23,23 +23,30 @@ function cursor() {
 
         function tracking(obj, t, fading) {
             if ($(obj)[0]) {
+                let init = false;
+                
                 $(document).mousemove((e) => {
                     requestAnimationFrame(() => {
                         follow(obj, e.clientX, e.clientY, t);
                     });
                 });
-                $(document).mouseenter((e) => {
-                    follow(obj, e.clientX, e.clientY, 0);
-                });
-                if (fading) {
-                    $(window).one('mouseenter', (e) => {
-                        fade(obj, 0, 1, 0.1);
+
+                $(window).mouseenter((e) => {
+                    if (!init) {
+                        if (fading) {
+                            fade(obj, 0, 1, 0.1);
+                        }
                         follow(obj, e.clientX, e.clientY, 0);
-                    });
-                    $(document).mouseleave(() => {
+                        init = true;
+                    }
+                });
+                
+                $(document).mouseleave(() => {
+                    if (fading) {
                         fade(obj, 1, 0, 0.7);
-                    });
-                }
+                    }
+                    init = false;
+                });
             }
         }
 
