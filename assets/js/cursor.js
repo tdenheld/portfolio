@@ -21,24 +21,25 @@ function cursor() {
             }
         }
 
-        function tracking(obj, t, trig) {
+        function tracking(obj, t, fading) {
             if ($(obj)[0]) {
                 $(document).mousemove((e) => {
                     requestAnimationFrame(() => {
                         follow(obj, e.clientX, e.clientY, t);
                     });
                 });
-                $(trig).mouseenter((e) => {
-                    if (trig === window) {
-                        fade(obj, 0, 1, 0.1);
-                    }
+                $(document).mouseenter((e) => {
                     follow(obj, e.clientX, e.clientY, 0);
                 });
-                $(document).mouseleave(() => {
-                    if (trig === window) {
+                if (fading) {
+                    $(window).one('mouseenter', (e) => {
+                        fade(obj, 0, 1, 0.1);
+                        follow(obj, e.clientX, e.clientY, 0);
+                    });
+                    $(document).mouseleave(() => {
                         fade(obj, 1, 0, 0.7);
-                    }
-                });
+                    });
+                }
             }
         }
 
@@ -88,10 +89,10 @@ function cursor() {
         }
 
         // execute functions
-        tracking('#js-cursor', 0.7, window);
+        tracking('#js-cursor', 0.7, true);
         hover('#js-cursor', 80);
 
-        tracking('#js-cursor-tile', 1.7, document);
+        tracking('#js-cursor-tile', 1.7, false);
         followingImgHover('.js-tile', '#js-cursor-tile', '#js-cursor-img', '#js-cursor-flash');
     }
 }
