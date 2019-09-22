@@ -91,17 +91,15 @@ function cursor() {
 
         // image hover
         // ------------------------------------------------
-        function followingImgHover(trig, obj, img, flash) {
+        function followingImgHover(trig, obj, img) {
             if ($(obj)[0]) {
                 $(trig).mouseenter(function () {
                     fade(obj, 0, 1, 1);
-                    fade(flash, 1, 0, 3);
-                    
+                    fade(img, 1, 0, 0);
                     const currentImg = $(this).attr('data-img');
-                    $(img).removeClass('is-active');
                     $(img).each(function(){
                         if (currentImg === $(this).attr('data-img')) {
-                            $(this).addClass('is-active');
+                            fade(this, 0, 1, 4);
                         };
                     });
                 });
@@ -116,7 +114,7 @@ function cursor() {
         hover('#js-cursor', 80);
 
         tracking('#js-cursor-tile', 1.7, false);
-        followingImgHover('.js-tile', '#js-cursor-tile', '.js-cursor-img', '#js-cursor-flash');
+        followingImgHover('.js-tile', '#js-cursor-tile', '.js-cursor-img');
     }
 }
 cursor();

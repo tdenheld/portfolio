@@ -27,14 +27,10 @@ $cursor-size: 40px;
 
 .cursor__img {
     display: none;
+    visibility: hidden;
+    opacity: 0;
     @include full(absolute);
     object-fit: cover;
-    opacity: 0;
-    transition: $fade-all;
-
-    &.is-active {
-        opacity: 1;
-    }
 }
 
 .no-touchevents {
