@@ -26,6 +26,7 @@ $cursor-size: 40px;
 }
 
 .cursor__img {
+    display: none;
     @include full(absolute);
     object-fit: cover;
     opacity: 0;
@@ -33,6 +34,12 @@ $cursor-size: 40px;
 
     &.is-active {
         opacity: 1;
+    }
+}
+
+.no-touchevents {
+    .cursor__img {
+        display: block;
     }
 }
 
