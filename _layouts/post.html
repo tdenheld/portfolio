@@ -12,17 +12,17 @@ layout: default
         </header>
 
         <ul class="g g-4-md g-6-lg col-gap-4 row-gap-4 mb-8 mb-12-sm">
-            <li class="js-scroll-magic">
+            <li class="js-scroll">
                 <hr class="mxw-50 ml-0 js-tr tr-stag">
                 <h3 class="meta js-tr tr-stag">Role</h3>
                 <p class="txt__body f18-sm js-tr tr-stag">{{ page.role }}</p>
             </li>
-            <li class="js-scroll-magic">
+            <li class="js-scroll">
                 <hr class="mxw-50 ml-0 js-tr tr-stag">
                 <h3 class="meta js-tr tr-stag">Technologies</h3>
                 <p class="txt__body f18-sm js-tr tr-stag">{{ page.technologies }}</p>
             </li>
-            <li class="js-scroll-magic">
+            <li class="js-scroll">
                 <hr class="mxw-50 ml-0 js-tr tr-stag">
                 <h3 class="meta js-tr tr-stag">When</h3>
                 <p class="txt__body f18-sm js-tr tr-stag">{{ page.when }}</p>
@@ -30,14 +30,14 @@ layout: default
         </ul>
 
         <img src="{{ page.hero }}" alt="{{ page.hero | replace: '/assets/img/uploads/', '' }}"
-            class="js-scroll-magic js-tr tr-fi-up tr-1500" />
+            class="js-scroll js-tr tr-fi-up tr-1500" />
     </div>
 </section>
 
 {% for entry in page.section %}
 <section class="section">
     <div class="container">
-        <div class="txt rich-txt js-scroll-magic">
+        <div class="txt rich-txt js-scroll">
             <hr class="mxw-50 ml-0 js-tr tr-stag">
             <h2 class="js-tr tr-stag">{{ entry.title }}</h2>
             {% for paragraph in entry.description %}
@@ -47,7 +47,7 @@ layout: default
 
         <div class="g {{ entry.grid }}">
             {% for item in entry.items %}
-            <figure class="{{ item.class }} {% unless entry.grid %}figure{% endunless %} js-scroll-magic">
+            <figure class="{{ item.class }} {% unless entry.grid %}figure{% endunless %} js-scroll">
                 {% if item.caption %}
                 <figcaption class="txt__caption mb-2 js-tr tr-stag">{{ item.caption }}</figcaption>
                 {% endif %}
@@ -62,7 +62,7 @@ layout: default
 
 <section class="section">
     <div class="container">
-        <h2 class="txt__caption mb-2 mb-4-sm js-scroll-magic js-tr tr-fi-up tr-1500">
+        <h2 class="txt__caption mb-2 mb-4-sm js-scroll js-tr tr-fi-up tr-1500">
             More work
         </h2>
         <div>
