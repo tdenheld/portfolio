@@ -100,7 +100,7 @@ function cursor() {
                     const currentImg = $(this).attr('data-img');
                     $(img).removeClass('is-active');
                     $(img).each(function(){
-                        if (currentImg === $(this).attr('src')) {
+                        if (currentImg === $(this).attr('data-img')) {
                             $(this).addClass('is-active');
                         };
                     });
