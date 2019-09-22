@@ -27,8 +27,13 @@ $cursor-size: 40px;
 
 .cursor__img {
     @include full(absolute);
-    @include bg(cover);
-    opacity: 0.9;
+    object-fit: cover;
+    opacity: 0;
+    transition: $fade-all;
+
+    &.is-active {
+        opacity: 1;
+    }
 }
 
 .cursor__noise {

@@ -21,6 +21,17 @@ function cursor() {
             }
         }
 
+        function filter(obj, a, b, t) {
+            if ($(obj)[0]) {
+                TweenMax.fromTo(obj, t, {
+                    filter: a
+                }, {
+                    filter: b,
+                    ease: Power4.easeOut
+                });
+            }
+        }
+
         function tracking(obj, t, fading) {
             if ($(obj)[0]) {
                 let init = false;
@@ -84,9 +95,14 @@ function cursor() {
             if ($(obj)[0]) {
                 $(trig).mouseenter(function () {
                     fade(obj, 0, 1, 1);
-                    fade(flash, 0.67, 0, 3);
-                    $(img).css({
-                        'background-image': 'url(' + $(this).attr('data-img') + ')'
+                    fade(flash, 1, 0, 3);
+                    
+                    const currentImg = $(this).attr('data-img');
+                    $(img).removeClass('is-active');
+                    $(img).each(function(){
+                        if (currentImg === $(this).attr('src')) {
+                            $(this).addClass('is-active');
+                        };
                     });
                 });
                 $(trig).mouseleave(function () {
@@ -100,7 +116,7 @@ function cursor() {
         hover('#js-cursor', 80);
 
         tracking('#js-cursor-tile', 1.7, false);
-        followingImgHover('.js-tile', '#js-cursor-tile', '#js-cursor-img', '#js-cursor-flash');
+        followingImgHover('.js-tile', '#js-cursor-tile', '.js-cursor-img', '#js-cursor-flash');
     }
 }
 cursor();
