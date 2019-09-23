@@ -25,7 +25,7 @@ function scroll() {
     }
 
     function scroll(obj, hook) {
-        const trigger = Math.round($(window).scrollTop() + $(window).innerHeight() * 1.02);
+        const trigger = Math.round($(window).scrollTop() + $(window).innerHeight() * 0.95 + 60);
         const pos = $(obj).offset().top;
 
         if (pos <= trigger) {
