@@ -9,6 +9,18 @@
         position: relative;
         z-index: 1;
         transition: $fade-link;
+        text-decoration: none;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: calc(100% - 1px);
+            top: 0;
+            left: 0;
+            border-bottom: 1px solid $brand;
+            transition: $fade-link;
+        }
 
         &.is-active {
             opacity: 0;
