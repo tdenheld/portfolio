@@ -46,6 +46,13 @@ $dark-light: #ccc;
         }
     }
 
+    .rich-txt a,
+    .img-hover u {
+        &:after {
+            border-color: $dark-light;
+        }
+    }
+
     .button {
         border-color: $dark-light;
     }
