@@ -32,6 +32,14 @@
     }
 }
 
+.js-trigger {
+    position: fixed;
+    border-bottom: 2px solid $brand;
+    height: 2px;
+    width: 100%;
+    z-index: 999999;
+}
+
 .section {
     position: relative;
     margin-bottom: 60px;
