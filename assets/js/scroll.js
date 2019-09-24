@@ -26,7 +26,7 @@ function scroll() {
 
     function scrollingListener(obj) {
         const customHook = $(obj).attr('data-hook');
-        let hook = 0.94;
+        let hook = 0.92;
 
         if (customHook != null) {
             hook = customHook;
