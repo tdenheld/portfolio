@@ -4,52 +4,17 @@
     position: relative;
 
     &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: calc(100% - 1px);
-        top: 0;
-        left: 0;
-        border-bottom: 1px solid rgba($brand, 0);
-        transform: scaleX(0);
-        transform-origin: 0 0;
-        transition: $fade-link;
+        @include link(0);
     }
 }
 
 .no-touchevents {
     .link:hover:after {
-        border-color: rgba($brand, 1);
+        opacity: 1;
         transform: scaleX(1);
     }
 }
 
 .link--nav:after {
-    height: calc(100% - 7px);
-}
-
-.arrow-link {
-    display: inline-flex;
-    align-items: center;
-    height: 36px;
-    font-family: $mono;
-    font-size: toRem(14px);
-
-    @include sm {
-        font-size: toRem(16px);
-    }
-
-    &:before {
-        font-family: $mono;
-        content: '→';
-        margin-right: $half-gutter;
-    }
-
-    span {
-        @extend .link;
-
-        &:after {
-            height: calc(100% + 1px);
-        }
-    }
+    height: calc(100% - 8px);
 }

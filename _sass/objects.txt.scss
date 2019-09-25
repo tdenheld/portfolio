@@ -33,7 +33,6 @@
 
 .txt__body {
     font-size: toRem(18px);
-    letter-spacing: toRem(0.2px);
 
     @include sm {
         font-size: toRem(20px);

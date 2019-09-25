@@ -16,7 +16,7 @@
 
     &:hover {
         .link:after {
-            border-bottom: 1px solid rgba($brand, 1);
+            opacity: 1;
             transform: scaleX(1);
         }
     }

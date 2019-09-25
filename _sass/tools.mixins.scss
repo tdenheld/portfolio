@@ -81,3 +81,21 @@
 	background-repeat: no-repeat;
 	background-size: $s;
 }
+
+
+
+// links
+// ------------------------------
+@mixin link($x) {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 2px);
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid $brand;
+    transform: scaleX($x);
+    transform-origin: 0 0;
+    opacity: $x;
+    transition: $fade-link;
+}
