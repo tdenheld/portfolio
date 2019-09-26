@@ -662,17 +662,6 @@
       Typography
 --------------------*/
 
-/*
-	Base:
-	f = font
-	fw = font-weight
-	
-	Media Query Extensions:
-     -sm = min-width $sm
-     -md = min-width $md
-     -lg = min-width $lg
-*/
-
 // font sizes
 // ----------------------------------------------------------------------
 .f10 {font-size: toRem(10px);}
@@ -829,6 +818,7 @@
 // font families
 // ----------------------------------------------------------------------
 .sans-serif {font-family: $sans;}
+.serif      {font-family: $serif;}
 .mono       {font-family: $mono;}
 
 // word wraps
@@ -836,27 +826,18 @@
 .no-wrap {white-space: nowrap;}
 .break-word {word-wrap: break-word;}
 
+// case
+// ----------------------------------------------------------------------
+.uppercase {
+    text-transform: uppercase;
+}
+
 
 
 /*-------------------
       Text align
 --------------------*/
 
-/*
-	Base:
-	txt = text-align
-	
-	Modifiers
-    l = left
-    r = right
-    c = center
-    j = justify
-    
-	Media Query Extensions:
-     -sm = min-width $sm
-     -md = min-width $md
-     -lg = min-width $lg
-*/
 .txt-l  { text-align: left; }
 .txt-r  { text-align: right; }
 .txt-c  { text-align: center; }

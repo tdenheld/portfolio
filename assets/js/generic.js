@@ -106,36 +106,46 @@ function scrollToObject() {
         });
     }
 }
-scrollToObject();
+$(function () {
+    scrollToObject();
+});
 
 
 
-// preloader
-// ------------------------------------------------------------	
-function loader() {
+// page transition
+// ------------------------------------------------------------
+function pageTransition() {
+    const obj = $('a');
     const loader = '.js-loader';
-    const content = '.js-loaded';
+    const loaderContent = '.js-loader-content';
+    const main = '.js-main';
+    const tl = new TimelineMax;
 
-    if (loader[0]) {
-        // init loader view
-        TweenLite.to(loader, 0.1, {
-            opacity: 1
-        });
-
-        // load website
-        window.addEventListener('load', function () {
-            TweenLite.to(loader, 0.3, {
-                delay: 0.7,
-                ease: Power3.easeInOut,
-                autoAlpha: 0,
-                display: 'none',
-                onComplete() {
-                    TweenLite.set(content, {
-                        display: 'block',
-                    });
-                }
-            });
+    if (obj[0]) {
+        obj.click(function(e){
+            const link = $(this).attr('href');
+            if ($(this).attr('target') !== '_blank') {
+                e.preventDefault();
+                tl.fromTo(loader, 0.7, {
+                    y: '-100%',
+                },{
+                    ease: Power3.easeInOut,
+                    y: '0%',
+                    display: 'flex',
+                    onComplete() {
+                        window.location = link;
+                    }
+                }).to(loaderContent, 0.2, {
+                    ease: Power3.easeInOut,
+                    opacity: 1
+                }, '-=0.2').to(main, 1, {
+                    ease: Power4.easeInOut,
+                    y: 200
+                }, '-=0.8');
+            }
         });
     }
 }
-loader();
+$(function () {
+    pageTransition();
+});

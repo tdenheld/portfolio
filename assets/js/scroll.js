@@ -68,7 +68,3 @@ function scroll() {
         });
     }
 }
-
-$(function () {
-    scroll();
-});

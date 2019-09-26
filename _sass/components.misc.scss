@@ -1,5 +1,14 @@
 // misc
 // --------------------------------------------------
+.splash {
+    @include full(fixed);
+    @include center;
+    background-color: $brand;
+    z-index: 99999999;
+    color: $light;
+    text-align: center;
+}
+
 .meta {
     font-family: $mono;
     font-size: toRem(10px);
@@ -8,4 +17,12 @@
 
 .serif-ns {
     display: none;
+}
+
+.split {
+    visibility: hidden;
+
+    &.is-active {
+        visibility: visible;
+    }
 }

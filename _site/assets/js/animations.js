@@ -30,6 +30,8 @@ function liquidFX(obj, y) {
 // ------------------------------------------------------------
 function splitWords(className) {
     if ($(className)[0]) {
+        $(className).addClass('is-active');
+
         var tl = new TimelineMax,
             st = new SplitText(className, {
                 type: 'words'
@@ -39,11 +41,8 @@ function splitWords(className) {
         tl.staggerFrom(chars, 0.9, {
             opacity: 0,
             y: -15,
+            autoCSS: true,
             ease: Back.easeOut,
-        }, 0.05, '+=0');
+        }, 0.03, '+=0');
     }
 }
-
-$(function () {
-    splitWords('.js-split-words');
-});

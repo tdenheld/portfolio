@@ -9,6 +9,11 @@ $dark-light: #ccc;
         fill: $dark-light;
     }
 
+    .splash {
+        background-color: $dark-light;
+        color: $dark-dark;
+    }
+
     .header__logo {
         svg {
             fill: $dark-light;

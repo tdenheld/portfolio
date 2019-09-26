@@ -1,4 +1,5 @@
 ---
+splash: true
 layout: article
 title: About
 heading: Hi, I am Tibor den Held. Raised by two art historians and fascinated with computers since the late 80s.
