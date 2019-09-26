@@ -1,7 +1,7 @@
 // page transition
 // ------------------------------------------------------------
 function pageTransition() {
-    const obj = $('a');
+    const obj = $('a[href*="/"]');
     const loader = '.js-loader';
     const loaderContent = '.js-loader-content';
     const main = '.js-main';
