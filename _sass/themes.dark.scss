@@ -1,6 +1,3 @@
-$dark-dark: #1a1a1a;
-$dark-light: #ccc;
-
 .dark {
     background-color: $dark-dark;
     color: $dark-light;
@@ -10,7 +7,7 @@ $dark-light: #ccc;
     }
 
     .splash {
-        background-color: $dark-light;
+        background-color: $light;
         color: $dark-dark;
     }
 

@@ -3,7 +3,7 @@
 .splash {
     @include full(fixed);
     @include center;
-    background-color: $brand;
+    background-color: $dark-dark;
     z-index: 99999999;
     color: $light;
     text-align: center;
