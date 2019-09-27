@@ -87,7 +87,7 @@ const body = {
 // ------------------------------------------------------------
 function scrollToObject() {
     const obj = $('.js-scroll-to');
-    const offset = 80;
+    const offset = $('.header').height() + 24;
 
     if (obj[0]) {
         obj.click(function () {
