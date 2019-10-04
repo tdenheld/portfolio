@@ -2,19 +2,19 @@ function scroll() {
     const section = $('.js-scroll');
     const richTxt = $('.js-scroll-rt p');
 
-    var controller = new ScrollMagic.Controller({
+    const controller = new ScrollMagic.Controller({
         globalSceneOptions: {
             duration: 99999,
         },
     });
 
     function scrollTrig(obj) {
-        var hook = 0.92;
-        var customHook = $(obj).attr('data-hook');
+        let hook = 0.92;
+        const customHook = $(obj).attr('data-hook');
         if (customHook != null) {
             hook = customHook;
         }
-        var scrll = new ScrollMagic.Scene({
+        const scrll = new ScrollMagic.Scene({
                 triggerElement: obj,
             })
             .triggerHook(hook)
