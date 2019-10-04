@@ -23,7 +23,7 @@
 	transition: none;
 }
 // 50ms - 1600ms
-@for $i from 1 through 32 {
+@for $i from 1 through 40 {
 	$x: $i * 50;
 	$d: $x * 1ms;
 	.tr-#{$x} {

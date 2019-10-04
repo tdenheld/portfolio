@@ -30,7 +30,7 @@ layout: default
         </ul>
 
         <img src="{{ page.hero }}" alt="{{ page.hero | replace: '/assets/img/uploads/', '' }}"
-            class="js-scroll js-tr tr-fi-up tr-1500" />
+            class="js-scroll js-tr tr-fi-up tr-2000" />
     </div>
 </section>
 
@@ -52,7 +52,7 @@ layout: default
                 <figcaption class="txt__caption mb-2 js-tr tr-stag">{{ item.caption }}</figcaption>
                 {% endif %}
                 <img src="{{ item.img }}" alt="{{ item.img | replace: '/assets/img/uploads/', '' }}"
-                    class="{% unless item.no-scroll-magic %}js-tr tr-fi-up tr-1500{% endunless %}" />
+                    class="{% unless item.no-scroll-magic %}js-tr tr-fi-up tr-2000{% endunless %}" />
             </figure>
             {% endfor %}
         </div>
