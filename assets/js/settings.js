@@ -9,10 +9,6 @@ function settings() {
     const body = $('html, body');
     let active;
 
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        $('body').addClass('dark');
-    }
-
     if (obj[0]) {
         // transition of modal
         // ------------------------------
