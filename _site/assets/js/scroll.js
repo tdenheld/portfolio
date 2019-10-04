@@ -20,9 +20,9 @@ function scroll() {
             .triggerHook(hook)
             .offset(0)
             .on('start', function () {
-                $('.js-tr', obj).toggleClass('is-active');
+                $('.js-tr', obj).addClass('is-active');
                 if ($(obj).hasClass('js-tr')) {
-                    $(obj).toggleClass('is-active');
+                    $(obj).addClass('is-active');
                 }
             })
             .addTo(controller);
