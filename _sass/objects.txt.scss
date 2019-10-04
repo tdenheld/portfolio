@@ -24,7 +24,7 @@
 }
 
 .txt__heading-s {
-    @include font(28px, bold, $lh-title);
+    @include font(32px, bold, $lh-title);
 
     @include sm {
         font-size: toRem(48px);
