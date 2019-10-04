@@ -7,6 +7,7 @@ body {
     font-weight: normal;
     font-kerning: normal;
     text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     line-height: $lh-copy;
     color: $brand;

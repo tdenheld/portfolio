@@ -48,6 +48,7 @@
     display: none;
     margin-top: $quarter-gutter;
     font-size: toRem(12px);
+    font-family: $sans;
 
     @include xs {
         display: block;

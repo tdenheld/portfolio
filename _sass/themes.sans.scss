@@ -1,4 +1,4 @@
-.sans {
+.modern {
     font-family: $sans;
 
     .serif-ns {
@@ -6,7 +6,7 @@
     }
 
     .txt__body {
-        letter-spacing: toRem(0.2px);
+        font-family: $serif;
     }
 
     .tile {

@@ -29,13 +29,18 @@
     @include sm {
         font-size: toRem(48px);
     }
+
+    @include lg {
+        font-size: toRem(60px);
+    }
 }
 
 .txt__body {
-    font-size: toRem(18px);
+    font-family: $sans;
+    font-size: toRem(16px);
 
     @include sm {
-        font-size: toRem(20px);
+        font-size: toRem(18px);
     }
 }
 
