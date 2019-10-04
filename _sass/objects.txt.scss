@@ -29,10 +29,6 @@
     @include sm {
         font-size: toRem(48px);
     }
-
-    @include lg {
-        font-size: toRem(60px);
-    }
 }
 
 .txt__body {

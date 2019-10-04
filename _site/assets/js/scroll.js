@@ -9,7 +9,7 @@ function scroll() {
     });
 
     function scrollTrig(obj) {
-        var hook = 0.94;
+        var hook = 0.92;
         var customHook = $(obj).attr('data-hook');
         if (customHook != null) {
             hook = customHook;
