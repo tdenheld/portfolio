@@ -6,7 +6,7 @@
     @include font(48px, bold, $lh-title);
 
     @include sm {
-        font-size: toRem(96px);
+        font-size: toRem(104px);
         letter-spacing: toRem(-0.6px);
     }
 }
@@ -27,16 +27,16 @@
     @include font(32px, bold, $lh-title);
 
     @include sm {
-        font-size: toRem(48px);
+        font-size: toRem(54px);
     }
 }
 
 .txt__body {
     font-family: $sans;
-    font-size: toRem(16px);
+    font-size: toRem(17px);
 
     @include sm {
-        font-size: toRem(18px);
+        font-size: toRem(20px);
     }
 }
 

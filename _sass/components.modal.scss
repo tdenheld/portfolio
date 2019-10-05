@@ -27,6 +27,11 @@
     max-width: 400px;
 }
 
+.modal__label {
+    font-family: $sans;
+    margin-bottom: $quarter-gutter;
+}
+
 .modal__close {
     @include center;
     position: absolute;
