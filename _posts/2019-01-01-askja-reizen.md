@@ -33,7 +33,7 @@ section:
         - img: /assets/img/uploads/ar-ph-6.jpg
 
     - title: Users landing
-      description: Analytics showed us that users barely land on the homepage. Instead they come from a search engine on a country page directly. The challenge was to make that page feel like a home page – a soft landing.
+      description: Analytics showed us that users barely land on the homepage. Instead they come from a search engine on a country page directly. The challenge was to make that page feel like a home page — a soft landing.
       items:
         - caption: Country landing
           img: /assets/img/uploads/ar-2.jpg
