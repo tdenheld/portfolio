@@ -8,13 +8,13 @@ function pageTransition() {
     const tl = new TimelineMax;
 
     if (obj[0]) {
-        obj.click(function(e){
+        obj.click(function (e) {
             const link = $(this).attr('href');
             if ($(this).attr('target') !== '_blank') {
                 e.preventDefault();
                 tl.fromTo(loader, 0.7, {
                     y: '-100%',
-                },{
+                }, {
                     ease: Power3.easeInOut,
                     y: '0%',
                     display: 'flex',
