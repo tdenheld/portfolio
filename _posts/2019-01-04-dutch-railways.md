@@ -40,4 +40,11 @@ section:
       items:
         - img: /assets/img/uploads/ns-spoordeelwinkel-1.jpg
         - img: /assets/img/uploads/ns-spoordeelwinkel-2.jpg
+
+    - title: ZZP Campaign
+      description: Commissioned by NS Zakelijk I designed and developed a campaign page. The aim is to increase the number of self-employed people travelling by train. I got briefed three weeks before launch. Yet, because I designed the page directly in the browser, it was quick and easy to put it into production.
+      items:
+        - img: /assets/img/uploads/ns-zakelijk-3.jpg
+        - img: /assets/img/uploads/ns-zakelijk-2.jpg
+        - img: /assets/img/uploads/ns-zakelijk-1.jpg
 ---
