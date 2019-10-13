@@ -45,6 +45,4 @@ section:
       description: Commissioned by NS Zakelijk I designed and developed a campaign <a href="https://ns.nl/ns-zakelijk" target="_blank" rel="noreferrer">page</a>. The aim was to increase the number of self-employed people travelling by train. I got briefed three weeks before launch. Yet, because I designed the page directly in the browser, it was quick and easy to put it into production.
       items:
         - img: /assets/img/uploads/ns-zakelijk-1.jpg
-        - img: /assets/img/uploads/ns-zakelijk-2.jpg
-        - img: /assets/img/uploads/ns-zakelijk-3.jpg
 ---
