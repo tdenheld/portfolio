@@ -1,60 +1,62 @@
-// basic functions
-// ------------------------------------------------------------
-function toggle() {
-    const obj = $('.js-toggle');
+'use strict';
+
+const ß = (node, element) => {
+    const obj = element || document;
+    const qs = obj.querySelectorAll(node);
+    return Array.from(qs);
+}
+
+const exists = node => {
+    return document.body.contains(document.querySelector(node));
+}
+
+const isHidden = node => {
+    return window.getComputedStyle(node).display === 'none';
+}
+
+const valueInArray = (value, array) => {
+    if (array.includes(value)) return true;
+}
+
+const removeAllChilds = node => {
+    while (node.firstChild) node.removeChild(node.firstChild);
+}
+
+const toggle = () => {
+    const obj = '.js-toggle';
+    if (!exists(obj)) return;
+    ß(obj).map((el) => el.onclick = () => el.classList.toggle('is-active'));
+}
+
+function scrollToObject() {
+    const obj = $('.js-scroll-to');
+    const offset = $('.header').height() + 24;
+
     if (obj[0]) {
         obj.click(function () {
-            $(this).toggleClass('is-active');
+            const element = $(this).attr('href');
+            if ($(element)[0]) {
+                TweenMax.to(window, .8, {
+                    ease: Power3.easeInOut,
+                    scrollTo: {
+                        y: element,
+                        offsetY: offset,
+                        autoKill: false,
+                    }
+                });
+                return false;
+            };
         });
     }
 }
 
-function radio() {
-    const obj = $('.js-radio');
-    if (obj[0]) {
-        obj.click(function () {
-            obj.removeClass('is-active');
-            $(this).toggleClass('is-active');
-        });
-    }
-}
-
-function clearSession() {
-    const obj = $('.js-clear-session');
-    if (obj[0]) {
-        obj.click(function () {
-            sessionStorage.clear();
-        });
-    }
-}
-
-function toggleText() {
-    const obj = $('.js-toggle-text');
-    if (obj[0]) {
-        obj.each(function () {
-            const initTxt = $(this).text();
-            let txt = $(this).attr('toggleTxt');
-            $(this).click(() => {
-                if ($(this).text() === initTxt) {
-                    $(this).text(txt);
-                } else {
-                    $(this).text(initTxt);
-                }
-            });
-        });
-    }
-}
-
-$(function () {
+document.addEventListener('DOMContentLoaded', () => {
     toggle();
-    radio();
-    clearSession();
-    toggleText();
+    scrollToObject();
 });
 
 
-
-// body scroll lock
+// body scroll lock object
 // ------------------------------------------------------------
 const body = {
     main: $('.js-main'),
@@ -80,32 +82,3 @@ const body = {
         });
     }
 };
-
-
-
-// scroll to
-// ------------------------------------------------------------
-function scrollToObject() {
-    const obj = $('.js-scroll-to');
-    const offset = $('.header').height() + 24;
-
-    if (obj[0]) {
-        obj.click(function () {
-            const element = $(this).attr('href');
-            if ($(element)[0]) {
-                TweenMax.to(window, .8, {
-                    ease: Power3.easeInOut,
-                    scrollTo: {
-                        y: element,
-                        offsetY: offset,
-                        autoKill: false,
-                    }
-                });
-                return false;
-            };
-        });
-    }
-}
-$(function () {
-    scrollToObject();
-});

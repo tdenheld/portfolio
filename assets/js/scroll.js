@@ -41,3 +41,23 @@ function scroll() {
         });
     }
 }
+
+// const revealOnScroll = () => {
+//     const hook = 0.94;
+//     const node = '.js-scroll';
+//     if (!exists(node)) return;
+
+//     const reveal = () => ß(node).map((el) => {
+//         const nodePosition = el.getBoundingClientRect();
+//         const inViewport = !(nodePosition.top > innerHeight * hook);
+        
+//         if (inViewport) {
+//             ß('.js-tr', el).map((ae) => ae.classList.add('is-active'));
+//             if (el.classList.contains('js-tr')) el.classList.add('is-active');
+//         }
+//     });
+//     reveal();
+
+//     window.addEventListener('scroll', () => requestAnimationFrame(reveal));
+//     window.addEventListener('resize', () => requestAnimationFrame(reveal));
+// }

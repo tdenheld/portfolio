@@ -33,11 +33,9 @@
 
     <script>
         // #fix safari back button browser cache issue
-        window.onpageshow = function (event) {
-            if (event.persisted) {
-                window.location.reload();
-            }
-        };
+        window.onpageshow = (e) => {
+            if (e.persisted) window.location.reload();
+        }
     </script>
 
 </head>
