@@ -58,27 +58,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // body scroll lock object
 // ------------------------------------------------------------
-const body = {
-    main: $('.js-main'),
-    scrollPos: window.scrollY,
+const bodyScroll = {
+    body: document.querySelector('body'),
+    main: document.querySelector('main'),
+    scrollPos: 0,
+
     lock() {
         this.scrollPos = window.scrollY;
-        $('body').css({
-            'position': 'fixed',
-            'top': -this.scrollPos,
-            'overflow-y': 'hidden',
-            'width': '100%',
-            'backface-visibility': 'hidden'
-        });
-        this.main.css({
-            'opacity': '0'
-        });
+        this.body.style.position = 'fixed';
+        this.body.style.top = -this.scrollPos + 'px';
+        this.body.style.overflowY = 'hidden';
+        this.body.style.width = '100%';
+        this.body.style.backfaceVisibility = 'hidden';
     },
     unlock() {
-        $('body').removeAttr('style');
-        $(window).scrollTop(this.scrollPos);
-        this.main.css({
-            'opacity': '1'
+        this.body.style.position = '';
+        this.body.style.top = '';
+        this.body.style.overflowY = '';
+        this.body.style.width = '';
+        this.body.style.backfaceVisibility = '';
+        this.main.style.opacity = '';
+        
+        window.scrollTo({
+            top: this.scrollPos,
         });
     }
 };
+Object.seal(bodyScroll);
