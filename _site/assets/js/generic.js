@@ -15,7 +15,7 @@ const isHidden = node => {
 }
 
 const valueInArray = (value, array) => {
-    if (array.includes(value)) return true;
+    return array.includes(value);
 }
 
 const removeAllChilds = node => {
@@ -28,26 +28,24 @@ const toggle = () => {
     ß(obj).map((el) => el.onclick = () => el.classList.toggle('is-active'));
 }
 
-function scrollToObject() {
-    const obj = $('.js-scroll-to');
-    const offset = $('.header').height() + 24;
+const scrollToObject = () => {
+    const obj = '.js-scroll-to';
+    const offset = document.querySelector('.header').offsetHeight + 24;
+    if (!exists(obj)) return;
 
-    if (obj[0]) {
-        obj.click(function () {
-            const element = $(this).attr('href');
-            if ($(element)[0]) {
-                TweenMax.to(window, .8, {
-                    ease: Power3.easeInOut,
-                    scrollTo: {
-                        y: element,
-                        offsetY: offset,
-                        autoKill: false,
-                    }
-                });
-                return false;
-            };
+    ß(obj).map((el) => el.onclick = () => {
+        const target = el.getAttribute('href');
+        if (!exists(target)) return;
+        TweenMax.to(window, .8, {
+            ease: Power3.easeInOut,
+            scrollTo: {
+                y: target,
+                offsetY: offset,
+                autoKill: false,
+            }
         });
-    }
+        return false;
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -72,13 +70,8 @@ const bodyScroll = {
         this.body.style.backfaceVisibility = 'hidden';
     },
     unlock() {
-        this.body.style.position = '';
-        this.body.style.top = '';
-        this.body.style.overflowY = '';
-        this.body.style.width = '';
-        this.body.style.backfaceVisibility = '';
-        this.main.style.opacity = '';
-        
+        this.body.removeAttribute('style');
+        this.main.removeAttribute('style');        
         window.scrollTo({
             top: this.scrollPos,
         });
