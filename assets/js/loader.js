@@ -56,7 +56,7 @@ function loader() {
                 opacity: 0,
                 onComplete() {
                     splitWords('.js-split-words');
-                    scroll();
+                    revealOnScroll();
                 }
             }).to(loader, 0.7, {
                 ease: Power3.easeInOut,

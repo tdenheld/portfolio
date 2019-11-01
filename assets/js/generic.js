@@ -76,5 +76,5 @@ const bodyScroll = {
             top: this.scrollPos,
         });
     }
-};
+}
 Object.seal(bodyScroll);
