@@ -1,36 +1,36 @@
-function imgHover() {
-    const obj = $('.js-img-hover');
+'use strict';
 
-    if (obj[0]) {
-        obj.append('<span>');
-        obj.each(function () {
-            const link = $('u', this);
-            const img = $('span', this);
+(() => {
+    const obj = '.js-img-hover';
+    if (!exists(obj)) return;
 
-            function add() {
-                link.addClass('is-active');
-                img.addClass('is-active');
+    ß(obj).map((el) => {
+        el.appendChild(document.createElement('span'));
+        const link = el.querySelector('u');
+        const img = el.querySelector('span');
+
+        const add = () => {
+            link.classList.add('is-active');
+            img.classList.add('is-active');
+        }
+
+        const remove = () => {
+            link.classList.remove('is-active');
+            img.classList.remove('is-active');
+        }
+
+        if (Modernizr.touchevents) {
+            link.onclick = () => {
+                add();
+                setTimeout(remove, 1300);
             }
-
-            function remove() {
-                link.removeClass('is-active');
-                img.removeClass('is-active');
+        } else {
+            link.onmouseenter = () => {
+                add();
             }
-
-            if (Modernizr.touchevents) {
-                link.click(function () {
-                    add();
-                    setTimeout(remove, 1300);
-                });
-            } else {
-                link.mouseenter(() => {
-                    add();
-                });
-                link.mouseleave(() => {
-                    remove();
-                });
+            link.onmouseleave = () => {
+                remove();
             }
-        });
-    }
-}
-imgHover();
+        }
+    });
+})()
