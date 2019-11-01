@@ -25,12 +25,8 @@
                 setTimeout(remove, 1300);
             }
         } else {
-            link.onmouseenter = () => {
-                add();
-            }
-            link.onmouseleave = () => {
-                remove();
-            }
+            link.onmouseenter = () => add();
+            link.onmouseleave = () => remove();
         }
     });
 })()
