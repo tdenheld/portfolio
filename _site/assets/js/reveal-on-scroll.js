@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const revealOnScroll = () => {
     const section = '.js-scroll';

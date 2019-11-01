@@ -1,56 +1,20 @@
-// page transition
-// ------------------------------------------------------------
-function pageTransition() {
-    const obj = $('a[href*="/"]');
-    const loader = '.js-loader';
-    const loaderContent = '.js-loader-content';
-    const mainContent = '.js-loader-fade';
-    const tl = new TimelineMax;
+'use strict';
 
-    if (obj[0]) {
-        obj.click(function (e) {
-            const link = $(this).attr('href');
-            if ($(this).attr('target') !== '_blank') {
-                e.preventDefault();
-                tl.fromTo(loader, 0.7, {
-                    y: '-100%',
-                }, {
-                    ease: Power3.easeInOut,
-                    y: '0%',
-                    display: 'flex',
-                    onComplete() {
-                        window.location = link;
-                    }
-                }).to(loaderContent, 0.2, {
-                    ease: Power3.easeInOut,
-                    opacity: 1
-                }, '-=0.2').to(mainContent, 1, {
-                    ease: Power4.easeInOut,
-                    y: 200
-                }, '-=0.8');
-            }
-        });
-    }
-}
-$(function () {
-    pageTransition();
-});
+const loader = {
+    element: '.js-loader',
+    content: '.js-loader-content',
+    main: '.js-loader-fade',
 
-function loader() {
-    const loader = '.js-loader';
-    const loaderContent = '.js-loader-content';
-    const mainContent = '.js-loader-fade';
-    const tl = new TimelineMax;
-    const sessionLoaded = sessionStorage.getItem('loaded');
-    let delay = 0.7;
+    load() {
+        const sessionLoaded = sessionStorage.getItem('loaded');
+        const delay = sessionLoaded ? 0.1 : 0.7;
+        const tl = new TimelineMax;
 
-    if (loader[0]) {
-        if (sessionLoaded) {
-            delay = 0.1;
-        }
-        window.addEventListener('load', function () {
+        if (!exists(this.element)) return;
+
+        window.onload = () => {
             sessionStorage.setItem('loaded', true);
-            tl.to(loaderContent, 0.7, {
+            tl.to(this.content, 0.7, {
                 ease: Power3.easeInOut,
                 delay: delay,
                 opacity: 0,
@@ -58,17 +22,48 @@ function loader() {
                     splitWords('.js-split-words');
                     revealOnScroll();
                 }
-            }).to(loader, 0.7, {
+            }).to(this.element, 0.7, {
                 ease: Power3.easeInOut,
                 y: '100%',
                 display: 'none',
-            }, '-=0.3').fromTo(mainContent, 1.4, {
+            }, '-=0.3').fromTo(this.main, 1.4, {
                 y: -100
             }, {
                 ease: Power4.easeInOut,
                 y: 0
             }, '-=1');
+        }
+    },
+    pageTransition() {
+        const obj = 'a[href*="/"]';
+        const tl = new TimelineMax;
+    
+        if (!exists(obj)) return;
+    
+        ß(obj).map((el) => el.onclick = (e) => {
+            const target = el.getAttribute('href');
+            if (el.getAttribute('target') === '_blank') return;
+            e.preventDefault();
+            
+            tl.fromTo(this.element, 0.7, {
+                y: '-100%',
+            }, {
+                ease: Power3.easeInOut,
+                y: '0%',
+                display: 'flex',
+                onComplete() {
+                    window.location = target;
+                }
+            }).to(this.content, 0.2, {
+                ease: Power3.easeInOut,
+                opacity: 1
+            }, '-=0.2').to(this.main, 1, {
+                ease: Power4.easeInOut,
+                y: 200
+            }, '-=0.8');
         });
     }
 }
-loader();
+Object.freeze(loader);
+loader.load();
+loader.pageTransition();
