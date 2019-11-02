@@ -22,6 +22,24 @@ const removeAllChilds = node => {
     while (node.firstChild) node.removeChild(node.firstChild);
 }
 
+const splitWords = (node) => {
+    if (!exists(node)) return;
+    ß(node).map((el) => el.style.visibility = 'visible');
+
+    var tl = new TimelineMax,
+        st = new SplitText(node, {
+            type: 'words'
+        }),
+        chars = st.words;
+
+    tl.staggerFrom(chars, 0.9, {
+        opacity: 0,
+        y: -15,
+        autoCSS: true,
+        ease: Back.easeOut,
+    }, 0.03, '+=0');
+}
+
 const toggle = () => {
     const obj = '.js-toggle';
     if (!exists(obj)) return;
@@ -71,7 +89,7 @@ const bodyScroll = {
     },
     unlock() {
         this.body.removeAttribute('style');
-        this.main.removeAttribute('style');        
+        this.main.removeAttribute('style');
         window.scrollTo({
             top: this.scrollPos,
         });

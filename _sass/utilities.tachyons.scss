@@ -648,13 +648,18 @@
 .o-025 { opacity: .025; }
 .o-0   { opacity: 0;    }
 
-// visibility breakpoints
+// display none on breakpoints
 // ----------------------------------------------------------------------
 .visible-xs { @include sm     { display: none; }}
 .hidden-xs {  @include sm-max { display: none; }}
 .hidden-sm {  @include sm-ex  { display: none; }}
 .hidden-md {  @include md-ex  { display: none; }}
 .hidden-lg {  @include lg     { display: none; }}
+
+// visibility
+// ----------------------------------------------------------------------
+.v-visible { visibility: visible; }
+.v-hidden { visibility: hidden; }
 
 
 
