@@ -65,29 +65,28 @@
     ß(toggle).map((el) => {
         const toggleBtn = ß('.js-settings-btn', el);
         const prop = el.getAttribute('data-toggle');
-        ß(body).map((el) => el.classList.add(localStorage.getItem(prop).trim()));
-
-        toggleBtn.map((el) => {
-            const thisVal = el.textContent.toLowerCase().trim();
-            const localVal = localStorage.getItem(prop).trim();
-            el.classList.remove('is-active');
-            if (thisVal === localVal) el.classList.add('is-active');
-        });
+        ß(body).map((el) => el.classList.add(checkLocalStorage(prop)));
 
         const check = () => toggleBtn.map((el) => {
             if (el.classList.contains('is-active')) active = el.textContent.toLowerCase().trim();
         });
 
-        toggleBtn.map((el) => el.onclick = (e) => {
-            check();
-            toggleFX();
-            toggleBtn.map((el) => el.classList.remove('is-active'));
-            e.target.classList.add('is-active');
-            localStorage.setItem(prop, e.target.textContent.toLowerCase().trim());
-            ß(body).map((el) => {
-                el.classList.remove(active);
-                el.classList.add(localStorage.getItem(prop).trim());
-            });
+        toggleBtn.map((el) => {
+            if (checkLocalStorage(prop)) el.classList.remove('is-active');
+            if (el.textContent.toLowerCase().trim() === checkLocalStorage(prop)) el.classList.add('is-active');
+
+            el.onclick = (e) => {
+                check();
+                toggleFX();
+                toggleBtn.map((el) => el.classList.remove('is-active'));
+                e.target.classList.add('is-active');
+                localStorage.setItem(prop, e.target.textContent.toLowerCase().trim());
+                
+                ß(body).map((el) => {
+                    el.classList.remove(active);
+                    el.classList.add(localStorage.getItem(prop).trim());
+                });
+            }
         });
     });
 })()

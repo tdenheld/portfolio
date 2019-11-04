@@ -18,6 +18,10 @@ const valueInArray = (value, array) => {
     return array.includes(value);
 }
 
+const checkLocalStorage = (value) => {
+    if (localStorage.getItem(value)) return localStorage.getItem(value).trim();
+}
+
 const removeAllChilds = node => {
     while (node.firstChild) node.removeChild(node.firstChild);
 }
