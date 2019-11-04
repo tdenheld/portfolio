@@ -1,22 +1,19 @@
-.main {
+.main { 
     position: relative;
     z-index: 1;
-    
-    // push footer to bottom
-    display: grid;
-    grid-template-rows: 1fr max-content;
-    min-height: 100%;
 }
 
 .content {
-    margin-top: 134px;
+    padding-top: 134px;
+    min-height: calc(100vh - 59px); // footer height
 
     @include sm {
-        margin-top: 160px;
+        padding-top: 160px;
     }
 
     @include md {
-        margin-top: 220px;
+        padding-top: 220px;
+        min-height: calc(100vh - 99px); // footer height
     }
 }
 
