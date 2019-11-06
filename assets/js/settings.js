@@ -75,7 +75,7 @@
             if (checkLocalStorage(prop)) el.classList.remove('is-active');
             if (el.textContent.toLowerCase().trim() === checkLocalStorage(prop)) el.classList.add('is-active');
 
-            el.onclick = (e) => {
+            el.onclick = () => {
                 check();
                 toggleFX();
                 toggleBtn.map((el) => el.classList.remove('is-active'));
