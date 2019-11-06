@@ -79,8 +79,8 @@
                 check();
                 toggleFX();
                 toggleBtn.map((el) => el.classList.remove('is-active'));
-                e.target.classList.add('is-active');
-                localStorage.setItem(prop, e.target.textContent.toLowerCase().trim());
+                el.classList.add('is-active');
+                localStorage.setItem(prop, el.textContent.toLowerCase().trim());
                 
                 ß(body).map((el) => {
                     el.classList.remove(active);
