@@ -5,20 +5,22 @@ const cursor = () => {
 
     const follow = (obj, x, y, t) => {
         if (!exists(obj)) return;
-        TweenMax.to(obj, t, {
+        gsap.to(obj, {
+            duration: t,
+            ease: 'power4.out',
             x: x,
             y: y,
-            ease: Power4.easeOut
         });
     }
 
     const fade = (obj, a, b, t) => {
         if (!exists(obj)) return;
-        TweenMax.fromTo(obj, t, {
+        gsap.fromTo(obj, {
             autoAlpha: a
         }, {
+            duration: t,
+            ease: 'power4.out',
             autoAlpha: b,
-            ease: Power4.easeOut
         });
     }
 
@@ -51,12 +53,13 @@ const cursor = () => {
     // ------------------------------------------------
     const sizing = (obj, size) => {
         if (!exists(obj)) return;
-        TweenMax.to(obj, 0.5, {
+        gsap.to(obj, {
+            duration: 0.5,
+            ease: 'power4.out',
             width: size,
             height: size,
             top: -size / 2,
             left: -size / 2,
-            ease: Power4.easeOut
         });
     }
 

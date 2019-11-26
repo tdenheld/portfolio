@@ -8,36 +8,38 @@ const loader = {
     load() {
         const sessionLoaded = sessionStorage.getItem('loaded');
         const delay = sessionLoaded ? 0.1 : 0.7;
-        const tl = new TimelineMax;
 
         if (!exists(this.element)) return;
 
         window.onload = () => {
             sessionStorage.setItem('loaded', true);
-            tl.to(this.content, 0.7, {
-                ease: Power3.easeInOut,
+            gsap.timeline({
+                defaults: {
+                    duration: 0.7,
+                    ease: 'power3.inOut'
+                }
+            }).to(this.content, {
                 delay: delay,
                 opacity: 0,
                 onComplete() {
                     splitWords('.js-split-words');
                     revealOnScroll();
                 }
-            }).to(this.element, 0.7, {
-                ease: Power3.easeInOut,
+            }).to(this.element, {
                 y: '100%',
                 display: 'none',
-            }, '-=0.3').fromTo(this.main, 1.4, {
+            }, '-=0.3').fromTo(this.main, {
                 y: -100
             }, {
+                duration: 1.4,
                 ease: Power4.easeInOut,
                 y: 0
             }, '-=1');
         }
     },
-    pageTransition() {
-        const obj = 'a[href*="/"]';
-        const tl = new TimelineMax;
     
+    pageTransition() {
+        const obj = 'a[href*="/"]';    
         if (!exists(obj)) return;
     
         ß(obj).map((el) => el.onclick = (e) => {
@@ -45,20 +47,25 @@ const loader = {
             if (el.getAttribute('target') === '_blank') return;
             e.preventDefault();
             
-            tl.fromTo(this.element, 0.7, {
+            gsap.timeline({
+                defaults: {
+                    ease: 'power3.inOut'
+                }
+            }).fromTo(this.element, {
                 y: '-100%',
+                display: 'flex'
             }, {
-                ease: Power3.easeInOut,
+                duration: 0.7,
                 y: '0%',
-                display: 'flex',
                 onComplete() {
                     window.location = target;
                 }
             }).to(this.content, 0.2, {
-                ease: Power3.easeInOut,
+                duration: 0.2,
                 opacity: 1
-            }, '-=0.2').to(this.main, 1, {
-                ease: Power4.easeInOut,
+            }, '-=0.2').to(this.main, {
+                duration: 1,
+                ease: 'power4.inOut',
                 y: 200
             }, '-=0.8');
         });

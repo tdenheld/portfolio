@@ -39,7 +39,6 @@ const splitWords = (node) => {
     tl.staggerFrom(chars, 0.9, {
         opacity: 0,
         y: -15,
-        autoCSS: true,
         ease: Back.easeOut,
     }, 0.03, '+=0');
 }
