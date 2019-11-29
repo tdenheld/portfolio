@@ -42,7 +42,11 @@
 
 <body>
     {% include loader.html %}
+
+    {% unless page.url == "/about.html" %}
     {% include cursor-tile.html %}
+    {% endunless %}
+
     <main class="main">
         {% include header.html %}
         <div class="content js-loader-fade">

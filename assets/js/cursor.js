@@ -13,37 +13,67 @@ const cursor = () => {
         });
     }
 
-    const fade = (obj, a, b, t) => {
+    // const fade = (obj, duration) => {
+    //     if (!exists(obj)) return;
+
+    //     const _tween = gsap.fromTo(obj, {
+    //         autoAlpha: 0
+    //     }, {
+    //         duration: duration,
+    //         ease: 'power4.out',
+    //         autoAlpha: 1,
+    //     }).pause();
+
+    //     const fadeIn = () => _tween.play();
+    //     const fadeOut = () => _tween.reverse();
+
+    //     return {
+    //         fadeIn: fadeIn,
+    //         fadeOut: fadeOut
+    //     }
+    // }
+
+    const fade = (obj) => {
         if (!exists(obj)) return;
-        gsap.fromTo(obj, {
-            autoAlpha: a
+
+        const tl = gsap.fromTo(obj, {
+            autoAlpha: 0
         }, {
-            duration: t,
+            duration: 1,
             ease: 'power4.out',
-            autoAlpha: b,
-        });
+            autoAlpha: 1,
+        }).pause();
+
+        const fadeIn = (d) => tl.duration(d).play();
+        const fadeOut = (d) => tl.duration(d).reverse();
+
+        return {
+            fadeIn: fadeIn,
+            fadeOut: fadeOut
+        }
     }
 
-    const tracking = (obj, t, fading) => {
+    const tracking = (obj, duration, fading) => {
         if (!exists(obj)) return;
+        const fadeObj = fade(obj);
 
         document.addEventListener('mousemove', e => {
             requestAnimationFrame(() => {
-                follow(obj, e.clientX, e.clientY, t);
+                follow(obj, e.clientX, e.clientY, duration);
             });
         }, {
             passive: true
         });
 
         document.body.addEventListener('mouseenter', e => {
-            if (fading) fade(obj, 0, 1, 0.1);
+            if (fading) fadeObj.fadeIn(0.5);
             follow(obj, e.clientX, e.clientY, 0);
         }, {
             passive: true
         });
 
         document.body.addEventListener('mouseleave', () => {
-            if (fading) fade(obj, 1, 0, 0.7);
+            if (fading) fadeObj.fadeOut(1);
         }, {
             passive: true
         });
@@ -82,16 +112,21 @@ const cursor = () => {
     // ------------------------------------------------
     const followingImgHover = (trig, obj, img) => {
         if (!exists(obj)) return;
+        console.log(obj);
+        
+        const fadeObj = fade(obj);
+        const tileGroup = document.querySelector('.js-tile-group');
+
+        tileGroup.onmouseenter = () => fadeObj.fadeIn(1);
+        tileGroup.onmouseleave = () => fadeObj.fadeOut(1);
+
         ß(trig).map((el) => {
             el.onmouseenter = () => {
-                fade(obj, 0, 1, 1);
-                fade(img, 1, 0, 0);
+                fadeObj.fadeIn(1);
+                ß(img).map((el) => el.style.visibility = 'hidden');
                 const currentImg = el.getAttribute('data-img');
-                fade(`.js-cursor-img[data-img="${currentImg}"]`, 0, 1, 4);
+                fade(`.js-cursor-img[data-img="${currentImg}"]`).fadeIn(1);
             }
-            el.onmouseleave = () => {
-                fade(obj, 1, 0, 0.5);
-            };
         });
     }
 
