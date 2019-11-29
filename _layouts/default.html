@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- SOCIAL MEDIA -->
-    <meta property="og:title" content="{{ page.title }}{% unless page.index %} — {% endunless %}
-          Tibor den Held{% if page.index %} — Product Designer &amp; Creative Developer{% endif %}" />
+    <meta property="og:title" content="{{ page.title }}{% unless page.url == "/" %} — {% endunless %}
+          Tibor den Held{% if page.url == "/" %} — Product Designer &amp; Creative Developer{% endif %}" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://tibor.work{{ page.og.img }}" />
     <meta property="og:url" content="https://tibor.work{{ page.url | remove: '.html' }}" />
@@ -27,8 +27,8 @@
     <!-- TITLE -->
     <title>
         {{ page.title }}
-        {% unless page.index %} — {% endunless %}
-        Tibor den Held{% if page.index %} — Product Designer &amp; Creative Developer{% endif %}
+        {% unless page.url == "/" %} — {% endunless %}
+        Tibor den Held{% if page.url == "/" %} — Product Designer &amp; Creative Developer{% endif %}
     </title>
 
     <script>
@@ -42,7 +42,10 @@
 
 <body>
     {% include loader.html %}
+    {% unless page.url == "/about.html" %}
     {% include cursor-tile.html %}
+    {% endunless %}
+
     <main class="main">
         {% include header.html %}
         <div class="content js-loader-fade">
