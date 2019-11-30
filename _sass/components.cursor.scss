@@ -26,11 +26,18 @@ $cursor-size: 40px;
 }
 
 .cursor__img {
+    position: relative;
     display: none;
-    visibility: hidden;
     opacity: 0;
     @include full(absolute);
     object-fit: cover;
+    filter: brightness(1.75) contrast(2);
+    transition: all 2s $ease-out;
+
+    &.is-active {
+        opacity: 1;
+        filter: none;
+    }
 }
 
 .no-touchevents {

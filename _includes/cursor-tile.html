@@ -1,6 +1,6 @@
 <div class="cursor cursor--tile" id="js-cursor-tile">
     {% for entry in site.posts %}
-    <img src="{{ entry.thumb }}" class="cursor__img js-cursor-img" data-img="{{ forloop.index }}" />
+    <img src="{{ entry.thumb }}" class="cursor__img js-cursor-img" data-set-img="{{ forloop.index }}" />
     {% endfor %}
     <div class="cursor__noise"></div>
 </div>

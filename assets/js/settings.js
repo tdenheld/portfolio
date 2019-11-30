@@ -15,31 +15,33 @@
 
     // transition of modal
     // ------------------------------
-    const tl = new TimelineMax({
-        paused: true
-    });
-    tl.to(modal, 0.5, {
-        ease: Power4.easeInOut,
-        scaleX: 1,
+    const tl = gsap.timeline({
+        paused: true,
+        defaults: {
+            duration: 0.5,
+            ease: 'power3.inOut'
+        }
+    }).fromTo(modal, {
         display: 'block',
-    }).staggerFromTo(stag, 0.5, {
-        lazy: true,
-        autoCSS: true,
+    },{
+        ease: 'power4.inOut',
+        scaleX: 1,
+    }).fromTo(stag, {
         opacity: 0,
         x: 40
     }, {
-        ease: Power3.easeInOut,
+        stagger: 0.05,
         opacity: 1,
         x: 0
-    }, 0.05, '-=0.2').to(closeBtn, 0.4, {
-        ease: Power3.easeInOut,
+    }, '-=0.2').to(closeBtn, {
+        duration: 0.4,
         scale: 1,
     }, '-=0.45');
 
     // open close modal
     // ------------------------------
     ß(obj).map((el) => el.onclick = () => tl.play().timeScale(1));
-    ß(closeModal).map((el) => el.onclick = () => tl.reverse().timeScale(1.75));
+    ß(closeModal).map((el) => el.onclick = () => tl.timeScale(-1.75));
 
     // effect if clicked on an option
     // ------------------------------

@@ -4,44 +4,49 @@ const cursor = () => {
     if (Modernizr.touchevents) return;
 
     const follow = (obj, x, y, t) => {
-        if (!exists(obj)) return;
-        TweenMax.to(obj, t, {
+        gsap.to(obj, {
+            duration: t,
+            ease: 'power4.out',
             x: x,
             y: y,
-            ease: Power4.easeOut
         });
     }
 
-    const fade = (obj, a, b, t) => {
-        if (!exists(obj)) return;
-        TweenMax.fromTo(obj, t, {
-            autoAlpha: a
+    const fade = (obj) => {
+        const tween = gsap.fromTo(obj, {
+            autoAlpha: 0
         }, {
-            autoAlpha: b,
-            ease: Power4.easeOut
-        });
+            duration: 1,
+            ease: 'power4.out',
+            autoAlpha: 1,
+        }).pause();
+
+        return {
+            tween: tween
+        }
     }
 
-    const tracking = (obj, t, fading) => {
+    const tracking = (obj, duration, fading) => {
         if (!exists(obj)) return;
+        const fadeObj = fade(obj);
 
         document.addEventListener('mousemove', e => {
             requestAnimationFrame(() => {
-                follow(obj, e.clientX, e.clientY, t);
+                follow(obj, e.clientX, e.clientY, duration);
             });
         }, {
             passive: true
         });
 
         document.body.addEventListener('mouseenter', e => {
-            if (fading) fade(obj, 0, 1, 0.1);
+            if (fading) fadeObj.tween.play();
             follow(obj, e.clientX, e.clientY, 0);
         }, {
             passive: true
         });
 
         document.body.addEventListener('mouseleave', () => {
-            if (fading) fade(obj, 1, 0, 0.7);
+            if (fading) fadeObj.tween.reverse();
         }, {
             passive: true
         });
@@ -51,12 +56,13 @@ const cursor = () => {
     // ------------------------------------------------
     const sizing = (obj, size) => {
         if (!exists(obj)) return;
-        TweenMax.to(obj, 0.5, {
+        gsap.to(obj, {
+            duration: 0.5,
+            ease: 'power4.out',
             width: size,
             height: size,
             top: -size / 2,
             left: -size / 2,
-            ease: Power4.easeOut
         });
     }
 
@@ -79,16 +85,22 @@ const cursor = () => {
     // ------------------------------------------------
     const followingImgHover = (trig, obj, img) => {
         if (!exists(obj)) return;
+
+        const fadeObj = fade(obj);
+        const tileGroup = document.querySelector('.js-tile-group');
+
+        tileGroup.onmouseenter = () => fadeObj.tween.play().timeScale(1);
+        tileGroup.onmouseleave = () => {
+            fadeObj.tween.timeScale(-2);
+            ß(img).map((el) => el.classList.remove('is-active'));
+        }
+
         ß(trig).map((el) => {
             el.onmouseenter = () => {
-                fade(obj, 0, 1, 1);
-                fade(img, 1, 0, 0);
-                const currentImg = el.getAttribute('data-img');
-                fade(`.js-cursor-img[data-img="${currentImg}"]`, 0, 1, 4);
+                ß(img).map((el) => el.classList.remove('is-active'));
+                const currentImg = el.getAttribute('data-get-img');
+                document.querySelector(`[data-set-img="${currentImg}"]`).classList.add('is-active');
             }
-            el.onmouseleave = () => {
-                fade(obj, 1, 0, 0.5);
-            };
         });
     }
 
