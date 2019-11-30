@@ -39,14 +39,14 @@ const cursor = () => {
         });
 
         document.body.addEventListener('mouseenter', e => {
-            if (fading) fadeObj.tween.duration(0.1).play();
+            if (fading) fadeObj.tween.play();
             follow(obj, e.clientX, e.clientY, 0);
         }, {
             passive: true
         });
 
         document.body.addEventListener('mouseleave', () => {
-            if (fading) fadeObj.tween.duration(0.7).reverse();
+            if (fading) fadeObj.tween.reverse();
         }, {
             passive: true
         });
@@ -90,7 +90,10 @@ const cursor = () => {
         const tileGroup = document.querySelector('.js-tile-group');
 
         tileGroup.onmouseenter = () => fadeObj.tween.play().timeScale(1);
-        tileGroup.onmouseleave = () => fadeObj.tween.timeScale(-3);
+        tileGroup.onmouseleave = () => {
+            fadeObj.tween.timeScale(-2);
+            ß(img).map((el) => el.classList.remove('is-active'));
+        }
 
         ß(trig).map((el) => {
             el.onmouseenter = () => {
