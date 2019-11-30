@@ -4,7 +4,6 @@ const cursor = () => {
     if (Modernizr.touchevents) return;
 
     const follow = (obj, x, y, t) => {
-        if (!exists(obj)) return;
         gsap.to(obj, {
             duration: t,
             ease: 'power4.out',
@@ -13,30 +12,8 @@ const cursor = () => {
         });
     }
 
-    // const fade = (obj, duration) => {
-    //     if (!exists(obj)) return;
-
-    //     const _tween = gsap.fromTo(obj, {
-    //         autoAlpha: 0
-    //     }, {
-    //         duration: duration,
-    //         ease: 'power4.out',
-    //         autoAlpha: 1,
-    //     }).pause();
-
-    //     const fadeIn = () => _tween.play();
-    //     const fadeOut = () => _tween.reverse();
-
-    //     return {
-    //         fadeIn: fadeIn,
-    //         fadeOut: fadeOut
-    //     }
-    // }
-
     const fade = (obj) => {
-        if (!exists(obj)) return;
-
-        const tl = gsap.fromTo(obj, {
+        const tween = gsap.fromTo(obj, {
             autoAlpha: 0
         }, {
             duration: 1,
@@ -44,12 +21,8 @@ const cursor = () => {
             autoAlpha: 1,
         }).pause();
 
-        const fadeIn = (d) => tl.duration(d).play();
-        const fadeOut = (d) => tl.duration(d).reverse();
-
         return {
-            fadeIn: fadeIn,
-            fadeOut: fadeOut
+            tween: tween
         }
     }
 
@@ -66,14 +39,14 @@ const cursor = () => {
         });
 
         document.body.addEventListener('mouseenter', e => {
-            if (fading) fadeObj.fadeIn(0.5);
+            if (fading) fadeObj.tween.duration(0.1).play();
             follow(obj, e.clientX, e.clientY, 0);
         }, {
             passive: true
         });
 
         document.body.addEventListener('mouseleave', () => {
-            if (fading) fadeObj.fadeOut(1);
+            if (fading) fadeObj.tween.duration(0.7).reverse();
         }, {
             passive: true
         });
@@ -112,20 +85,18 @@ const cursor = () => {
     // ------------------------------------------------
     const followingImgHover = (trig, obj, img) => {
         if (!exists(obj)) return;
-        console.log(obj);
-        
+
         const fadeObj = fade(obj);
         const tileGroup = document.querySelector('.js-tile-group');
 
-        tileGroup.onmouseenter = () => fadeObj.fadeIn(1);
-        tileGroup.onmouseleave = () => fadeObj.fadeOut(1);
+        tileGroup.onmouseenter = () => fadeObj.tween.play().timeScale(1);
+        tileGroup.onmouseleave = () => fadeObj.tween.timeScale(-3);
 
         ß(trig).map((el) => {
             el.onmouseenter = () => {
-                fadeObj.fadeIn(1);
-                ß(img).map((el) => el.style.visibility = 'hidden');
-                const currentImg = el.getAttribute('data-img');
-                fade(`.js-cursor-img[data-img="${currentImg}"]`).fadeIn(1);
+                ß(img).map((el) => el.classList.remove('is-active'));
+                const currentImg = el.getAttribute('data-get-img');
+                document.querySelector(`[data-set-img="${currentImg}"]`).classList.add('is-active');
             }
         });
     }
