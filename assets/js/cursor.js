@@ -44,25 +44,17 @@ const cursor = () => {
         if (!exists(obj)) return;
         const fadeObj = fade(obj);
 
-        document.addEventListener('mousemove', e => {
-            requestAnimationFrame(() => {
-                follow(obj, e.clientX, e.clientY, duration);
-            });
-        }, {
-            passive: true
-        });
+        document.addEventListener('mousemove', e => requestAnimationFrame(() => {
+            follow(obj, e.clientX, e.clientY, duration);
+        }));
 
-        document.body.addEventListener('mouseenter', e => {
+        document.addEventListener('mouseover', e => {
             if (fading) fadeObj.fadeIn(0.3);
             follow(obj, e.clientX, e.clientY, 0);
-        }, {
-            passive: true
         });
 
-        document.body.addEventListener('mouseleave', () => {
+        document.addEventListener('mouseout', () => {
             if (fading) fadeObj.fadeOut(1);
-        }, {
-            passive: true
         });
     }
 
@@ -96,33 +88,31 @@ const cursor = () => {
 
     // image hover
     // ------------------------------------------------
-    const followingImgHover = (trig, obj, img) => {
+    (() => {
+        const obj = '#js-cursor-tile';
         if (!exists(obj)) return;
 
         const fadeObj = fade(obj);
-        const tileGroup = document.querySelector('.js-tile-group');
-
-        tileGroup.onmouseenter = () => fadeObj.fadeIn(0.5);
-        tileGroup.onmouseleave = () => {
-            fadeObj.fadeOut(1);
-            ß(img).map((el) => el.classList.remove('is-active'));
-        }
+        const img = '.js-cursor-img';
+        const trig = '.js-tile';
 
         ß(trig).map((el) => {
-            el.onmouseenter = () => {
+            el.addEventListener('mouseenter', () => {
+                fadeObj.fadeIn(0.45);
                 ß(img).map((el) => el.classList.remove('is-active'));
                 const currentImg = el.getAttribute('data-get-img');
                 document.querySelector(`[data-set-img="${currentImg}"]`).classList.add('is-active');
-            }
+            });
+
+            el.addEventListener('mouseleave', () => fadeObj.fadeOut(0.45));
         });
-    }
+    })()
 
     // execution
     // ------------------------------------------------
     tracking('#js-cursor', 0.7, 'fading');
     hover('#js-cursor', 80);
     tracking('#js-cursor-tile', 1.7);
-    followingImgHover('.js-tile', '#js-cursor-tile', '.js-cursor-img');
 }
 
 document.addEventListener('DOMContentLoaded', () => cursor());

@@ -32,7 +32,7 @@ $cursor-size: 40px;
     @include full(absolute);
     object-fit: cover;
     filter: brightness(1.75) contrast(2);
-    transition: all 2s $ease-out;
+    transition: all 1s $ease-out;
 
     &.is-active {
         opacity: 1;
