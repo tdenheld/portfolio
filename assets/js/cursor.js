@@ -13,13 +13,31 @@ const cursor = () => {
     }
 
     const fade = (obj) => {
-        return gsap.fromTo(obj, {
+        const _tween = gsap.fromTo(obj, {
             autoAlpha: 0
         }, {
-            duration: 1,
-            ease: 'power2.out',
+            ease: 'linear.none',
             autoAlpha: 1,
         }).pause();
+
+        const fadeIn = dur => {
+            gsap.to(_tween, {
+                ease: 'power4.out'
+            });
+            _tween.duration(dur).play();
+        }
+
+        const fadeOut = dur => {
+            gsap.to(_tween, {
+                ease: 'power4.in'
+            });
+            _tween.duration(dur).reverse();
+        }
+
+        return {
+            fadeIn,
+            fadeOut
+        }
     }
 
     const tracking = (obj, duration, fading) => {
@@ -35,14 +53,14 @@ const cursor = () => {
         });
 
         document.body.addEventListener('mouseenter', e => {
-            if (fading) fadeObj.play();
+            if (fading) fadeObj.fadeIn(0.3);
             follow(obj, e.clientX, e.clientY, 0);
         }, {
             passive: true
         });
 
         document.body.addEventListener('mouseleave', () => {
-            if (fading) fadeObj.reverse();
+            if (fading) fadeObj.fadeOut(1);
         }, {
             passive: true
         });
@@ -84,9 +102,9 @@ const cursor = () => {
         const fadeObj = fade(obj);
         const tileGroup = document.querySelector('.js-tile-group');
 
-        tileGroup.onmouseenter = () => fadeObj.play().timeScale(1);
+        tileGroup.onmouseenter = () => fadeObj.fadeIn(0.5);
         tileGroup.onmouseleave = () => {
-            fadeObj.timeScale(-2);
+            fadeObj.fadeOut(1);
             ß(img).map((el) => el.classList.remove('is-active'));
         }
 
