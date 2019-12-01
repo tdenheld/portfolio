@@ -77,12 +77,8 @@ const cursor = () => {
         const hover = 'a, button, .js-settings-close, .js-img-hover u';
 
         ß(hover).map((el) => {
-            el.addEventListener('mouseenter', () => sizing(obj, size), {
-                passive: true
-            });
-            el.addEventListener('mouseleave', () => sizing(obj, initSize), {
-                passive: true
-            });
+            el.addEventListener('mouseenter', () => sizing(obj, size));
+            el.addEventListener('mouseleave', () => sizing(obj, initSize));
         });
     }
 
