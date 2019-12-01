@@ -13,17 +13,13 @@ const cursor = () => {
     }
 
     const fade = (obj) => {
-        const tween = gsap.fromTo(obj, {
+        return gsap.fromTo(obj, {
             autoAlpha: 0
         }, {
             duration: 1,
-            ease: 'power4.out',
+            ease: 'power2.out',
             autoAlpha: 1,
         }).pause();
-
-        return {
-            tween: tween
-        }
     }
 
     const tracking = (obj, duration, fading) => {
@@ -39,14 +35,14 @@ const cursor = () => {
         });
 
         document.body.addEventListener('mouseenter', e => {
-            if (fading) fadeObj.tween.play();
+            if (fading) fadeObj.play();
             follow(obj, e.clientX, e.clientY, 0);
         }, {
             passive: true
         });
 
         document.body.addEventListener('mouseleave', () => {
-            if (fading) fadeObj.tween.reverse();
+            if (fading) fadeObj.reverse();
         }, {
             passive: true
         });
@@ -55,7 +51,6 @@ const cursor = () => {
     // hover states
     // ------------------------------------------------
     const sizing = (obj, size) => {
-        if (!exists(obj)) return;
         gsap.to(obj, {
             duration: 0.5,
             ease: 'power4.out',
@@ -89,9 +84,9 @@ const cursor = () => {
         const fadeObj = fade(obj);
         const tileGroup = document.querySelector('.js-tile-group');
 
-        tileGroup.onmouseenter = () => fadeObj.tween.play().timeScale(1);
+        tileGroup.onmouseenter = () => fadeObj.play().timeScale(1);
         tileGroup.onmouseleave = () => {
-            fadeObj.tween.timeScale(-2);
+            fadeObj.timeScale(-2);
             ß(img).map((el) => el.classList.remove('is-active'));
         }
 
