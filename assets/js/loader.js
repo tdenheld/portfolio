@@ -11,7 +11,7 @@ const loader = {
 
         if (!exists(this.element)) return;
 
-        window.onload = () => {
+        window.addEventListener('load', () => {
             sessionStorage.setItem('loaded', true);
             gsap.timeline({
                 defaults: {
@@ -35,14 +35,14 @@ const loader = {
                 ease: Power4.easeInOut,
                 y: 0
             }, '-=1');
-        }
+        });
     },
     
     pageTransition() {
         const obj = 'a[href*="/"]';    
         if (!exists(obj)) return;
     
-        ß(obj).map((el) => el.onclick = (e) => {
+        ß(obj).map((el) => el.addEventListener('click', e => {
             const target = el.getAttribute('href');
             if (el.getAttribute('target') === '_blank') return;
             e.preventDefault();
@@ -68,7 +68,7 @@ const loader = {
                 ease: 'power4.inOut',
                 y: 200
             }, '-=0.8');
-        });
+        }));
     }
 }
 Object.freeze(loader);

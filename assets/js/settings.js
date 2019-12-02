@@ -40,8 +40,8 @@
 
     // open close modal
     // ------------------------------
-    ß(obj).map((el) => el.onclick = () => tl.play().timeScale(1));
-    ß(closeModal).map((el) => el.onclick = () => tl.timeScale(-1.75));
+    ß(obj).map((el) => el.addEventListener('click', () => tl.play().timeScale(1)));
+    ß(closeModal).map((el) => el.addEventListener('click', () => tl.timeScale(-1.75)));
 
     // effect if clicked on an option
     // ------------------------------
@@ -77,7 +77,7 @@
             if (checkLocalStorage(prop)) el.classList.remove('is-active');
             if (el.textContent.toLowerCase().trim() === checkLocalStorage(prop)) el.classList.add('is-active');
 
-            el.onclick = () => {
+            el.addEventListener('click', () => {
                 check();
                 toggleFX();
                 toggleBtn.map((el) => el.classList.remove('is-active'));
@@ -88,7 +88,7 @@
                     el.classList.remove(active);
                     el.classList.add(localStorage.getItem(prop).trim());
                 });
-            }
+            });
         });
     });
 })()

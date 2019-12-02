@@ -20,13 +20,13 @@
         }
 
         if (Modernizr.touchevents) {
-            link.onclick = () => {
+            link.addEventListener('click', () => {
                 add();
                 setTimeout(remove, 1300);
-            }
+            });
         } else {
-            link.onmouseenter = () => add();
-            link.onmouseleave = () => remove();
+            link.addEventListener('mouseenter', () => add());
+            link.addEventListener('mouseleave', () => remove());
         }
     });
 })()

@@ -18,7 +18,7 @@ const valueInArray = (value, array) => {
     return array.includes(value);
 }
 
-const checkLocalStorage = (value) => {
+const checkLocalStorage = value => {
     if (localStorage.getItem(value)) return localStorage.getItem(value).trim();
 }
 
@@ -26,27 +26,30 @@ const removeAllChilds = node => {
     while (node.firstChild) node.removeChild(node.firstChild);
 }
 
-const splitWords = (node) => {
+const splitWords = node => {
     if (!exists(node)) return;
     ß(node).map((el) => el.style.visibility = 'visible');
 
-    var tl = new TimelineMax,
-        st = new SplitText(node, {
-            type: 'words'
-        }),
-        chars = st.words;
+    const st = new SplitText(node, {
+        type: 'words'
+    });
+    const chars = st.words;
 
-    tl.staggerFrom(chars, 0.9, {
+    gsap.from(chars, {
+        duration: 0.9,
+        ease: 'back.out',
         opacity: 0,
         y: -15,
-        ease: Back.easeOut,
-    }, 0.03, '+=0');
+        stagger: 0.03
+    });
 }
 
 const toggle = () => {
     const obj = '.js-toggle';
     if (!exists(obj)) return;
-    ß(obj).map((el) => el.onclick = () => el.classList.toggle('is-active'));
+    ß(obj).map((el) => el.addEventListener('click', () => {
+        el.classList.toggle('is-active');
+    }));
 }
 
 const scrollToObject = () => {
@@ -54,19 +57,19 @@ const scrollToObject = () => {
     const offset = document.querySelector('.header').offsetHeight + 24;
     if (!exists(obj)) return;
 
-    ß(obj).map((el) => el.onclick = () => {
+    ß(obj).map((el) => el.addEventListener('click', () => {
         const target = el.getAttribute('href');
         if (!exists(target)) return;
-        TweenMax.to(window, .8, {
-            ease: Power3.easeInOut,
+        gsap.to(window, {
+            duration: 0.8,
+            ease: 'power3.inOut',
             scrollTo: {
                 y: target,
                 offsetY: offset,
-                autoKill: false,
             }
         });
         return false;
-    });
+    }));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
