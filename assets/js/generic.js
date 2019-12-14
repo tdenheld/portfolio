@@ -62,7 +62,7 @@ const scrollToObject = () => {
         if (!exists(target)) return;
         gsap.to(window, {
             duration: 0.8,
-            ease: Power3.easeInOut,
+            ease: 'power3.inOut',
             scrollTo: {
                 y: target,
                 offsetY: offset
