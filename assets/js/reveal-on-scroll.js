@@ -5,26 +5,24 @@ const revealOnScroll = () => {
     const richTxt = '.js-scroll-rt > *';
     if (!exists(section) && !exists(richTxt)) return;
 
-    const init = (node) => {
-        const reveal = () => ß(node).map((el) => {
-            const defaultHook = 0.92;
-            const hook = el.getAttribute('data-hook') || defaultHook;
-
-            const nodePosition = el.getBoundingClientRect();
-            const inViewport = !(nodePosition.top > innerHeight * hook);
-
-            if (inViewport) {
-                ß('.js-tr', el).map((ae) => ae.classList.add('is-active'));
-                if (el.classList.contains('js-tr')) el.classList.add('is-active');
+    const observer = new IntersectionObserver((entries, self) => {
+        entries.map(entry => {
+            const target = entry.target;
+            
+            if (entry.isIntersecting) {
+                ß('.js-tr', target).map((el) => el.classList.add('is-active'));
+                if (target.classList.contains('js-tr')) target.classList.add('is-active');
+                self.unobserve(target);
             }
         });
-        reveal();
+    }, {
+        rootMargin: '-5% 0px',
+        threshold: 0.05
+    });
 
-        window.addEventListener('scroll', () => requestAnimationFrame(reveal));
-        window.addEventListener('resize', () => requestAnimationFrame(reveal));
-    }
-
-    ß(richTxt).map((el) => el.classList.add('js-tr', 'tr-fi-up', 'tr-1500'));
-    init(richTxt);
-    init(section);
+    ß(richTxt).map((el) => {
+        el.classList.add('js-tr', 'tr-fi-up', 'tr-1500');
+        observer.observe(el);
+    });
+    ß(section).map(el => observer.observe(el));
 }
