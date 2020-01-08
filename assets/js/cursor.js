@@ -92,15 +92,22 @@ const cursor = () => {
         const img = '.js-cursor-img';
         const trig = '.js-tile';
 
+        const removeImg = () => {
+            ß(img).map((el) => el.classList.remove('is-active'));
+        }
+
         ß(trig).map((el) => {
             el.addEventListener('mouseenter', () => {
                 fadeObj.fadeIn(0.45);
-                ß(img).map((el) => el.classList.remove('is-active'));
+                removeImg();
                 const currentImg = el.getAttribute('data-get-img');
                 document.querySelector(`[data-set-img="${currentImg}"]`).classList.add('is-active');
             });
 
-            el.addEventListener('mouseleave', () => fadeObj.fadeOut(0.45));
+            el.addEventListener('mouseleave', () => {
+                fadeObj.fadeOut(0.45);
+                removeImg();
+            });
         });
     })()
 
