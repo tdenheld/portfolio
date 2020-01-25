@@ -1,4 +1,4 @@
-.main { 
+.main {
     position: relative;
     z-index: 1;
 }
@@ -61,11 +61,9 @@
     @include bg(cover);
 }
 
-.offset {
-    &:target:before {
-        content: "";
-        display: block;
-        height: 120px;
-        margin-top: -120px;
-    }
+.offset:target:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
 }
