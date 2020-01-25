@@ -54,8 +54,9 @@ const toggle = () => {
 
 const scrollToObject = () => {
     const obj = '.js-scroll-to';
-    const offset = document.querySelector('.header').offsetHeight + 24;
     if (!exists(obj)) return;
+    const workHash = window.location.href.search('#work') > 0;
+    const offset = workHash ? 0 : 120;
 
     ß(obj).map((el) => el.onclick = () => {
         const target = el.getAttribute('href');
