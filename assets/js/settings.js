@@ -13,6 +13,21 @@
 
     if (!exists(obj)) return;
 
+    // check for native appearance
+    // ---------------------------------
+    if (localStorage.getItem('appearance') == null) {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            localStorage.setItem('appearance', 'dark');
+            localStorage.setItem('nativeDarkmode', 'set');
+        }
+    }
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        if (localStorage.getItem('nativeDarkmode') === 'set') {
+            localStorage.removeItem('appearance');
+        }
+    }
+
     // transition of modal
     // ------------------------------
     const tl = gsap.timeline({
@@ -23,7 +38,7 @@
         }
     }).fromTo(modal, {
         display: 'block',
-    },{
+    }, {
         ease: 'power4.inOut',
         scaleX: 1,
     }).fromTo(stag, {
@@ -67,7 +82,7 @@
     ß(toggle).map((el) => {
         const toggleBtn = ß('.js-settings-btn', el);
         const prop = el.getAttribute('data-toggle');
-        ß(body).map((el) => el.classList.add(checkLocalStorage(prop)));
+        if (localStorage.getItem(prop)) ß(body).map((el) => el.classList.add(checkLocalStorage(prop)));
 
         const check = () => toggleBtn.map((el) => {
             if (el.classList.contains('is-active')) active = el.textContent.toLowerCase().trim();
@@ -83,7 +98,8 @@
                 toggleBtn.map((el) => el.classList.remove('is-active'));
                 el.classList.add('is-active');
                 localStorage.setItem(prop, el.textContent.toLowerCase().trim());
-                
+                localStorage.removeItem('nativeDarkmode');
+
                 ß(body).map((el) => {
                     el.classList.remove(active);
                     el.classList.add(localStorage.getItem(prop).trim());
