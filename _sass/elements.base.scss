@@ -9,6 +9,10 @@ body {
     -webkit-font-smoothing: antialiased;
     line-height: $lh-copy;
     color: $brand;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 a,
