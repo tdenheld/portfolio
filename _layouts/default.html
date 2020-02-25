@@ -42,7 +42,7 @@
 
 <body>
     {% include loader.html %}
-    {% unless page.url == "/about.html" %}
+    {% unless page.url == "/about.html" and "/fun.html" %}
     {% include cursor-tile.html %}
     {% endunless %}
 

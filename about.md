@@ -1,5 +1,4 @@
 ---
-loader: true
 layout: article
 title: About
 heading: Hi, I am Tibor den Held. Raised by two art historians and fascinated with computers since the late 80s.
@@ -23,5 +22,3 @@ So I applied to Digitas and I came to work for Dutch Railways. An account won th
 Especially the combination with prototyping. I picked up my coding skills, improved it hugely and now design about 80% of the projects directly in HTML. Now and then I'm even used as a front-end developer to write production code :)
 
 In my spare time I love to play with cameras and synthesizers. Mail me at <a href="mailto:hoi@tk305.com" target="_blank" rel="noreferrer">hoi@tk305.com</a> or google my <a href="http://www.google.com/search?q=Tibor+den+Held" target="_blank" rel="noreferrer">full name</a>.
-
-

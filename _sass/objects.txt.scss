@@ -31,6 +31,14 @@
     }
 }
 
+.txt__heading-xs {
+    @include font(24px, bold, $lh-title);
+
+    @include sm {
+        font-size: toRem(32px);
+    }
+}
+
 .txt__body {
     font-family: $sans;
     font-size: toRem(17px);

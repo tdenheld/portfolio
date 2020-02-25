@@ -15,6 +15,7 @@
 }
 
 .header__logo {
+    flex-shrink: 0;
     position: relative;
     top: 6px;
     width: 50px;

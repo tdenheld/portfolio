@@ -5,12 +5,15 @@
         </figure>
         <div>
             <nav class="header__nav">
+                <a href="/about" class="header__item link link--nav">
+                    <span>about</span>
+                </a>
                 <a href="{% unless page.url=='/'%}/{%endunless%}#work"
                     class="header__item link link--nav {% if page.url=='/'%}js-scroll-to{% endif %}">
                     <span>work</span>
                 </a>
-                <a href="/about" class="header__item link link--nav">
-                    <span>about</span>
+                <a href="/fun" class="header__item link link--nav">
+                    <span>fun</span>
                 </a>
                 <button class="header__item header__item--settings lh-none js-settings" aria-label="settings">
                     {% include svg/icons/settings.svg %}
