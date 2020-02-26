@@ -1,31 +1,66 @@
 ---
 layout: default
 title: Experiments & side projects
+experiments:
+  - title: Ambient Sound Mixer
+    url: https://ambient.netlify.com
+    description: Vue.js — 2020
+  - title: Disco Machine
+    url: http://www.030303.nl/discomachine/
+    description: Flash AS2 — 2011
+  - title: Video Mixer
+    url: http://030303.nl/videomixer/
+    description: Flash AS2 — 2009
+  - title: Block Avoid Game
+    url: https://mazeavoid.netlify.com
+    description: Flash AS3 — 2009
+  - title: Super Slider
+    url: https://superslider.tk305.com
+    description: Flash AS2 — 2010 
+  - title: Dance Jockey
+    url: https://dancejockey.tk305.com
+    description: Flash AS2 — 2008
+
+portfolio:
+  - title: 2018.tk305.com
+    url: https://2018.tk305.com
+  - title: 2016.tk305.com
+    url: https://2016.tk305.com
+  - title: 2013.tk305.com
+    url: https://2013.tk305.com
+  - title: 90s.tk305.com
+    url: https://90s.tk305.com
 ---
 
 
 <article class="section">
     <div class="container">
-        <header class="mb-6 mb-8-sm">
+        <header class="mb-8 mb-16-md">
             <h1 class="txt__heading-l v-hidden js-split-words">
                 {{ page.title }}
             </h1>
         </header>
-        <ul class="txt rich-txt sans-serif f20 mb-8 mb-16-md">
-            <li class="mb-2"><a href="https://ambient.netlify.com" target="_blank" rel="noreferrer">Ambient Sound Mixer</a></li>
-            <li class="mb-2"><a href="http://www.030303.nl/discomachine/" target="_blank" rel="noreferrer">Disco Machine</a></li>
-            <li class="mb-2"><a href="http://030303.nl/videomixer/" target="_blank" rel="noreferrer">Video Mixer</a></li>
-            <li class="mb-2"><a href="https://mazeavoid.netlify.com" target="_blank" rel="noreferrer">Block Avoid Game</a></li>
-            <li class="mb-2"><a href="https://superslider.tk305.com" target="_blank" rel="noreferrer">Superslider</a></li>
-            <li><a href="https://dancejockey.tk305.com" target="_blank" rel="noreferrer">Dance Jockey</a></li>
+
+        <ul class="link-list section">
+            {% for entry in page.experiments %}
+                <li>
+                    <a href="{{ entry.url }}" target="_blank" rel="noreferrer" class="link-list__link">
+                        {{ entry.title }}
+                    </a>
+                    <p class="f14">{{ entry.description }}</p>
+                </li>
+            {% endfor %}
         </ul>
 
-        <h2 class="txt__heading-xs mb-2">Portfolio Archive</h2>
-        <ul class="txt rich-txt sans-serif f20">
-            <li class="mb-2"><a href="https://2018.tk305.com" target="_blank" rel="noreferrer">2018</a></li>
-            <li class="mb-2"><a href="https://2016.tk305.com" target="_blank" rel="noreferrer">2016</a></li>
-            <li class="mb-2"><a href="https://2013.tk305.com" target="_blank" rel="noreferrer">2013</a></li>
-            <li><a href="https://90s.tk305.com" target="_blank" rel="noreferrer">90's</a></li>
+        <h2 class="txt__heading-s mb-4">Portfolio Archive</h2>
+        <ul class="link-list link-list--small">
+            {% for entry in page.portfolio %}
+                <li>
+                    <a href="{{ entry.url }}" target="_blank" rel="noreferrer" class="link-list__link">
+                        {{ entry.title }}
+                    </a>
+                </li>
+            {% endfor %}
         </ul>
     </div>
 </article>

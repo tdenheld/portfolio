@@ -18,3 +18,40 @@
 .link--nav:after {
     height: calc(100% - 8px);
 }
+
+
+// link list
+// --------------------------------------------------
+.link-list {
+    display: grid;
+    grid-gap: $gutter;
+    font-family: $sans;
+
+    @include sm {
+        grid-gap: $double-gutter;
+    }
+}
+
+.link-list--small {
+    grid-gap: $half-gutter;
+
+    .link-list__link {
+        font-size: toRem(18px);
+    }
+}
+
+.link-list__link {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-size: calc(20px + 1.2vw);
+    line-height: $lh-title;
+    transition: all 800ms $ease-out;
+    box-shadow: inset 0 -1px 0 $brand;
+}
+
+.no-touchevents {
+    .link-list__link:hover {
+        letter-spacing: 0.06em;
+        transition: all 800ms $ease-out;
+    }
+}
