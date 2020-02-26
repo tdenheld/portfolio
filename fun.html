@@ -43,7 +43,7 @@ portfolio:
 
         <ul class="link-list section">
             {% for entry in page.experiments %}
-                <li>
+                <li class="js-scroll js-tr tr-fi-up tr-1000">
                     <a href="{{ entry.url }}" target="_blank" rel="noreferrer" class="link-list__link">
                         {{ entry.title }}
                     </a>
@@ -52,10 +52,10 @@ portfolio:
             {% endfor %}
         </ul>
 
-        <h2 class="txt__heading-s mb-4">Portfolio Archive</h2>
+        <h2 class="txt__heading-s mb-4 js-scroll js-tr tr-fi-up tr-1000">Portfolio Archive</h2>
         <ul class="link-list link-list--small">
             {% for entry in page.portfolio %}
-                <li>
+                <li class="js-scroll js-tr tr-fi-up tr-1000">
                     <a href="{{ entry.url }}" target="_blank" rel="noreferrer" class="link-list__link">
                         {{ entry.title }}
                     </a>
