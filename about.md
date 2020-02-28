@@ -14,7 +14,7 @@ During my studies (CMD), I started as an intern at a small digital agency. Soon 
 
 ![Portret of Tibor den Held](/assets/img/portret.gif)
 
-About 4 years later I wrapped up my BSc, quit the agency job and started freelancing. I wanted more freedom and sit at the table with clients to do my own consulting. As well I was part of a corporation with other creatives. In this period I worked for SnappCar, KPN, Tivoli Utrecht, Doornroosje and many more. 
+About 4 years later I wrapped up my BSc, quit the agency job and started freelancing. I wanted more freedom and sit at the table with clients to do my own consulting. As well I was part of a corporation with other creatives. In this period I worked for SnappCar, KPN, Tivoli Utrecht, Doornroosje and many more.
 
 I freelanced for about 6 years. After becoming a dad I wanted a more stable income. Besides I was ready for the next step: to work for a large design agency with big clients on a regular basis. While freelancing, it frustrated me that after delivering I was no longer listened to. Often resulting in mediocre developed products.
 
