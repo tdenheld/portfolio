@@ -1,8 +1,7 @@
 ---
 layout: article
 title: About
-heading: Hi, I am Tibor den Held. I know digital. I make the best digital products. They're terrific. Everyone agrees.
-# heading: Hi, I am Tibor den Held. Raised by two art historians and fascinated with computers since the late 80s.
+heading: Hi, I am Tibor. Raised by two art historians and fascinated with computers since the late 80s.
 
 og:
   img: /assets/img/portret.gif
