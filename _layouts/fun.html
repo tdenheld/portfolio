@@ -21,17 +21,6 @@ layout: default
             {% endfor %}
         </ul>
 
-        <h2 class="txt__heading-s mb-4 js-scroll js-tr tr-fi-up tr-1000">Portfolio Archive</h2>
-        <ul class="link-list link-list--small">
-            {% for entry in page.portfolio %}
-                <li class="js-scroll js-tr tr-fi-up tr-1000">
-                    <a href="{{ entry.url }}" target="_blank" rel="noreferrer" class="link-list__link">
-                        {{ entry.title }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-
         {{ content }}
     </div>
 </article>
