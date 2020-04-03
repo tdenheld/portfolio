@@ -23,7 +23,7 @@ section:
         
     - title: Plentiful images
       description: Askja asked me to renew their website from head to toe. A huge product database of travel experiences was a welcome starting point. An extensive card sorting session has served as the basis of the user experience.
-      grid: g-2 g-3-md gap-2px gap-4-sm
+      grid: g-2 g-3@l gap-2px gap-4@ml
       items:
         - img: /assets/img/uploads/ar-ph-5.jpg
         - img: /assets/img/uploads/ar-ph-2.jpg
