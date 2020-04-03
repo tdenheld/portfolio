@@ -28,7 +28,7 @@
     font-family: $sans;
 
     @include respond-min($ml) {
-        grid-gap: space(16);
+        grid-gap: space(8);
     }
 }
 

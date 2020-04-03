@@ -22,10 +22,10 @@
     margin: 0 auto;
     padding: 0 space(4);
     width: 100%;
-    max-width: 1280 + space(16) * 2;
+    max-width: 1408px;
 
     @include respond-min($l) {
-        padding: 0 space(16);
+        padding: 0 space(8);
     }
 }
 
