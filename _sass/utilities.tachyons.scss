@@ -75,18 +75,18 @@
 .mv-auto {margin: auto 0;}
 
 @include respond-min($m) {
-    .ma-auto\@m {margin: auto;}
-    .mh-auto\@m {margin: 0 auto;}
-    .mv-auto\@m {margin: auto 0;}
-    .ml-auto\@m {margin-left: auto;}
-    .mr-auto\@m {margin-right: auto;}
+    .ma-auto\@ml {margin: auto;}
+    .mh-auto\@ml {margin: 0 auto;}
+    .mv-auto\@ml {margin: auto 0;}
+    .ml-auto\@ml {margin-left: auto;}
+    .mr-auto\@ml {margin-right: auto;}
 }
 @include respond-max($m) {
-    .ma-auto-until\@m {margin: auto;}
-    .mh-auto-until\@m {margin: 0 auto;}
-    .mv-auto-until\@m {margin: auto 0;}
-    .ml-auto-until\@m {margin-left: auto;}
-    .mr-auto-until\@m {margin-right: auto;}  
+    .ma-auto-until\@ml {margin: auto;}
+    .mh-auto-until\@ml {margin: 0 auto;}
+    .mv-auto-until\@ml {margin: auto 0;}
+    .ml-auto-until\@ml {margin-left: auto;}
+    .mr-auto-until\@ml {margin-right: auto;}  
 }
 @include respond-min($l) {
     .ma-auto\@l {margin: auto;}
@@ -120,42 +120,42 @@
 
     @include respond-min($m) {
         // margin
-        .ma-#{$i}\@m { margin: space($i) }
-        .mh-#{$i}\@m { margin-left: space($i); margin-right: space($i); }
-        .mv-#{$i}\@m { margin-top: space($i); margin-bottom: space($i); }
-        .mt-#{$i}\@m { margin-top: space($i); }
-        .mb-#{$i}\@m { margin-bottom: space($i); }
-        .ml-#{$i}\@m { margin-left: space($i); }
-        .mr-#{$i}\@m { margin-right: space($i); }
+        .ma-#{$i}\@ml { margin: space($i) }
+        .mh-#{$i}\@ml { margin-left: space($i); margin-right: space($i); }
+        .mv-#{$i}\@ml { margin-top: space($i); margin-bottom: space($i); }
+        .mt-#{$i}\@ml { margin-top: space($i); }
+        .mb-#{$i}\@ml { margin-bottom: space($i); }
+        .ml-#{$i}\@ml { margin-left: space($i); }
+        .mr-#{$i}\@ml { margin-right: space($i); }
 
         // padding
-        .pa-#{$i}\@m { padding: space($i); }
-        .ph-#{$i}\@m { padding-left: space($i); padding-right: space($i); }
-        .pv-#{$i}\@m { padding-top: space($i); padding-bottom: space($i); }
-        .pt-#{$i}\@m { padding-top: space($i); }
-        .pb-#{$i}\@m { padding-bottom: space($i); }
-        .pl-#{$i}\@m { padding-left: space($i); }
-        .pr-#{$i}\@m { padding-right: space($i); }
+        .pa-#{$i}\@ml { padding: space($i); }
+        .ph-#{$i}\@ml { padding-left: space($i); padding-right: space($i); }
+        .pv-#{$i}\@ml { padding-top: space($i); padding-bottom: space($i); }
+        .pt-#{$i}\@ml { padding-top: space($i); }
+        .pb-#{$i}\@ml { padding-bottom: space($i); }
+        .pl-#{$i}\@ml { padding-left: space($i); }
+        .pr-#{$i}\@ml { padding-right: space($i); }
 	}
     
     @include respond-max($m) {
         // margin
-        .ma-#{$i}-until\@m { margin: space($i) }
-        .mh-#{$i}-until\@m { margin-left: space($i); margin-right: space($i); }
-        .mv-#{$i}-until\@m { margin-top: space($i); margin-bottom: space($i); }
-        .mt-#{$i}-until\@m { margin-top: space($i); }
-        .mb-#{$i}-until\@m { margin-bottom: space($i); }
-        .ml-#{$i}-until\@m { margin-left: space($i); }
-        .mr-#{$i}-until\@m { margin-right: space($i); }
+        .ma-#{$i}-until\@ml { margin: space($i) }
+        .mh-#{$i}-until\@ml { margin-left: space($i); margin-right: space($i); }
+        .mv-#{$i}-until\@ml { margin-top: space($i); margin-bottom: space($i); }
+        .mt-#{$i}-until\@ml { margin-top: space($i); }
+        .mb-#{$i}-until\@ml { margin-bottom: space($i); }
+        .ml-#{$i}-until\@ml { margin-left: space($i); }
+        .mr-#{$i}-until\@ml { margin-right: space($i); }
 
         // padding
-        .pa-#{$i}-until\@m { padding: space($i); }
-        .ph-#{$i}-until\@m { padding-left: space($i); padding-right: space($i); }
-        .pv-#{$i}-until\@m { padding-top: space($i); padding-bottom: space($i); }
-        .pt-#{$i}-until\@m { padding-top: space($i); }
-        .pb-#{$i}-until\@m { padding-bottom: space($i); }
-        .pl-#{$i}-until\@m { padding-left: space($i); }
-        .pr-#{$i}-until\@m { padding-right: space($i); }
+        .pa-#{$i}-until\@ml { padding: space($i); }
+        .ph-#{$i}-until\@ml { padding-left: space($i); padding-right: space($i); }
+        .pv-#{$i}-until\@ml { padding-top: space($i); padding-bottom: space($i); }
+        .pt-#{$i}-until\@ml { padding-top: space($i); }
+        .pb-#{$i}-until\@ml { padding-bottom: space($i); }
+        .pl-#{$i}-until\@ml { padding-left: space($i); }
+        .pr-#{$i}-until\@ml { padding-right: space($i); }
     }
 
 	@include respond-min($l) {
@@ -223,22 +223,22 @@
 .w-100 { width: 100%; }
 
 @include respond-min($m) {
-	.w-auto\@m {    width:    auto; }
-	.w-inherit\@m { width: inherit; }
-	.w-10\@m {  width:  10%; }
-	.w-20\@m {  width:  20%; }
-	.w-25\@m {  width:  25%; }
-	.w-30\@m {  width:  30%; }
-	.w-33\@m {  width:  33%; }
-	.w-34\@m {  width:  34%; }
-	.w-40\@m {  width:  40%; }
-	.w-50\@m {  width:  50%; }
-	.w-60\@m {  width:  60%; }
-	.w-70\@m {  width:  70%; }
-	.w-75\@m {  width:  75%; }
-	.w-80\@m {  width:  80%; }
-	.w-90\@m {  width:  90%; }
-	.w-100\@m { width: 100%; }
+	.w-auto\@ml {    width:    auto; }
+	.w-inherit\@ml { width: inherit; }
+	.w-10\@ml {  width:  10%; }
+	.w-20\@ml {  width:  20%; }
+	.w-25\@ml {  width:  25%; }
+	.w-30\@ml {  width:  30%; }
+	.w-33\@ml {  width:  33%; }
+	.w-34\@ml {  width:  34%; }
+	.w-40\@ml {  width:  40%; }
+	.w-50\@ml {  width:  50%; }
+	.w-60\@ml {  width:  60%; }
+	.w-70\@ml {  width:  70%; }
+	.w-75\@ml {  width:  75%; }
+	.w-80\@ml {  width:  80%; }
+	.w-90\@ml {  width:  90%; }
+	.w-100\@ml { width: 100%; }
 }
 @include respond-min($l) {
 	.w-auto\@l {    width:    auto; }
@@ -287,7 +287,7 @@
     }
 
     @include respond-min($m) {
-        .mxw-#{$class}\@m {
+        .mxw-#{$class}\@ml {
             max-width: #{$value};
         }
     }
@@ -325,12 +325,12 @@
 .g-6 {grid-template-columns: repeat(6,1fr);}
 
 @include respond-min($m) {
-	.g-1\@m {grid-template-columns: 1fr;}
-	.g-2\@m {grid-template-columns: repeat(2,1fr);}
-	.g-3\@m {grid-template-columns: repeat(3,1fr);}
-	.g-4\@m {grid-template-columns: repeat(4,1fr);}
-	.g-5\@m {grid-template-columns: repeat(5,1fr);}
-	.g-6\@m {grid-template-columns: repeat(6,1fr);}
+	.g-1\@ml {grid-template-columns: 1fr;}
+	.g-2\@ml {grid-template-columns: repeat(2,1fr);}
+	.g-3\@ml {grid-template-columns: repeat(3,1fr);}
+	.g-4\@ml {grid-template-columns: repeat(4,1fr);}
+	.g-5\@ml {grid-template-columns: repeat(5,1fr);}
+	.g-6\@ml {grid-template-columns: repeat(6,1fr);}
 }
 @include respond-min($l) {
 	.g-1\@l {grid-template-columns: 1fr;}
@@ -364,17 +364,17 @@
 .g-3-5 {grid-template-columns: 3fr 5fr;}
 
 @include respond-min($m) {
-	.g-m-1\@m {grid-template-columns: max-content 1fr;}
-	.g-1-m\@m {grid-template-columns: 1fr max-content;}
-	.g-m-m\@m {grid-template-columns: max-content max-content;}
-	.g-2-1\@m {grid-template-columns: 2fr 1fr;}
-	.g-1-2\@m {grid-template-columns: 1fr 2fr;}
-	.g-3-2\@m {grid-template-columns: 3fr 2fr;}
-	.g-2-3\@m {grid-template-columns: 2fr 3fr;}
-	.g-4-1\@m {grid-template-columns: 4fr 1fr;}
-	.g-1-4\@m {grid-template-columns: 1fr 4fr;}
-	.g-5-3\@m {grid-template-columns: 5fr 3fr;}
-	.g-3-5\@m {grid-template-columns: 3fr 5fr;}
+	.g-m-1\@ml {grid-template-columns: max-content 1fr;}
+	.g-1-m\@ml {grid-template-columns: 1fr max-content;}
+	.g-m-m\@ml {grid-template-columns: max-content max-content;}
+	.g-2-1\@ml {grid-template-columns: 2fr 1fr;}
+	.g-1-2\@ml {grid-template-columns: 1fr 2fr;}
+	.g-3-2\@ml {grid-template-columns: 3fr 2fr;}
+	.g-2-3\@ml {grid-template-columns: 2fr 3fr;}
+	.g-4-1\@ml {grid-template-columns: 4fr 1fr;}
+	.g-1-4\@ml {grid-template-columns: 1fr 4fr;}
+	.g-5-3\@ml {grid-template-columns: 5fr 3fr;}
+	.g-3-5\@ml {grid-template-columns: 3fr 5fr;}
 }
 @include respond-min($l) {
 	.g-m-1\@l {grid-template-columns: max-content 1fr;}
@@ -413,12 +413,12 @@
 .gc-6 {grid-column: span 6;}
 
 @include respond-min($m) {
-	.gc-1\@m {grid-column: span 1;}
-	.gc-2\@m {grid-column: span 2;}
-	.gc-3\@m {grid-column: span 3;}
-	.gc-4\@m {grid-column: span 4;}
-	.gc-5\@m {grid-column: span 5;}
-	.gc-6\@m {grid-column: span 6;}
+	.gc-1\@ml {grid-column: span 1;}
+	.gc-2\@ml {grid-column: span 2;}
+	.gc-3\@ml {grid-column: span 3;}
+	.gc-4\@ml {grid-column: span 4;}
+	.gc-5\@ml {grid-column: span 5;}
+	.gc-6\@ml {grid-column: span 6;}
 }
 @include respond-min($l) {
 	.gc-1\@l {grid-column: span 1;}
@@ -458,23 +458,23 @@
 .justify-around  { justify-content: space-around; }
 
 @include respond-min($m) {
-	.items-start\@m     { align-items: start; }
-	.items-end\@m       { align-items: end; }
-	.items-center\@m    { align-items: center; }
-	.items-baseline\@m  { align-items: baseline; }
-	.items-stretch\@m   { align-items: stretch; }
+	.items-start\@ml     { align-items: start; }
+	.items-end\@ml       { align-items: end; }
+	.items-center\@ml    { align-items: center; }
+	.items-baseline\@ml  { align-items: baseline; }
+	.items-stretch\@ml   { align-items: stretch; }
 	
-	.self-start\@m      { align-self: start; }
-	.self-end\@m        { align-self: end; }
-	.self-center\@m     { align-self: center; }
-	.self-baseline\@m   { align-self: baseline; }
-	.self-stretch\@m    { align-self: stretch; }
+	.self-start\@ml      { align-self: start; }
+	.self-end\@ml        { align-self: end; }
+	.self-center\@ml     { align-self: center; }
+	.self-baseline\@ml   { align-self: baseline; }
+	.self-stretch\@ml    { align-self: stretch; }
 	
-	.justify-start\@m   { justify-content: start; }
-	.justify-end\@m     { justify-content: end; }
-	.justify-center\@m  { justify-content: center; }
-	.justify-between\@m { justify-content: space-between; }
-	.justify-around\@m  { justify-content: space-around; }
+	.justify-start\@ml   { justify-content: start; }
+	.justify-end\@ml     { justify-content: end; }
+	.justify-center\@ml  { justify-content: center; }
+	.justify-between\@ml { justify-content: space-between; }
+	.justify-around\@ml  { justify-content: space-around; }
 }
 @include respond-min($l) {
 	.items-start\@l     { align-items: start; }
@@ -529,16 +529,16 @@
 .order-last { order: 99999; }
 
 @include respond-min($m) {
-	.order-0\@m { order: 0; }
-	.order-1\@m { order: 1; }
-	.order-2\@m { order: 2; }
-	.order-3\@m { order: 3; }
-	.order-4\@m { order: 4; }
-	.order-5\@m { order: 5; }
-	.order-6\@m { order: 6; }
-	.order-7\@m { order: 7; }
-	.order-8\@m { order: 8; }
-	.order-last\@m { order: 99999; }
+	.order-0\@ml { order: 0; }
+	.order-1\@ml { order: 1; }
+	.order-2\@ml { order: 2; }
+	.order-3\@ml { order: 3; }
+	.order-4\@ml { order: 4; }
+	.order-5\@ml { order: 5; }
+	.order-6\@ml { order: 6; }
+	.order-7\@ml { order: 7; }
+	.order-8\@ml { order: 8; }
+	.order-last\@ml { order: 99999; }
 }
 @include respond-min($l) {
 	.order-0\@l { order: 0; }
@@ -589,15 +589,15 @@
 // hidden
 // ----------------------------------------------------------------------
 .hidden\@sm  { @include respond-min($sm) { display: none; }}
-.hidden\@m   { @include respond-min($m) { display: none; }}
-.hidden\@ml  { @include respond-min($ml) { display: none; }}
+.hidden\@ml   { @include respond-min($m) { display: none; }}
+.hidden\@mll  { @include respond-min($ml) { display: none; }}
 .hidden\@l   { @include respond-min($l) { display: none; }}
 .hidden\@xl  { @include respond-min($xl) { display: none; }}
 .hidden\@xxxl { @include respond-min($xxxl) { display: none; }}
 
 .hidden-until\@sm  { @include respond-max($sm) { display: none; }}
-.hidden-until\@m   { @include respond-max($m) { display: none; }}
-.hidden-until\@ml  { @include respond-max($ml) { display: none; }}
+.hidden-until\@ml   { @include respond-max($m) { display: none; }}
+.hidden-until\@mll  { @include respond-max($ml) { display: none; }}
 .hidden-until\@l   { @include respond-max($l) { display: none; }}
 .hidden-until\@xl  { @include respond-max($xl) { display: none; }}
 .hidden-until\@xxxl { @include respond-max($xxxl) { display: none; }}
@@ -696,42 +696,42 @@
 	.f96-until\@-sm {font-size: toRem(96px);}
 }
 @include respond-min($m) {
-	.f16\@m {font-size: toRem(16px);}
-	.f18\@m {font-size: toRem(18px);}
-	.f20\@m {font-size: toRem(20px);}
-	.f24\@m {font-size: toRem(24px);}
-	.f28\@m {font-size: toRem(28px);}
-	.f30\@m {font-size: toRem(30px);}
-	.f32\@m {font-size: toRem(32px);}
-	.f36\@m {font-size: toRem(36px);}
-	.f38\@m {font-size: toRem(38px);}
-	.f40\@m {font-size: toRem(40px);}
-	.f48\@m {font-size: toRem(48px);}
-	.f56\@m {font-size: toRem(56px);}
-	.f60\@m {font-size: toRem(60px);}
-	.f64\@m {font-size: toRem(64px);}
-	.f72\@m {font-size: toRem(72px);}
-	.f80\@m {font-size: toRem(80px);}
-	.f96\@m {font-size: toRem(96px);}
+	.f16\@ml {font-size: toRem(16px);}
+	.f18\@ml {font-size: toRem(18px);}
+	.f20\@ml {font-size: toRem(20px);}
+	.f24\@ml {font-size: toRem(24px);}
+	.f28\@ml {font-size: toRem(28px);}
+	.f30\@ml {font-size: toRem(30px);}
+	.f32\@ml {font-size: toRem(32px);}
+	.f36\@ml {font-size: toRem(36px);}
+	.f38\@ml {font-size: toRem(38px);}
+	.f40\@ml {font-size: toRem(40px);}
+	.f48\@ml {font-size: toRem(48px);}
+	.f56\@ml {font-size: toRem(56px);}
+	.f60\@ml {font-size: toRem(60px);}
+	.f64\@ml {font-size: toRem(64px);}
+	.f72\@ml {font-size: toRem(72px);}
+	.f80\@ml {font-size: toRem(80px);}
+	.f96\@ml {font-size: toRem(96px);}
 }
 @include respond-max($m) {
-	.f16-until\@m {font-size: toRem(16px);}
-	.f18-until\@m {font-size: toRem(18px);}
-	.f20-until\@m {font-size: toRem(20px);}
-	.f24-until\@m {font-size: toRem(24px);}
-	.f28-until\@m {font-size: toRem(28px);}
-	.f30-until\@m {font-size: toRem(30px);}
-	.f32-until\@m {font-size: toRem(32px);}
-	.f36-until\@m {font-size: toRem(36px);}
-	.f38-until\@m {font-size: toRem(38px);}
-	.f40-until\@m {font-size: toRem(40px);}
-	.f48-until\@m {font-size: toRem(48px);}
-	.f56-until\@m {font-size: toRem(56px);}
-	.f60-until\@m {font-size: toRem(60px);}
-	.f64-until\@m {font-size: toRem(64px);}
-	.f72-until\@m {font-size: toRem(72px);}
-	.f80-until\@m {font-size: toRem(80px);}
-	.f96-until\@m {font-size: toRem(96px);}
+	.f16-until\@ml {font-size: toRem(16px);}
+	.f18-until\@ml {font-size: toRem(18px);}
+	.f20-until\@ml {font-size: toRem(20px);}
+	.f24-until\@ml {font-size: toRem(24px);}
+	.f28-until\@ml {font-size: toRem(28px);}
+	.f30-until\@ml {font-size: toRem(30px);}
+	.f32-until\@ml {font-size: toRem(32px);}
+	.f36-until\@ml {font-size: toRem(36px);}
+	.f38-until\@ml {font-size: toRem(38px);}
+	.f40-until\@ml {font-size: toRem(40px);}
+	.f48-until\@ml {font-size: toRem(48px);}
+	.f56-until\@ml {font-size: toRem(56px);}
+	.f60-until\@ml {font-size: toRem(60px);}
+	.f64-until\@ml {font-size: toRem(64px);}
+	.f72-until\@ml {font-size: toRem(72px);}
+	.f80-until\@ml {font-size: toRem(80px);}
+	.f96-until\@ml {font-size: toRem(96px);}
 }
 @include respond-min($l) {
 	.f16\@l {font-size: toRem(16px);}
@@ -780,10 +780,10 @@
 .lh-copy  { line-height: $lh-copy; }
 
 @include respond-min($m) {
-	.lh-none\@m  { line-height: 0; }
-	.lh-solid\@m { line-height: $lh-solid; }
-	.lh-title\@m { line-height: $lh-title; }
-	.lh-copy\@m  { line-height: $lh-copy; }
+	.lh-none\@ml  { line-height: 0; }
+	.lh-solid\@ml { line-height: $lh-solid; }
+	.lh-title\@ml { line-height: $lh-title; }
+	.lh-copy\@ml  { line-height: $lh-copy; }
 }
 @include respond-min($l) {
 	.lh-none\@l  { line-height: 0; }
@@ -861,16 +861,16 @@
 .txt-j  { text-align: justify; }
 
 @include respond-min($m) {
-	.txt-l\@m  { text-align: left; }
-	.txt-r\@m  { text-align: right; }
-	.txt-c\@m  { text-align: center; }
-	.txt-j\@m  { text-align: justify; }
-}
-@include respond-min($ml) {
 	.txt-l\@ml  { text-align: left; }
 	.txt-r\@ml  { text-align: right; }
 	.txt-c\@ml  { text-align: center; }
 	.txt-j\@ml  { text-align: justify; }
+}
+@include respond-min($ml) {
+	.txt-l\@mll  { text-align: left; }
+	.txt-r\@mll  { text-align: right; }
+	.txt-c\@mll  { text-align: center; }
+	.txt-j\@mll  { text-align: justify; }
 }
 @include respond-min($l) {
 	.txt-l\@l  { text-align: left; }
