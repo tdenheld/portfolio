@@ -1,8 +1,8 @@
 .footer {
     overflow: hidden;
-    padding-bottom: $gutter;
+    padding-bottom: space(4);
 
-    @include md {
+    @include respond-min($l) {
         padding-bottom: 64px;
     }
 }
@@ -11,7 +11,7 @@
     display: grid;
     align-items: center;
 
-    @include xs {
+    @include respond-min($sm) {
         grid-template-columns: 1fr max-content;
     }
 }
@@ -46,11 +46,11 @@
 
 .footer__disclaimer {
     display: none;
-    margin-top: $quarter-gutter;
+    margin-top: space(1);
     font-size: toRem(12px);
     font-family: $sans;
 
-    @include xs {
+    @include respond-min($sm) {
         display: block;
         margin: 0;
     }

@@ -17,7 +17,7 @@
     @include center;
     height: calc(100vh - 60px);
 
-    @include sm {
+    @include respond-min($ml) {
         height: 100vh;
     }
 }
@@ -29,7 +29,7 @@
 
 .modal__label {
     font-family: $sans;
-    margin-bottom: $quarter-gutter;
+    margin-bottom: space(1);
 }
 
 .modal__close {
@@ -55,7 +55,7 @@
         }
     }
 
-    @include sm {
+    @include respond-min($ml) {
         top: 56px;
         right: 36px;
 

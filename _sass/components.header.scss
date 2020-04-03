@@ -1,10 +1,10 @@
 .header {
     position: fixed;
     width: 100%;
-    margin-top: $gutter;
+    margin-top: space(4);
     z-index: 666;
 
-    @include md {
+    @include respond-min($l) {
         margin-top: 64px;
     }
 }
@@ -34,13 +34,13 @@
 
 .header__item {
     @include center;
-    margin-left: $gutter;
+    margin-left: space(4);
     height: 36px;
     @include font(14px, normal, $lh-solid);
     font-family: $mono;
     cursor: pointer;
 
-    @include sm {
+    @include respond-min($ml) {
         margin-left: 32px;
         font-size: toRem(16px);
     }
@@ -58,7 +58,7 @@
     margin-left: 16px;
     margin-right: -8px;
 
-    @include sm {
+    @include respond-min($ml) {
         margin-left: 24px;
     }
 

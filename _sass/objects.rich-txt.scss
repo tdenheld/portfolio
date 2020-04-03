@@ -1,27 +1,27 @@
 .rich-txt {
     h1 {
         @extend .txt__heading-l;
-        margin-bottom: $one-half-gutter;
+        margin-bottom: space(6);
 
-        @include sm {
-            margin-bottom: $double-gutter;
+        @include respond-min($ml) {
+            margin-bottom: space(16);
         }
     }
 
     h2 {
         @extend .txt__heading-s;
-        margin-bottom: $gutter;
+        margin-bottom: space(4);
     }
 
     p {
         @extend .txt__body;
-        margin-bottom: $gutter;
+        margin-bottom: space(4);
 
         &:last-child {
-            margin-bottom: $one-half-gutter;
+            margin-bottom: space(6);
 
-            @include sm {
-                margin-bottom: $double-gutter;
+            @include respond-min($ml) {
+                margin-bottom: space(16);
             }
         }
     }

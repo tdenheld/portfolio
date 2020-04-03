@@ -7,11 +7,11 @@
     padding-top: 134px;
     min-height: calc(100vh - 59px); // footer height
 
-    @include sm {
+    @include respond-min($ml) {
         padding-top: 160px;
     }
 
-    @include md {
+    @include respond-min($l) {
         padding-top: 220px;
         min-height: calc(100vh - 99px); // footer height
     }
@@ -20,12 +20,12 @@
 .container {
     position: relative;
     margin: 0 auto;
-    padding: 0 $gutter;
+    padding: 0 space(4);
     width: 100%;
-    max-width: 1280 + $double-gutter * 2;
+    max-width: 1280 + space(16) * 2;
 
-    @include md {
-        padding: 0 $double-gutter;
+    @include respond-min($l) {
+        padding: 0 space(16);
     }
 }
 
@@ -33,16 +33,16 @@
     position: relative;
     margin-bottom: 60px;
 
-    @include sm {
+    @include respond-min($ml) {
         margin-bottom: 120px;
     }
 }
 
 .figure {
     position: relative;
-    margin-bottom: $gutter;
+    margin-bottom: space(4);
 
-    @include sm {
+    @include respond-min($ml) {
         margin-bottom: 72px;
     }
 

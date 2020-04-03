@@ -15,28 +15,8 @@ $fade-link:                 all 200ms $ease;
 	   Spacers
 --------------------*/
 
-$grid-gutter-width: 24px;
-
-$triple-gutter:				$grid-gutter-width * 3;
-$double-gutter:				$grid-gutter-width * 2;
-$one-half-gutter:			$grid-gutter-width * 1.5;
-
-$gutter:					$grid-gutter-width;
-$half-gutter:				$grid-gutter-width / 2;
-$quarter-gutter:			$grid-gutter-width / 4;
-
-
-
-
-/*-------------------
-    Media queries
---------------------*/
-
-$xs: 480px;
-$sm: 768px;
-$md: 912px;
-$lg: 1280 + $double-gutter * 2;
-$xl: 1440px;
+$global-baseline: 8px;
+$gutter: $global-baseline * 3;
 
 
 
@@ -52,6 +32,9 @@ $serif: 'tw-serif', 'Palatino', Georgia, Times, serif;
 $lh-copy: 1.55;
 $lh-title: 1.2;
 $lh-solid: 1;
+
+// letter spacings for headings
+$ls-heading: -0.016em;
 
 
 

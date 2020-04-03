@@ -1,12 +1,12 @@
 .tile {
     display: block;
     position: relative;
-    padding: $gutter 0;
+    padding: space(4) 0;
     height: 108px;
     border-bottom: 1px solid rgba($brand, 0.2);
     overflow: hidden;
 
-    @include sm {
+    @include respond-min($ml) {
         height: 160px;
     }
 
@@ -26,7 +26,7 @@
     @include font(20px, 600, $lh-title);
     margin-bottom: 4px;
 
-    @include sm {
+    @include respond-min($ml) {
         font-size: toRem(24px);
     }
 }
@@ -35,7 +35,7 @@
     font-family: $mono;
     @include font(10px, normal, $lh-title);
 
-    @include sm {
+    @include respond-min($ml) {
         font-size: toRem(12px);
     }
 }
@@ -44,7 +44,7 @@
     position: relative;
     top: 2px;
 
-    @include sm {
+    @include respond-min($ml) {
         top: 0;
     }
 
