@@ -22,7 +22,7 @@
     margin: 0 auto;
     padding: 0 space(4);
     width: 100%;
-    max-width: 1376px;
+    max-width: $xxxl;
 
     @include respond-min($l) {
         padding: 0 space(8);
