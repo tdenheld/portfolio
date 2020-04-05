@@ -10,16 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- SOCIAL MEDIA -->
-    <meta property="og:title" content="{{ page.title }}{% unless page.url == "/" %} — {% endunless %}
-          Tibor den Held{% if page.url == "/" %} — Product Designer &amp; Creative Developer{% endif %}" />
+    <meta property="og:title" content="{% unless page.url == "/" %}{{ page.title }} — {% endunless %}Tibor den Held{% if page.url == "/" %} — Product Designer &amp; Creative Developer{% endif %}" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://tibor.work{{ page.og.img }}" />
     <meta property="og:url" content="https://tibor.work{{ page.url | remove: '.html' }}" />
     <meta property="og:description" content="{{ page.og.description }}" />
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ page.title }}{% unless page.url == "/" %} — {% endunless %}
-          Tibor den Held{% if page.url == "/" %} — Product Designer &amp; Creative Developer{% endif %}">
+    <meta name="twitter:title" content="{% unless page.url == "/" %}{{ page.title }} — {% endunless %}Tibor den Held{% if page.url == "/" %} — Product Designer &amp; Creative Developer{% endif %}">
     <meta name="twitter:description" content="{{ page.og.description }}">
     <meta name="twitter:image" content="https://tibor.work{{ page.og.img }}">
 
@@ -32,9 +30,7 @@
 
     <!-- TITLE -->
     <title>
-        {{ page.title }}
-        {% unless page.url == "/" %} — {% endunless %}
-        Tibor den Held{% if page.url == "/" %} — Product Designer &amp; Creative Developer{% endif %}
+        {% unless page.url == "/" %}{{ page.title }} — {% endunless %}Tibor den Held{% if page.url == "/" %} — Product Designer &amp; Creative Developer{% endif %}
     </title>
 
     <script>
