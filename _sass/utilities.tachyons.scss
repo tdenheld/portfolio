@@ -74,14 +74,14 @@
 .mh-auto {margin: 0 auto;}
 .mv-auto {margin: auto 0;}
 
-@include respond-min($m) {
+@include respond-min($ml) {
     .ma-auto\@ml {margin: auto;}
     .mh-auto\@ml {margin: 0 auto;}
     .mv-auto\@ml {margin: auto 0;}
     .ml-auto\@ml {margin-left: auto;}
     .mr-auto\@ml {margin-right: auto;}
 }
-@include respond-max($m) {
+@include respond-max($ml) {
     .ma-auto-until\@ml {margin: auto;}
     .mh-auto-until\@ml {margin: 0 auto;}
     .mv-auto-until\@ml {margin: auto 0;}
@@ -118,7 +118,7 @@
 	.pl-#{$i} {	padding-left: space($i); }
     .pr-#{$i} {	padding-right: space($i); }
 
-    @include respond-min($m) {
+    @include respond-min($ml) {
         // margin
         .ma-#{$i}\@ml { margin: space($i) }
         .mh-#{$i}\@ml { margin-left: space($i); margin-right: space($i); }
@@ -138,7 +138,7 @@
         .pr-#{$i}\@ml { padding-right: space($i); }
 	}
     
-    @include respond-max($m) {
+    @include respond-max($ml) {
         // margin
         .ma-#{$i}-until\@ml { margin: space($i) }
         .mh-#{$i}-until\@ml { margin-left: space($i); margin-right: space($i); }
@@ -222,7 +222,7 @@
 .w-90 {  width:  90%; }
 .w-100 { width: 100%; }
 
-@include respond-min($m) {
+@include respond-min($ml) {
 	.w-auto\@ml {    width:    auto; }
 	.w-inherit\@ml { width: inherit; }
 	.w-10\@ml {  width:  10%; }
@@ -286,7 +286,7 @@
         max-width: #{$value};
     }
 
-    @include respond-min($m) {
+    @include respond-min($ml) {
         .mxw-#{$class}\@ml {
             max-width: #{$value};
         }
@@ -324,7 +324,7 @@
 .g-5 {grid-template-columns: repeat(5,1fr);}
 .g-6 {grid-template-columns: repeat(6,1fr);}
 
-@include respond-min($m) {
+@include respond-min($ml) {
 	.g-1\@ml {grid-template-columns: 1fr;}
 	.g-2\@ml {grid-template-columns: repeat(2,1fr);}
 	.g-3\@ml {grid-template-columns: repeat(3,1fr);}
@@ -363,7 +363,7 @@
 .g-5-3 {grid-template-columns: 5fr 3fr;}
 .g-3-5 {grid-template-columns: 3fr 5fr;}
 
-@include respond-min($m) {
+@include respond-min($ml) {
 	.g-m-1\@ml {grid-template-columns: max-content 1fr;}
 	.g-1-m\@ml {grid-template-columns: 1fr max-content;}
 	.g-m-m\@ml {grid-template-columns: max-content max-content;}
@@ -412,7 +412,7 @@
 .gc-5 {grid-column: span 5;}
 .gc-6 {grid-column: span 6;}
 
-@include respond-min($m) {
+@include respond-min($ml) {
 	.gc-1\@ml {grid-column: span 1;}
 	.gc-2\@ml {grid-column: span 2;}
 	.gc-3\@ml {grid-column: span 3;}
@@ -457,7 +457,7 @@
 .justify-between { justify-content: space-between; }
 .justify-around  { justify-content: space-around; }
 
-@include respond-min($m) {
+@include respond-min($ml) {
 	.items-start\@ml     { align-items: start; }
 	.items-end\@ml       { align-items: end; }
 	.items-center\@ml    { align-items: center; }
@@ -528,7 +528,7 @@
 .order-8 { order: 8; }
 .order-last { order: 99999; }
 
-@include respond-min($m) {
+@include respond-min($ml) {
 	.order-0\@ml { order: 0; }
 	.order-1\@ml { order: 1; }
 	.order-2\@ml { order: 2; }
@@ -589,15 +589,15 @@
 // hidden
 // ----------------------------------------------------------------------
 .hidden\@sm  { @include respond-min($sm) { display: none; }}
-.hidden\@ml   { @include respond-min($m) { display: none; }}
-.hidden\@mll  { @include respond-min($ml) { display: none; }}
+.hidden\@m   { @include respond-min($m) { display: none; }}
+.hidden\@ml  { @include respond-min($ml) { display: none; }}
 .hidden\@l   { @include respond-min($l) { display: none; }}
 .hidden\@xl  { @include respond-min($xl) { display: none; }}
 .hidden\@xxxl { @include respond-min($xxxl) { display: none; }}
 
 .hidden-until\@sm  { @include respond-max($sm) { display: none; }}
-.hidden-until\@ml   { @include respond-max($m) { display: none; }}
-.hidden-until\@mll  { @include respond-max($ml) { display: none; }}
+.hidden-until\@m   { @include respond-max($m) { display: none; }}
+.hidden-until\@ml  { @include respond-max($ml) { display: none; }}
 .hidden-until\@l   { @include respond-max($l) { display: none; }}
 .hidden-until\@xl  { @include respond-max($xl) { display: none; }}
 .hidden-until\@xxxl { @include respond-max($xxxl) { display: none; }}
@@ -695,7 +695,7 @@
 	.f80-until\@-sm {font-size: toRem(80px);}
 	.f96-until\@-sm {font-size: toRem(96px);}
 }
-@include respond-min($m) {
+@include respond-min($ml) {
 	.f16\@ml {font-size: toRem(16px);}
 	.f18\@ml {font-size: toRem(18px);}
 	.f20\@ml {font-size: toRem(20px);}
@@ -714,7 +714,7 @@
 	.f80\@ml {font-size: toRem(80px);}
 	.f96\@ml {font-size: toRem(96px);}
 }
-@include respond-max($m) {
+@include respond-max($ml) {
 	.f16-until\@ml {font-size: toRem(16px);}
 	.f18-until\@ml {font-size: toRem(18px);}
 	.f20-until\@ml {font-size: toRem(20px);}
@@ -779,7 +779,7 @@
 .lh-title, .lh-title div { line-height: $lh-title; }
 .lh-copy  { line-height: $lh-copy; }
 
-@include respond-min($m) {
+@include respond-min($ml) {
 	.lh-none\@ml  { line-height: 0; }
 	.lh-solid\@ml { line-height: $lh-solid; }
 	.lh-title\@ml { line-height: $lh-title; }
@@ -861,16 +861,16 @@
 .txt-j  { text-align: justify; }
 
 @include respond-min($m) {
+	.txt-l\@m  { text-align: left; }
+	.txt-r\@m  { text-align: right; }
+	.txt-c\@m  { text-align: center; }
+	.txt-j\@m  { text-align: justify; }
+}
+@include respond-min($ml) {
 	.txt-l\@ml  { text-align: left; }
 	.txt-r\@ml  { text-align: right; }
 	.txt-c\@ml  { text-align: center; }
 	.txt-j\@ml  { text-align: justify; }
-}
-@include respond-min($ml) {
-	.txt-l\@mll  { text-align: left; }
-	.txt-r\@mll  { text-align: right; }
-	.txt-c\@mll  { text-align: center; }
-	.txt-j\@mll  { text-align: justify; }
 }
 @include respond-min($l) {
 	.txt-l\@l  { text-align: left; }
