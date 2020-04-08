@@ -2,7 +2,7 @@
 // --------------------------------------------------
 .loader {
     @include full(fixed);
-    @include center;
+    @include center(flex);
     background-color: $dark-dark;
     z-index: 99999999;
     color: $light;

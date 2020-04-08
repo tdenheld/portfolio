@@ -33,7 +33,7 @@
 }
 
 .header__item {
-    @include center;
+    @include center(flex);
     margin-left: space(4);
     height: 36px;
     @include font(14px, normal, $lh-solid);

@@ -14,7 +14,7 @@
 }
 
 .modal__container {
-    @include center;
+    @include center(flex);
     height: calc(100vh - 60px);
 
     @include respond-min($ml) {
@@ -33,7 +33,7 @@
 }
 
 .modal__close {
-    @include center;
+    @include center(flex);
     position: absolute;
     top: 12px;
     right: 12px;

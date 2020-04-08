@@ -53,7 +53,7 @@
 
 .center {
     position: relative;
-    @include center;
+    @include center(flex);
 }
 
 .full-bg {

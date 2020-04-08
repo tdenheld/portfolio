@@ -46,8 +46,8 @@
 	width: 100%;
 }
 
-@mixin center {
-    display: flex;
+@mixin center($d) {
+    display: $d;
     justify-content: center;
     align-items: center;
 }
