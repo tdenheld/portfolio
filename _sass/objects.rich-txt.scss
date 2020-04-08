@@ -1,6 +1,6 @@
 .rich-txt {
     h1 {
-        @extend .txt__heading-l;
+        @extend .h-l;
         margin-bottom: space(6);
 
         @include respond-min($ml) {
@@ -9,12 +9,12 @@
     }
 
     h2 {
-        @extend .txt__heading-s;
+        @extend .h-s;
         margin-bottom: space(4);
     }
 
     p {
-        @extend .txt__body;
+        @extend .txt-body;
         margin-bottom: space(4);
 
         &:last-child {

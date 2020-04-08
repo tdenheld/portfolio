@@ -2,7 +2,7 @@
     max-width: 750px;
 }
 
-.txt__heading-l {
+.h-l {
     @include font(48px, bold, $lh-title);
 
     @include respond-min($ml) {
@@ -11,7 +11,7 @@
     }
 }
 
-.txt__heading-m {
+.h-m {
     @include font(36px, bold, $lh-title);
 
     @include respond-min($ml) {
@@ -23,7 +23,7 @@
     }
 }
 
-.txt__heading-s {
+.h-s {
     @include font(32px, bold, $lh-title);
 
     @include respond-min($ml) {
@@ -31,7 +31,7 @@
     }
 }
 
-.txt__heading-xs {
+.h-xs {
     @include font(24px, bold, $lh-title);
 
     @include respond-min($ml) {
@@ -39,7 +39,7 @@
     }
 }
 
-.txt__body {
+.txt-body {
     font-family: $sans;
     font-size: toRem(17px);
 
@@ -48,7 +48,7 @@
     }
 }
 
-.txt__caption {
+.caption {
     font-family: $sans;
     font-weight: 600;
     font-size: toRem(10px);
