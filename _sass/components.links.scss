@@ -24,16 +24,16 @@
 // --------------------------------------------------
 .link-list {
     display: grid;
-    grid-gap: space(4);
+    gap: space(4);
     font-family: $sans;
 
     @include respond-min($ml) {
-        grid-gap: space(8);
+        gap: space(8);
     }
 }
 
 .link-list--small {
-    grid-gap: space(2);
+    gap: space(2);
 
     .link-list__link {
         font-size: toRem(18px);
