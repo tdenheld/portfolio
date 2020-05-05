@@ -1,7 +1,7 @@
 ---
 layout: article
 title: About
-heading: Hi, I am Tibor. Raised by two art historians and fascinated with computers since the late 80s.
+heading: Hi, I am Tibor. Intrigued with product design, creative development and branding.
 
 og:
   img: /assets/img/portret.gif
