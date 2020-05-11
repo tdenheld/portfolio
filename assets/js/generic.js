@@ -73,9 +73,26 @@ const scrollToObject = () => {
     });
 }
 
+const playVideo = () => {
+    const obj = '.js-video';
+    if (!exists(obj)) return;
+
+    const observer = new IntersectionObserver((entries, self) => {
+        entries.map(entry => {
+            const target = entry.target.querySelector('video');
+            entry.isIntersecting ? target.play() : target.pause();
+        });
+    }, {
+        threshold: 0.4
+    });
+
+    ß(obj).map(el => observer.observe(el));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     toggle();
     scrollToObject();
+    playVideo();
 });
 
 

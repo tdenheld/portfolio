@@ -29,8 +29,7 @@ layout: default
             </li>
         </ul>
 
-        <img src="{{ page.img }}" alt="Hero image for {{ page.title }}"
-            class="js-scroll js-tr tr-fi-up tr-2000" />
+        <img src="{{ page.img }}" alt="Hero image for {{ page.title }}" class="js-scroll js-tr tr-fi-up tr-2000" />
     </div>
 </section>
 
@@ -47,6 +46,7 @@ layout: default
 
         <div class="g {{ entry.grid }}">
             {% for item in entry.items %}
+            {% if item.img %}
             <figure class="{{ item.class }} {% unless entry.grid %}figure{% endunless %} js-scroll">
                 {% if item.caption %}
                 <figcaption class="caption mb-2 js-tr tr-stag">{{ item.caption }}</figcaption>
@@ -54,6 +54,17 @@ layout: default
                 <img src="{{ item.img }}" alt="{{ item.img | replace: '/assets/img/uploads/', '' }}"
                     class="{% unless item.no-scroll-magic %}js-tr tr-fi-up tr-2000{% endunless %}" />
             </figure>
+            {% endif %}
+
+            {% if item.video %}
+            <div class="js-video js-scroll js-tr tr-fi-up tr-2000">
+                <video class="w-100" preload="auto"
+                    poster="{{ item.video.poster }}" autoplay muted loop playsinline>
+                    <source src="{{ item.video.url }}" type="video/mp4">
+                    </source>
+                </video>
+            </div>
+            {% endif %}
             {% endfor %}
         </div>
     </div>
