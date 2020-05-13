@@ -31,19 +31,19 @@
 
 .section {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: space(15);
 
     @include respond-min($ml) {
-        margin-bottom: 120px;
+        margin-bottom: space(30);
     }
 }
 
 .figure {
     position: relative;
-    margin-bottom: space(4);
+    margin-bottom: space(8);
 
     @include respond-min($ml) {
-        margin-bottom: 72px;
+        margin-bottom: space(16);
     }
 
     &:last-child {
