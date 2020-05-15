@@ -83,7 +83,7 @@ const playVideo = () => {
             entry.isIntersecting ? target.play() : target.pause();
         });
     }, {
-        threshold: 0.4
+        threshold: 0.1
     });
 
     ß(obj).map(el => observer.observe(el));
