@@ -40,7 +40,7 @@
 
 .figure {
     position: relative;
-    margin-bottom: space(8);
+    margin-bottom: space(4);
 
     @include respond-min($ml) {
         margin-bottom: space(16);
