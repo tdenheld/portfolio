@@ -57,8 +57,8 @@ layout: default
             {% endif %}
 
             {% if item.video %}
-            <div class="figure js-video js-scroll js-tr tr-fi-up tr-2000">
-                <video class="w-100" preload="auto"
+            <div class="figure o-hidden js-video js-scroll js-tr tr-fi-up tr-2000">
+                <video class="video" preload="auto"
                     poster="{{ item.video.poster }}" autoplay muted loop playsinline>
                     <source src="{{ item.video.url }}" type="video/mp4">
                     </source>
