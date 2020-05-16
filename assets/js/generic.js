@@ -77,22 +77,30 @@ const playVideo = () => {
     const obj = '.js-video';
     if (!exists(obj)) return;
 
-    const observer = new IntersectionObserver((entries, self) => {
+    const observer = new IntersectionObserver(entries => {
         entries.map(entry => {
-            const target = entry.target.querySelector('video');
-            entry.isIntersecting ? target.play() : target.pause();
+            const video = entry.target;
+            entry.isIntersecting ? video.play() : video.pause();
         });
     }, {
         threshold: 0.1
     });
 
-    ß(obj).map(el => observer.observe(el));
+    ß(obj).map(el => {
+        const video = el.querySelector('video');
+        const source = el.querySelector('source');
+        const src = source.dataset.src;
+        if (!src) return
+
+        source.src = src;
+        video.load();
+        observer.observe(video);
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     toggle();
     scrollToObject();
-    playVideo();
 });
 
 

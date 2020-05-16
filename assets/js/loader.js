@@ -24,6 +24,7 @@ const loader = {
                 onComplete() {
                     splitWords('.js-split-words');
                     revealOnScroll();
+                    playVideo();
                 }
             }).to(this.element, {
                 y: '100%',
