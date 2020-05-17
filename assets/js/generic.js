@@ -88,12 +88,7 @@ const playVideo = () => {
 
     ß(obj).map(el => {
         const video = el.querySelector('video');
-        const source = el.querySelector('source');
-        const src = source.dataset.src;
-        if (!src) return
-
-        source.src = src;
-        video.load();
+        video.setAttribute('preload', 'auto');
         observer.observe(video);
     });
 }
