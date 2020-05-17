@@ -314,6 +314,7 @@
 	.col-gap-#{$i} { column-gap: space($i); }
 	.row-gap-#{$i} { row-gap: space($i); }
 }
+.gap-2px { gap: 2px; }
 
 // fractions
 // -------------------------

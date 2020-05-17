@@ -15,12 +15,6 @@
     border: 1px solid $brand;
     border-radius: 100px;
     transition: $fade-all;
-}
-
-.button--primairy {
-    border: none;
-    background-color: $brand;
-    color: $light;
 
     &:hover {
         @keyframes scale-io-btn {
@@ -30,6 +24,12 @@
         }
         animation: scale-io-btn 380ms $ease both;
     }
+}
+
+.button--primairy {
+    border: none;
+    background-color: $brand;
+    color: $light;
 }
 
 .button--toggle {
@@ -56,6 +56,10 @@
 
     &.is-active {
         background-color: rgba($brand, 0.1);
+    }
+
+    &:hover {
+        animation: none;
     }
 }
 

@@ -9,6 +9,14 @@ layout: default
                 {{ page.title }}
             </h1>
             <p class="mxw-750 txt-body">{{ page.description }}</p>
+
+            {% if page.button %}
+            <div class="mt-4 mt-8@ml">
+                <a href="{{ page.button.url }}" target="_blank" rel="noreferrer" class="button">
+                    {{ page.button.text }}
+                </a>
+            </div>
+            {% endif %}
         </header>
 
         <ul class="g g-4@l g-5@xxxl col-gap-4 row-gap-4 mb-8 mb-12@ml">
@@ -51,16 +59,14 @@ layout: default
                 {% if item.caption %}
                 <figcaption class="caption mb-2 js-tr tr-stag">{{ item.caption }}</figcaption>
                 {% endif %}
-                <img src="{{ item.img }}" alt="{{ item.img | replace: '/assets/img/uploads/', '' }}"
-                    class="{% unless item.no-scroll-magic %}js-tr tr-fi-up tr-2000{% endunless %}
+                <img src="{{ item.img }}" alt="{{ item.img | replace: '/assets/img/uploads/', '' }}" class="{% unless item.no-scroll-magic %}js-tr tr-fi-up tr-2000{% endunless %}
                     {{ item.border }}" />
             </figure>
             {% endif %}
 
             {% if item.video %}
             <div class="figure o-hidden js-video js-scroll js-tr tr-fi-up tr-2000">
-                <video class="video" preload="auto"
-                    poster="{{ item.video.poster }}" autoplay muted loop playsinline>
+                <video class="video" preload="auto" poster="{{ item.video.poster }}" autoplay muted loop playsinline>
                     <source data-src="{{ item.video.url }}" src="#" type="video/mp4">
                     </source>
                 </video>
