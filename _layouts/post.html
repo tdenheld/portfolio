@@ -52,7 +52,8 @@ layout: default
                 <figcaption class="caption mb-2 js-tr tr-stag">{{ item.caption }}</figcaption>
                 {% endif %}
                 <img src="{{ item.img }}" alt="{{ item.img | replace: '/assets/img/uploads/', '' }}"
-                    class="{% unless item.no-scroll-magic %}js-tr tr-fi-up tr-2000{% endunless %}" />
+                    class="{% unless item.no-scroll-magic %}js-tr tr-fi-up tr-2000{% endunless %}
+                    {{ item.border }}" />
             </figure>
             {% endif %}
 
