@@ -68,8 +68,7 @@ layout: default
             {% if item.video %}
             <div class="figure o-hidden js-video js-scroll js-tr tr-fi-up tr-2000">
                 <video class="video" preload="none" poster="{{ item.video.poster }}" muted loop playsinline>
-                    <source src="{{ item.video.url }}" type="video/mp4">
-                    </source>
+                    <source src="{{ item.video.url }}" type="video/mp4" />
                 </video>
             </div>
             {% endif %}
