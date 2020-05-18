@@ -6,17 +6,13 @@ experiments:
     url: https://ambient.netlify.com
     description: Vue.js — 2020
 
-  - title: Ziris – Kunst & Fotografie
-    url: https://ziris.nl
-    description: Jekyll, GSAP, Netlify CMS, Zapier — 2019
+  - title: Marloes te Riele
+    url: https://marloesteriele.nl
+    description: Jekyll, HTML5, CSS3 — 2019
 
   - title: Disco Machine
     url: http://www.030303.nl/discomachine/
     description: Flash AS2 — 2011
-
-  - title: Marloes te Riele
-    url: https://marloesteriele.nl
-    description: Jekyll, HTML5, CSS3 — 2019
 
   - title: Video Mixer
     url: http://030303.nl/videomixer/
