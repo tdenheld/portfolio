@@ -38,6 +38,14 @@
     }
 }
 
+.section--small {
+    margin-bottom: space(10);
+
+    @include respond-min($ml) {
+        margin-bottom: space(20);
+    } 
+}
+
 .figure {
     position: relative;
     margin-bottom: space(8);
