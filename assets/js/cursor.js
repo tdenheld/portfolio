@@ -12,7 +12,7 @@ const cursor = () => {
         });
     }
 
-    const fade = (obj) => {
+    const fade = obj => {
         const _tween = gsap.fromTo(obj, {
             autoAlpha: 0
         }, {
@@ -73,7 +73,7 @@ const cursor = () => {
 
     const hover = (obj, size) => {
         if (!exists(obj)) return;
-        const initSize = ß(obj).map((el) => el.offsetWidth);
+        const initSize = ß(obj).map(el => el.offsetWidth);
         const hover = 'a, button, .js-settings-close, .js-img-hover u';
 
         ß(hover).map((el) => {
@@ -93,10 +93,10 @@ const cursor = () => {
         const trig = '.js-tile';
 
         const removeImg = () => {
-            ß(img).map((el) => el.classList.remove('is-active'));
+            ß(img).map(el => el.classList.remove('is-active'));
         }
 
-        ß(trig).map((el) => {
+        ß(trig).map(el => {
             el.addEventListener('mouseenter', () => {
                 fadeObj.fadeIn(0.45);
                 removeImg();

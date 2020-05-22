@@ -10,7 +10,7 @@ const revealOnScroll = () => {
             const target = entry.target;
             
             if (entry.isIntersecting) {
-                ß('.js-tr', target).map((el) => el.classList.add('is-active'));
+                ß('.js-tr', target).map(el => el.classList.add('is-active'));
                 if (target.classList.contains('js-tr')) target.classList.add('is-active');
                 self.unobserve(target);
             }
@@ -20,7 +20,7 @@ const revealOnScroll = () => {
         threshold: 0.05
     });
 
-    ß(richTxt).map((el) => {
+    ß(richTxt).map(el => {
         el.classList.add('js-tr', 'tr-fi-up', 'tr-1500');
         observer.observe(el);
     });

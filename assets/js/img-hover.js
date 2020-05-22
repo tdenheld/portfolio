@@ -4,7 +4,7 @@
     const obj = '.js-img-hover';
     if (!exists(obj)) return;
 
-    ß(obj).map((el) => {
+    ß(obj).map(el => {
         el.appendChild(document.createElement('span'));
         const link = el.querySelector('u');
         const img = el.querySelector('span');

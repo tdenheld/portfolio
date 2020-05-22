@@ -43,7 +43,7 @@ const loader = {
         const obj = 'a[href*="/"]';    
         if (!exists(obj)) return;
     
-        ß(obj).map((el) => el.addEventListener('click', e => {
+        ß(obj).map(el => el.addEventListener('click', e => {
             const target = el.getAttribute('href');
             if (el.getAttribute('target') === '_blank') return;
             e.preventDefault();

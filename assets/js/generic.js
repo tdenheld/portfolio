@@ -47,7 +47,7 @@ const splitWords = node => {
 const toggle = () => {
     const obj = '.js-toggle';
     if (!exists(obj)) return;
-    ß(obj).map((el) => el.addEventListener('click', () => {
+    ß(obj).map(el => el.addEventListener('click', () => {
         el.classList.toggle('is-active');
     }));
 }
@@ -58,7 +58,7 @@ const scrollToObject = () => {
     const workHash = window.location.href.search('#work') > 0;
     const offset = workHash ? 0 : 120;
 
-    ß(obj).map((el) => el.onclick = () => {
+    ß(obj).map(el => el.onclick = () => {
         const target = el.getAttribute('href');
         if (!exists(target)) return;
         gsap.to(window, {
