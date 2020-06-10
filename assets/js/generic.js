@@ -83,7 +83,7 @@ const playVideo = () => {
             entry.isIntersecting ? video.play() : video.pause();
         });
     }, {
-        threshold: 0.1
+        rootMargin: '-5% 0px'
     });
 
     ß(obj).map(el => {
