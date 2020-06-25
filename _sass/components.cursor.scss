@@ -49,5 +49,5 @@ $cursor-size: 40px;
 .cursor__noise {
     @include full(absolute);
     background-image: url('/assets/img/noise.gif');
-    opacity: 0.12;
+    opacity: 0.1;
 }
