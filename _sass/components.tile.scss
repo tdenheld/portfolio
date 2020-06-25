@@ -27,7 +27,7 @@
     margin-bottom: 4px;
 
     @include respond-min($ml) {
-        font-size: toRem(24px);
+        font-size: toRem(28px);
     }
 }
 
