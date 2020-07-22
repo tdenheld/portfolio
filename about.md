@@ -1,7 +1,7 @@
 ---
 layout: article
 title: About
-heading: Hi, I am Tibor. Intrigued with product design, creative development and branding.
+heading: Hi, I am Tibor. Intrigued with product design, front end development and branding.
 img: /assets/img/portret.gif
 ---
 

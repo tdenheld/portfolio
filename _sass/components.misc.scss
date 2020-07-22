@@ -17,8 +17,10 @@
 
 .video {
     position: relative;
-    width: calc(100% + 8px);
-    left: -4px;
+    width: calc(100% + 2px);
+    left: -1px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .border {

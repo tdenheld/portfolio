@@ -38,7 +38,7 @@ layout: default
             </li>
         </ul>
 
-        <img src="{{ page.img }}" alt="Hero image for {{ page.title }}" class="js-scroll js-tr tr-fi-up tr-2000" />
+        <img src="{{ page.img }}" alt="Hero image for {{ page.title }}" class="js-scroll js-tr tr-fi-up tr-2000 br-8" />
     </div>
 </section>
 
@@ -60,13 +60,13 @@ layout: default
                 {% if item.caption %}
                 <figcaption class="caption mb-2 js-tr tr-stag">{{ item.caption }}</figcaption>
                 {% endif %}
-                <img src="{{ item.img }}" alt="{{ item.img | replace: '/assets/img/uploads/', '' }}" class="{% unless item.no-scroll-magic %}js-tr tr-fi-up tr-2000{% endunless %}
+                <img src="{{ item.img }}" alt="{{ item.img | replace: '/assets/img/uploads/', '' }}" class="{% unless item.no-scroll-magic %}js-tr tr-fi-up tr-2000 br-8{% endunless %}
                     {{ item.border }}" />
             </figure>
             {% endif %}
 
             {% if item.video %}
-            <div class="figure o-hidden js-video js-scroll js-tr tr-fi-up tr-2000">
+            <div class="figure o-hidden js-video js-scroll js-tr tr-fi-up tr-2000 br-8">
                 <video class="video" preload="none" poster="{{ item.video.poster }}" muted loop playsinline>
                     <source src="{{ item.video.url }}" type="video/mp4" />
                 </video>
