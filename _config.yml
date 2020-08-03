@@ -21,7 +21,7 @@ defaults:
     values:
       layout: "default"
       img: /assets/img/og.png
-      description: Multidisciplinary designer who codes. Working with large online platforms as well as tasteful campaign websites. Currently working at Dutch Railways (NS) as a lead product designer & creative developer.
+      description: Designer & Front end Developer. Working with large online platforms as well as campaign websites.
   - scope:
       path: ""
       type: "posts"
