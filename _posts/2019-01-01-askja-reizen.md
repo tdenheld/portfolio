@@ -1,6 +1,6 @@
 ---
 title: Askja Reizen
-role: Digital Designer
+role: Designer
 technologies: Adobe, Marvel app<br>HTML5, CSS3, JS
 when: 2015 – 2016
 img: /assets/img/uploads/ar-hero.jpg
