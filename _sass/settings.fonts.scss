@@ -7,27 +7,24 @@
 // sans
 @font-face {
     font-family: 'tw-sans';
-    font-display: auto;
-	src: url('/assets/fonts/sans-regular.woff2') format('woff2');
-	font-weight: 400;
+    src: url('/assets/fonts/sans-regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'tw-sans';
-    font-display: auto;
-	src: url('/assets/fonts/sans-semibold.woff2') format('woff2');
-	font-weight: 600;
+    src: url('/assets/fonts/sans-semibold.woff2') format('woff2');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'tw-sans';
-    font-display: auto;
     src: url('/assets/fonts/sans-bold.woff2') format('woff2');
-	font-weight: 700;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -35,9 +32,8 @@
 // mono
 @font-face {
     font-family: 'tw-mono';
-    font-display: auto;
-	src: url('/assets/fonts/mono.woff2') format('woff2');
-	font-weight: 400;
+    src: url('/assets/fonts/mono.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
@@ -45,18 +41,16 @@
 // serif
 @font-face {
     font-family: 'tw-serif';
-    font-display: auto;
-	src: url('/assets/fonts/serif-regular.woff2') format('woff2');
-	font-weight: 400;
+    src: url('/assets/fonts/serif-regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'tw-serif';
-    font-display: auto;
-	src: url('/assets/fonts/serif-bold.woff2') format('woff2');
-	font-weight: 700;
+    src: url('/assets/fonts/serif-bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: bold;
     font-display: swap;
 }
