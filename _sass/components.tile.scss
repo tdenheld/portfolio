@@ -35,12 +35,12 @@
 }
 
 .tile__title {
-    // font-family: $sans;
+    font-family: $sans;
     @include font(20px, 600, $lh-title);
     margin-bottom: 4px;
 
     @include respond-min($ml) {
-        font-size: toRem(32px);
+        font-size: toRem(28px);
     }
 }
 
