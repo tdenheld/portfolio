@@ -2,6 +2,10 @@
 layout: fun
 title: Experiments & side projects
 experiments:
+  - title: Freek Fabricius
+    url: https://lost-controller.netlify.app
+    description: Vue.js — 2020
+
   - title: Ambient Sound Mixer
     url: https://ambient.netlify.com
     description: Vue.js — 2020
