@@ -1,14 +1,15 @@
 .h-l {
     @include font(48px, bold, $lh-title);
+    letter-spacing: $ls-heading;
 
     @include respond-min($ml) {
         font-size: toRem(104px);
-        letter-spacing: toRem(-0.6px);
     }
 }
 
 .h-m {
     @include font(36px, bold, $lh-title);
+    letter-spacing: $ls-heading;
 
     @include respond-min($ml) {
         font-size: toRem(60px);
@@ -21,6 +22,7 @@
 
 .h-s {
     @include font(32px, bold, $lh-title);
+    letter-spacing: $ls-heading;
 
     @include respond-min($ml) {
         font-size: toRem(54px);
@@ -29,6 +31,7 @@
 
 .h-xs {
     @include font(24px, bold, $lh-title);
+    letter-spacing: $ls-heading;
 
     @include respond-min($ml) {
         font-size: toRem(32px);
