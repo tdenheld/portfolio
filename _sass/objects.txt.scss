@@ -2,6 +2,10 @@
     @include font(48px, bold, $lh-title);
     letter-spacing: $ls-heading;
 
+    @include respond-min($sm) {
+        font-size: toRem(64px);
+    }
+
     @include respond-min($ml) {
         font-size: toRem(104px);
     }
@@ -10,6 +14,10 @@
 .h-m {
     @include font(36px, bold, $lh-title);
     letter-spacing: $ls-heading;
+
+    @include respond-min($sm) {
+        font-size: toRem(48px);
+    }
 
     @include respond-min($ml) {
         font-size: toRem(60px);

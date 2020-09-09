@@ -325,6 +325,14 @@
 .g-5 {grid-template-columns: repeat(5,1fr);}
 .g-6 {grid-template-columns: repeat(6,1fr);}
 
+@include respond-min($m) {
+	.g-1\@m {grid-template-columns: 1fr;}
+	.g-2\@m {grid-template-columns: repeat(2,1fr);}
+	.g-3\@m {grid-template-columns: repeat(3,1fr);}
+	.g-4\@m {grid-template-columns: repeat(4,1fr);}
+	.g-5\@m {grid-template-columns: repeat(5,1fr);}
+	.g-6\@m {grid-template-columns: repeat(6,1fr);}
+}
 @include respond-min($ml) {
 	.g-1\@ml {grid-template-columns: 1fr;}
 	.g-2\@ml {grid-template-columns: repeat(2,1fr);}

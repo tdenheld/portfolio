@@ -1,9 +1,9 @@
 .tile {
     display: block;
     position: relative;
-    padding: space(3) 0;
+    padding: space(2) 0;
     height: 108px;
-    border-top: 1px solid rgba($brand, 0.2);
+    border-top: 1px solid rgba($brand, 0.3);
     overflow: hidden;
 
     @include respond-min($ml) {
