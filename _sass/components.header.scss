@@ -18,7 +18,6 @@
     flex-shrink: 0;
     position: relative;
     top: 6px;
-    width: 50px;
 
     svg {
         fill: $brand;
@@ -37,7 +36,7 @@
     margin-left: space(4);
     height: 36px;
     @include font(14px, normal, $lh-solid);
-    font-family: $mono;
+    font-family: $sans;
     cursor: pointer;
 
     @include respond-min($ml) {
@@ -53,7 +52,6 @@
 
 .header__item--settings {
     position: relative;
-    top: 1px;
     width: 36px;
     margin-left: 16px;
     margin-right: -8px;
