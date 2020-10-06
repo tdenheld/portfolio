@@ -36,7 +36,7 @@
     margin-left: space(4);
     height: 36px;
     @include font(14px, normal, $lh-solid);
-    font-family: $sans;
+    font-family: $mono;
     cursor: pointer;
 
     @include respond-min($ml) {
