@@ -89,6 +89,9 @@ const playVideo = () => {
     ß(obj).map(el => {
         const video = el.querySelector('video');
         video.setAttribute('preload', 'auto');
+        video.play();
+        requestAnimationFrame(() => video.pause());
+        
         observer.observe(video);
     });
 }
