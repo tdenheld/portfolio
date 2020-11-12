@@ -88,8 +88,9 @@ const playVideo = () => {
 
     ß(obj).map(el => {
         const video = el.querySelector('video');
-        video.setAttribute('preload', 'auto');
-        setTimeout(() => video.pause(), 1000);
+        video.addEventListener('loadedmetadata', () => {
+            video.currentTime = 0.067;
+        }, false);
         observer.observe(video);
     });
 }
